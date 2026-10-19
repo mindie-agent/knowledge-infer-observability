@@ -1,0 +1,109 @@
+{
+  "closure": {
+    "unit-msprof-analyze-mfu-range-flops-attribution": [],
+    "unit-msprof-analyze-step-overlap-clock-and-intervals": []
+  },
+  "digest": "352135a44a21217959c261d3cc79c228a68b3875e012b95d2c1d0b5a8a69e1fb",
+  "federation": {
+    "corpus": {
+      "automatic": false,
+      "bytes": 7419,
+      "estimated_tokens": 1187,
+      "kind": "federation",
+      "path": ".",
+      "unit_ids": [
+        "unit-msprof-analyze-mfu-range-flops-attribution",
+        "unit-msprof-analyze-step-overlap-clock-and-intervals"
+      ],
+      "units": 2
+    },
+    "domains": [
+      {
+        "automatic": false,
+        "bytes": 7419,
+        "estimated_tokens": 1187,
+        "exceeds": [],
+        "kind": "federation",
+        "path": "measurement",
+        "recommended_action": "review_federation_boundary",
+        "unit_ids": [
+          "unit-msprof-analyze-mfu-range-flops-attribution",
+          "unit-msprof-analyze-step-overlap-clock-and-intervals"
+        ],
+        "units": 2
+      }
+    ]
+  },
+  "index_build_elapsed_ms": 0.4015840240754187,
+  "index_digest": "2dabea80973b42583e298247da048de4bdb59304ce487d3ce3d92112e48ad615",
+  "leaves": [
+    {
+      "automatic": false,
+      "bytes": 3245,
+      "estimated_tokens": 519,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "measurement/msprof/mfu",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-msprof-analyze-mfu-range-flops-attribution"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 4174,
+      "estimated_tokens": 668,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "measurement/msprof/overlap",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-msprof-analyze-step-overlap-clock-and-intervals"
+      ],
+      "units": 1
+    }
+  ],
+  "schema": "mindie-shard-topology/1",
+  "two_level_subtrees": [
+    {
+      "automatic": false,
+      "bytes": 7419,
+      "estimated_tokens": 1187,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "measurement/msprof",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-msprof-analyze-mfu-range-flops-attribution",
+        "unit-msprof-analyze-step-overlap-clock-and-intervals"
+      ],
+      "units": 2
+    }
+  ],
+  "unit_count": 2,
+  "units": {
+    "unit-msprof-analyze-mfu-range-flops-attribution": {
+      "bytes": 3245,
+      "category": "sop",
+      "content_sha256": "67c9ea7f5458e067a0eb36b7c16b324fb0e02e1a234eba8fd707b334aa6620a3",
+      "domain_path": "measurement/msprof/mfu",
+      "estimated_tokens": 519,
+      "evidence_strength": "single_observation",
+      "inherits_from": [],
+      "path": "measurement/msprof/mfu/unit-msprof-analyze-mfu-range-flops-attribution.md",
+      "tier": "L2"
+    },
+    "unit-msprof-analyze-step-overlap-clock-and-intervals": {
+      "bytes": 4174,
+      "category": "sop",
+      "content_sha256": "aa930636bf2fd97a76e483b379501b0ec1149919d78560cb552c3c9655b616b9",
+      "domain_path": "measurement/msprof/overlap",
+      "estimated_tokens": 668,
+      "evidence_strength": "single_observation",
+      "inherits_from": [],
+      "path": "measurement/msprof/overlap/unit-msprof-analyze-step-overlap-clock-and-intervals.md",
+      "tier": "L2"
+    }
+  }
+}

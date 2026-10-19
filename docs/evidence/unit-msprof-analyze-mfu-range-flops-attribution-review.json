@@ -1,0 +1,42 @@
+{
+  "index": 0,
+  "decision": "accept_with_editorial_rewrite",
+  "domain": "infer-observability",
+  "level": "L2",
+  "title": "Recorded FLOPs are assigned to every selected kernel in msprof MFU",
+  "mechanism": "At msprof-analyze revision 639eb8702c1884813dfab59ddb371f7838caab6d, MFUCalculator joins CPU-op/kernel correlation with kernel shapes on kernel_name, kernel_ts and kernel_end. A recorded MSTX FLOPs range selects op_ts with the closed condition startNs <= op_ts <= endNs, then drops duplicate kernel_ts/kernel_end pairs. The sum of task_duration is only a positivity gate. Dtype is taken from the first selected row before non-positive task durations are removed. Each remaining kernel receives the entire recorded range FLOPs, using flops / (task_duration * 1e-9) / chip_peak. FLOPs are not divided among the selected kernels. The 1e-9 conversion belongs to this database path; it does not inherit the separate CSV column label Task Duration(us). This source reading establishes the attribution formula, not a measured hardware-utilization result. Exporter schemas and clock definitions remain outside the admitted source set.",
+  "corrections": [
+    "Keep the inclusive point-selection predicate and full-range FLOPs attribution explicit.",
+    "Do not describe total_duration as a per-kernel FLOPs weighting.",
+    "Keep database timing units separate from the other analyzer's CSV labels."
+  ],
+  "source_scope": "Root accepted only the rewritten mechanism. Independent Cursor reading and its broader findings remain in the immutable author packet. Root source reading is enumerated separately.",
+  "supporting_ranges": [
+    {
+      "path": "msprof_analyze/cluster_analyse/cluster_kernels_analysis/operator_mfu/mfu_calculator.py",
+      "line_start": 41,
+      "line_end": 170,
+      "source_revision": "639eb8702c1884813dfab59ddb371f7838caab6d",
+      "source_sha256": "3859700f5ed9b3539e0894578bec575c606afe0a72926bf87f34f0433c4dac4a",
+      "range_sha256": "1a5628ff8db255d5c6d3379b3e779ed3e1ae04992dc799e9c887ea4e762249a8",
+      "git_blob_oid": "c80b89faa3541b437c85416ae97c3d63db486d30",
+      "unit_ids": [
+        "source:Ascend--msprof-analyze:639eb8702c1884813dfab59ddb371f7838caab6d:msprof_analyze/cluster_analyse/cluster_kernels_analysis/operator_mfu/mfu_calculator.py:0-10029"
+      ],
+      "url": "https://gitcode.com/Ascend/msprof-analyze/blob/639eb8702c1884813dfab59ddb371f7838caab6d/msprof_analyze/cluster_analyse/cluster_kernels_analysis/operator_mfu/mfu_calculator.py#L41-L170"
+    }
+  ],
+  "source_revision": "639eb8702c1884813dfab59ddb371f7838caab6d",
+  "accepted_body_sha256": "39c23b50a756bc5000ce344fb95bc227afda394b78464eaa5cc7c56bbd08bf32",
+  "adoption_boundary": "Use to interpret an MFU table only after checking the actual exporter clock, dtype and FLOPs-range semantics. No NPU execution or measured efficiency is established here.",
+  "schema_version": "mindie-reviewed-source-record/1",
+  "source_repository": "Ascend/msprof-analyze",
+  "editorial_packet_sha256": "1cbbc4984273868cf6257e174d7680c57086c59107f3e302a61dc3da4df8639e",
+  "evidence_strength": "single_observation",
+  "execution": "not_performed",
+  "original_artifact_sha256": {
+    "original_review_output": "cd4daf3b2d41e1e1a57bd41b89afeebc96c6d685cc140dc95e6b135fc1ab0797",
+    "original_receipt": "a5175a72f92aaf137f0a0a1a09bec41a8f6838f82c05b6c3ae69c14998813ee6",
+    "original_admission": "a19064488733ab18d5f3833b57327a162b73bae1cb60b879462a4d627ee96b00"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "build_elapsed_ms": 0.4015840240754187,
+  "closure": {
+    "unit-msprof-analyze-mfu-range-flops-attribution": [],
+    "unit-msprof-analyze-step-overlap-clock-and-intervals": []
+  },
+  "digest": "2dabea80973b42583e298247da048de4bdb59304ce487d3ce3d92112e48ad615",
+  "generation": "84a0ccd108d96a6301a9e8ead0fb8290bf947fbd1177e079db438baaf055eb43",
+  "id_path": {
+    "unit-msprof-analyze-mfu-range-flops-attribution": "measurement/msprof/mfu/unit-msprof-analyze-mfu-range-flops-attribution.md",
+    "unit-msprof-analyze-step-overlap-clock-and-intervals": "measurement/msprof/overlap/unit-msprof-analyze-step-overlap-clock-and-intervals.md"
+  },
+  "query_budget_excludes_build": true,
+  "schema_version": "mindie-routing-manifest/1",
+  "token_estimator": "utf8_bytes_div_4_ceiling",
+  "unit_count": 2,
+  "units": [
+    {
+      "category": "sop",
+      "closure_digest": "sha256:1ad91fd3c428661574a516ef2c235381b3e881143facec06f773425dfc58bddf",
+      "conditions": {
+        "repository": "Ascend/msprof-analyze",
+        "revision": "639eb8702c1884813dfab59ddb371f7838caab6d"
+      },
+      "content_digest": "sha256:67c9ea7f5458e067a0eb36b7c16b324fb0e02e1a234eba8fd707b334aa6620a3",
+      "content_sha256": "67c9ea7f5458e067a0eb36b7c16b324fb0e02e1a234eba8fd707b334aa6620a3",
+      "domain_path": "measurement/msprof/mfu",
+      "evidence_strength": "single_observation",
+      "id": "unit-msprof-analyze-mfu-range-flops-attribution",
+      "inherits_from": [],
+      "inherits_from_closure": [],
+      "path": "measurement/msprof/mfu/unit-msprof-analyze-mfu-range-flops-attribution.md",
+      "provenance": {
+        "evidence_refs": [
+          "docs/evidence/unit-msprof-analyze-mfu-range-flops-attribution-review.json",
+          "https://gitcode.com/Ascend/msprof-analyze/blob/639eb8702c1884813dfab59ddb371f7838caab6d/msprof_analyze/cluster_analyse/cluster_kernels_analysis/operator_mfu/mfu_calculator.py#L41-L170"
+        ],
+        "source_digest": "0a1b3e92953c2b893be5c42fbfc603c8ef6c6a3fa5508f9f1d0a5d3260cb1447",
+        "source_locator": "docs/evidence/unit-msprof-analyze-mfu-range-flops-attribution-review.json",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "Recorded FLOPs are assigned to every selected kernel in msprof MFU",
+      "token_estimate": 519,
+      "triggers": {
+        "error_signatures": [],
+        "keywords": [
+          "msprof-analyze",
+          "recorded",
+          "flops",
+          "are",
+          "assigned",
+          "to",
+          "every",
+          "selected",
+          "kernel",
+          "in",
+          "msprof",
+          "mfu"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "closure_digest": "sha256:0801a5b4ed24e3675c28fa4a0170a0e3a97b6f9d098d0b40c2a64feee37145a9",
+      "conditions": {
+        "repository": "Ascend/msprof-analyze",
+        "revision": "639eb8702c1884813dfab59ddb371f7838caab6d"
+      },
+      "content_digest": "sha256:aa930636bf2fd97a76e483b379501b0ec1149919d78560cb552c3c9655b616b9",
+      "content_sha256": "aa930636bf2fd97a76e483b379501b0ec1149919d78560cb552c3c9655b616b9",
+      "domain_path": "measurement/msprof/overlap",
+      "evidence_strength": "single_observation",
+      "id": "unit-msprof-analyze-step-overlap-clock-and-intervals",
+      "inherits_from": [],
+      "inherits_from_closure": [],
+      "path": "measurement/msprof/overlap/unit-msprof-analyze-step-overlap-clock-and-intervals.md",
+      "provenance": {
+        "evidence_refs": [
+          "docs/evidence/unit-msprof-analyze-step-overlap-clock-and-intervals-review.json",
+          "https://gitcode.com/Ascend/msprof-analyze/blob/639eb8702c1884813dfab59ddb371f7838caab6d/msprof_analyze/cluster_analyse/common_func/time_range_calculator.py#L41-L96",
+          "https://gitcode.com/Ascend/msprof-analyze/blob/639eb8702c1884813dfab59ddb371f7838caab6d/msprof_analyze/cluster_analyse/common_func/time_range_calculator.py#L99-L192",
+          "https://gitcode.com/Ascend/msprof-analyze/blob/639eb8702c1884813dfab59ddb371f7838caab6d/msprof_analyze/cluster_analyse/common_func/linearity_utils.py#L46-L119"
+        ],
+        "source_digest": "492233d66bff23074c60ec01142ab5c750364b026576ad2e63788fae4815c1b8",
+        "source_locator": "docs/evidence/unit-msprof-analyze-step-overlap-clock-and-intervals-review.json",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "Linearity selects overlapping events without clipping them to the step",
+      "token_estimate": 668,
+      "triggers": {
+        "error_signatures": [],
+        "keywords": [
+          "msprof-analyze",
+          "linearity",
+          "selects",
+          "overlapping",
+          "events",
+          "without",
+          "clipping",
+          "them",
+          "to",
+          "the",
+          "step"
+        ]
+      }
+    }
+  ]
+}

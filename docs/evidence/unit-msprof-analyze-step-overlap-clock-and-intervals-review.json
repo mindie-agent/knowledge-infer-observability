@@ -1,0 +1,68 @@
+{
+  "index": 1,
+  "decision": "accept_with_editorial_rewrite",
+  "domain": "infer-observability",
+  "level": "L2",
+  "title": "Linearity selects overlapping events without clipping them to the step",
+  "mechanism": "At msprof-analyze revision 639eb8702c1884813dfab59ddb371f7838caab6d, LinearityUtils includes an event when event_end > step_start and event_start < step_end. The selected endpoints are not clipped to the step. Communication is filtered by parallelType; computation is not filtered by that field. Communication and step timestamps use startNs/endNs, while computation uses task_start_time/task_end_time, with no conversion in this function. By default total communication time sums raw selected intervals, including overlap. Its optional merge path merges touching or overlapping intervals. compute_uncovered_durations always merges communication and computation separately and subtracts their intersections. The raw communication total and the uncovered total can therefore use different interval sets. Each total is divided by the step duration, so a ratio can exceed one because events extend outside the step or raw communication intervals overlap. merge_continuous_intervals sorts the input list and extends its original interval objects in place.",
+  "corrections": [
+    "An overlap filter does not establish containment or clipping.",
+    "Use the same interval-set and clock semantics before comparing total and uncovered ratios.",
+    "A ratio above one is a consequence permitted by this static formula, not a measured incident."
+  ],
+  "source_scope": "Root accepted only the rewritten mechanism. Independent Cursor reading and its broader findings remain in the immutable author packet. Root source reading is enumerated separately.",
+  "supporting_ranges": [
+    {
+      "path": "msprof_analyze/cluster_analyse/common_func/time_range_calculator.py",
+      "line_start": 41,
+      "line_end": 96,
+      "source_revision": "639eb8702c1884813dfab59ddb371f7838caab6d",
+      "source_sha256": "a3ec1b3b8fdbab7b96a9bffd1826dbbbdac0b5f8ce0ecc92a60cf231278f1f5e",
+      "range_sha256": "a8b915829431eb0d0d7cc667a5973cf388a7b0b4bc292e06193e67364d53e0ac",
+      "git_blob_oid": "a594430aadb0438bc629c926445460602700df22",
+      "unit_ids": [
+        "source:Ascend--msprof-analyze:639eb8702c1884813dfab59ddb371f7838caab6d:msprof_analyze/cluster_analyse/common_func/time_range_calculator.py:0-8234"
+      ],
+      "url": "https://gitcode.com/Ascend/msprof-analyze/blob/639eb8702c1884813dfab59ddb371f7838caab6d/msprof_analyze/cluster_analyse/common_func/time_range_calculator.py#L41-L96"
+    },
+    {
+      "path": "msprof_analyze/cluster_analyse/common_func/time_range_calculator.py",
+      "line_start": 99,
+      "line_end": 192,
+      "source_revision": "639eb8702c1884813dfab59ddb371f7838caab6d",
+      "source_sha256": "a3ec1b3b8fdbab7b96a9bffd1826dbbbdac0b5f8ce0ecc92a60cf231278f1f5e",
+      "range_sha256": "b374493c7d4c03c2b88c32ffad75840cfc6bdfe542fe1df35197428022f7d43f",
+      "git_blob_oid": "a594430aadb0438bc629c926445460602700df22",
+      "unit_ids": [
+        "source:Ascend--msprof-analyze:639eb8702c1884813dfab59ddb371f7838caab6d:msprof_analyze/cluster_analyse/common_func/time_range_calculator.py:0-8234"
+      ],
+      "url": "https://gitcode.com/Ascend/msprof-analyze/blob/639eb8702c1884813dfab59ddb371f7838caab6d/msprof_analyze/cluster_analyse/common_func/time_range_calculator.py#L99-L192"
+    },
+    {
+      "path": "msprof_analyze/cluster_analyse/common_func/linearity_utils.py",
+      "line_start": 46,
+      "line_end": 119,
+      "source_revision": "639eb8702c1884813dfab59ddb371f7838caab6d",
+      "source_sha256": "d5b83dead067c2ab6bfd76f9b34f21d137026a874f9f09155abc6d0d4862476f",
+      "range_sha256": "077300595a45c529ab56cd5d8e85c0fbb2d164357b79727fc52206a9408ea9c3",
+      "git_blob_oid": "0e72074b3a2e03363b80d588092cc16b15364bae",
+      "unit_ids": [
+        "source:Ascend--msprof-analyze:639eb8702c1884813dfab59ddb371f7838caab6d:msprof_analyze/cluster_analyse/common_func/linearity_utils.py:0-7501"
+      ],
+      "url": "https://gitcode.com/Ascend/msprof-analyze/blob/639eb8702c1884813dfab59ddb371f7838caab6d/msprof_analyze/cluster_analyse/common_func/linearity_utils.py#L46-L119"
+    }
+  ],
+  "source_revision": "639eb8702c1884813dfab59ddb371f7838caab6d",
+  "accepted_body_sha256": "68d4dc876c95a4289309ee9a7239638d990cba2015b57e5c8821a4e9ddac03be",
+  "adoption_boundary": "Use as the source contract for communication attribution. Validate clocks and interval normalization against each actual trace before reporting a utilization or overlap percentage.",
+  "schema_version": "mindie-reviewed-source-record/1",
+  "source_repository": "Ascend/msprof-analyze",
+  "editorial_packet_sha256": "1cbbc4984273868cf6257e174d7680c57086c59107f3e302a61dc3da4df8639e",
+  "evidence_strength": "single_observation",
+  "execution": "not_performed",
+  "original_artifact_sha256": {
+    "original_review_output": "c307049c00988173d2dc76e45392b34feb62a8dbfbe6ed900604048e6d9b6f71",
+    "original_receipt": "95cc1c3d4ac881cde294a032a70b54718c6d15156effc82d420fabcc8ddfeda7",
+    "original_admission": "66f18d52153872ad05e94f8cf047ca82d07fc902628ae320e8fb50fcd3ecaeb8"
+  }
+}
