@@ -1,0 +1,22 @@
+{
+  "schema_version": "mindie-tier-completion-admission/1",
+  "unit_id": "unit-observed-dual-die-phy-id-topology",
+  "tier": "L1",
+  "category": "measurement",
+  "evidence_strength": "reproduced_empirical",
+  "actual_repetitions": 2,
+  "validator_revision": "422ebbdfb3d3faacd858e4b96811d99694aa1be0",
+  "editorial_packet_sha256": "7bb45577279dc7cad17661fdd16c384bfc2cd469b45767f9ec50ec41fc10de30",
+  "source_projection_sha256": "62e41437b0f444780eff9b2b8870e2e8890818c83c2f7378d24c17912e3b418a",
+  "c6": "applied",
+  "actual_Gitleaks_and_deterministic_scan": "unchanged",
+  "applicable_query": "matched",
+  "missing_condition": "excluded",
+  "mismatched_condition": "excluded",
+  "partial_workload": "not_applicable",
+  "exact_ref": "byte_matched",
+  "existing_unit_bytes": "preserved",
+  "admission_model_calls": 0,
+  "new_hardware_calls": 0,
+  "remote_writes": 0
+}

@@ -1,23 +1,38 @@
 {
   "closure": {
     "unit-msprof-analyze-mfu-range-flops-attribution": [],
-    "unit-msprof-analyze-step-overlap-clock-and-intervals": []
+    "unit-msprof-analyze-step-overlap-clock-and-intervals": [],
+    "unit-observed-dual-die-phy-id-topology": []
   },
-  "digest": "352135a44a21217959c261d3cc79c228a68b3875e012b95d2c1d0b5a8a69e1fb",
+  "digest": "6a9d60d47b4092c2e6492825e0e40c9119b19a670d77c8cafcb679f6b46ea459",
   "federation": {
     "corpus": {
       "automatic": false,
-      "bytes": 7419,
-      "estimated_tokens": 1187,
+      "bytes": 9569,
+      "estimated_tokens": 1469,
       "kind": "federation",
       "path": ".",
       "unit_ids": [
         "unit-msprof-analyze-mfu-range-flops-attribution",
-        "unit-msprof-analyze-step-overlap-clock-and-intervals"
+        "unit-msprof-analyze-step-overlap-clock-and-intervals",
+        "unit-observed-dual-die-phy-id-topology"
       ],
-      "units": 2
+      "units": 3
     },
     "domains": [
+      {
+        "automatic": false,
+        "bytes": 2150,
+        "estimated_tokens": 282,
+        "exceeds": [],
+        "kind": "federation",
+        "path": "hardware",
+        "recommended_action": "review_federation_boundary",
+        "unit_ids": [
+          "unit-observed-dual-die-phy-id-topology"
+        ],
+        "units": 1
+      },
       {
         "automatic": false,
         "bytes": 7419,
@@ -34,9 +49,22 @@
       }
     ]
   },
-  "index_build_elapsed_ms": 0.4015840240754187,
-  "index_digest": "2dabea80973b42583e298247da048de4bdb59304ce487d3ce3d92112e48ad615",
+  "index_build_elapsed_ms": 0.9352919878438115,
+  "index_digest": "174c49fdcca2ce7d0549c0e64dba5b35100485bbf72ce7089def11c12f90343c",
   "leaves": [
+    {
+      "automatic": false,
+      "bytes": 2150,
+      "estimated_tokens": 282,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "hardware/topology",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-observed-dual-die-phy-id-topology"
+      ],
+      "units": 1
+    },
     {
       "automatic": false,
       "bytes": 3245,
@@ -68,6 +96,19 @@
   "two_level_subtrees": [
     {
       "automatic": false,
+      "bytes": 2150,
+      "estimated_tokens": 282,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "hardware/topology",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-observed-dual-die-phy-id-topology"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
       "bytes": 7419,
       "estimated_tokens": 1187,
       "exceeds": [],
@@ -81,7 +122,7 @@
       "units": 2
     }
   ],
-  "unit_count": 2,
+  "unit_count": 3,
   "units": {
     "unit-msprof-analyze-mfu-range-flops-attribution": {
       "bytes": 3245,
@@ -104,6 +145,17 @@
       "inherits_from": [],
       "path": "measurement/msprof/overlap/unit-msprof-analyze-step-overlap-clock-and-intervals.md",
       "tier": "L2"
+    },
+    "unit-observed-dual-die-phy-id-topology": {
+      "bytes": 2150,
+      "category": "measurement",
+      "content_sha256": "0d2597e6da58b50f8ad69425dd708d6ae40fecd9c7729c8ef4a6b429a79790ea",
+      "domain_path": "hardware/topology",
+      "estimated_tokens": 282,
+      "evidence_strength": "reproduced_empirical",
+      "inherits_from": [],
+      "path": "hardware/topology/unit-observed-dual-die-phy-id-topology.md",
+      "tier": "L1"
     }
   }
 }

@@ -1,19 +1,21 @@
 {
-  "build_elapsed_ms": 0.4015840240754187,
+  "build_elapsed_ms": 0.9352919878438115,
   "closure": {
     "unit-msprof-analyze-mfu-range-flops-attribution": [],
-    "unit-msprof-analyze-step-overlap-clock-and-intervals": []
+    "unit-msprof-analyze-step-overlap-clock-and-intervals": [],
+    "unit-observed-dual-die-phy-id-topology": []
   },
-  "digest": "2dabea80973b42583e298247da048de4bdb59304ce487d3ce3d92112e48ad615",
-  "generation": "84a0ccd108d96a6301a9e8ead0fb8290bf947fbd1177e079db438baaf055eb43",
+  "digest": "174c49fdcca2ce7d0549c0e64dba5b35100485bbf72ce7089def11c12f90343c",
+  "generation": "449d068121f7d4e3d39284f7a02c96dcbc7f403a69ff74e1743ee542d884a35b",
   "id_path": {
     "unit-msprof-analyze-mfu-range-flops-attribution": "measurement/msprof/mfu/unit-msprof-analyze-mfu-range-flops-attribution.md",
-    "unit-msprof-analyze-step-overlap-clock-and-intervals": "measurement/msprof/overlap/unit-msprof-analyze-step-overlap-clock-and-intervals.md"
+    "unit-msprof-analyze-step-overlap-clock-and-intervals": "measurement/msprof/overlap/unit-msprof-analyze-step-overlap-clock-and-intervals.md",
+    "unit-observed-dual-die-phy-id-topology": "hardware/topology/unit-observed-dual-die-phy-id-topology.md"
   },
   "query_budget_excludes_build": true,
   "schema_version": "mindie-routing-manifest/1",
   "token_estimator": "utf8_bytes_div_4_ceiling",
-  "unit_count": 2,
+  "unit_count": 3,
   "units": [
     {
       "category": "sop",
@@ -107,6 +109,52 @@
           "to",
           "the",
           "step"
+        ]
+      }
+    },
+    {
+      "category": "measurement",
+      "closure_digest": "sha256:3a678617711efd5384ee6303953e593b1401cda46d81d21e99bb8ad456c0a0d8",
+      "conditions": {
+        "device_name": "Ascend910",
+        "machine_identity_sha256": "c09dc2994a84315148b486a9b4f2e34b656d0112fe5c9d9e663bd57fb2922bab",
+        "npu_smi_version": "26.0.rc1",
+        "topology_sha256": "69790a51d503a1816fb4145c0516d46168123b646d9da24063edc4f0099fa638"
+      },
+      "content_digest": "sha256:0d2597e6da58b50f8ad69425dd708d6ae40fecd9c7729c8ef4a6b429a79790ea",
+      "content_sha256": "0d2597e6da58b50f8ad69425dd708d6ae40fecd9c7729c8ef4a6b429a79790ea",
+      "domain_path": "hardware/topology",
+      "evidence_strength": "reproduced_empirical",
+      "id": "unit-observed-dual-die-phy-id-topology",
+      "inherits_from": [],
+      "inherits_from_closure": [],
+      "path": "hardware/topology/unit-observed-dual-die-phy-id-topology.md",
+      "provenance": {
+        "evidence_refs": [
+          "docs/evidence/l1-topology-observations.json"
+        ],
+        "source_digest": "62e41437b0f444780eff9b2b8870e2e8890818c83c2f7378d24c17912e3b418a",
+        "source_locator": "docs/evidence/l1-topology-observations.json",
+        "source_type": "run_manifest",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L1",
+      "title": "Observed NPU, Chip and Phy-ID mapping on one dual-die machine",
+      "token_estimate": 282,
+      "triggers": {
+        "error_signatures": [],
+        "keywords": [
+          "observed",
+          "npu",
+          "chip",
+          "and",
+          "phy-id",
+          "mapping",
+          "on",
+          "one",
+          "dual-die",
+          "machine"
         ]
       }
     }
