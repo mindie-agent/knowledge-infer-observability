@@ -1,8 +1,21 @@
 {
-  "build_elapsed_ms": 2.1710420260205865,
+  "build_elapsed_ms": 5.507666035555303,
   "closure": {
+    "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+    ],
+    "unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+      "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+    ],
     "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms": [
       "unit-observed-dual-die-phy-id-topology"
+    ],
+    "unit-ascend-npu-compute-npu-check-and-debug-api-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop": [
       "unit-observed-dual-die-phy-id-topology",
@@ -21,9 +34,12 @@
     "unit-msprof-analyze-step-overlap-clock-and-intervals": [],
     "unit-observed-dual-die-phy-id-topology": []
   },
-  "generation": "db1fbfdabccd86639292e7eefa79face0fdf95b7cd2f7162641d5d3a541cf860",
+  "generation": "d276c7b836a6a1d12e0e1ab5c52c11fea41fc17147c4151292b75d522e6a78c4",
   "id_path": {
+    "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": "diagnostics/error-codes/unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow.md",
+    "unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow": "diagnostics/aicore-dump/unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow.md",
     "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms": "measurement/msprof/unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms.md",
+    "unit-ascend-npu-compute-npu-check-and-debug-api-sop": "measurement/npu-compute/unit-ascend-npu-compute-npu-check-and-debug-api-sop.md",
     "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop": "diagnostics/aicore-dump/unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop.md",
     "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop": "diagnostics/plog-asys/unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop.md",
     "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow": "measurement/end-to-end/unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow.md",
@@ -34,8 +50,120 @@
   "query_budget_excludes_build": true,
   "schema_version": "mindie-routing-manifest/1",
   "token_estimator": "utf8_bytes_div_4_ceiling",
-  "unit_count": 7,
+  "unit_count": 10,
   "units": [
+    {
+      "category": "workflow",
+      "conditions": {
+        "log_family": "CANN plog and ErrorManager",
+        "repository": "cann/cannbot-skills",
+        "revision": "f305e200aa4b1e1fed73cd21ff1f083b8df25a1e"
+      },
+      "domain_path": "diagnostics/error-codes",
+      "evidence_strength": "software_contract",
+      "id": "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow",
+      "inherits_from": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ],
+      "path": "diagnostics/error-codes/unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow.md",
+      "provenance": {
+        "evidence_refs": [
+          "docs/evidence/cannbot-exception-compute-and-error-code-provenance.json",
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/ops/cann-error-code-standard/SKILL.md#L6-L39",
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/ops/ops-error-code-remediation/SKILL.md#L6-L106"
+        ],
+        "source_digest": "cad5302e2dfa4eaeec30182dda55f298fd1e1e60da892ffa76877dbf5ba227b3",
+        "source_locator": "docs/evidence/cannbot-exception-compute-and-error-code-provenance.json",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L3",
+      "title": "CANN operator error-code four-layer evidence verification, innermost first-report rule, and E*9*** remediation workflow",
+      "token_estimate": 883,
+      "triggers": {
+        "error_signatures": [
+          "EZ9999",
+          "E89999",
+          "EI9999",
+          "REPORT_PREDEFINED_ERR_MSG",
+          "REPORT_INNER_ERR_MSG"
+        ],
+        "keywords": [
+          "cann-error-code-standard",
+          "ops-error-code-remediation",
+          "ErrorManager",
+          "OP_LOGE",
+          "documented-error-codes.json",
+          "audit_operator_error_codes",
+          "scan_error_code_candidates"
+        ]
+      }
+    },
+    {
+      "category": "workflow",
+      "conditions": {
+        "collection_tool": "asys",
+        "dump_analyzer": "msaicerr",
+        "product_form": "Ascend EP",
+        "repository": "cann/cannbot-skills",
+        "revision": "f305e200aa4b1e1fed73cd21ff1f083b8df25a1e"
+      },
+      "domain_path": "diagnostics/aicore-dump",
+      "evidence_strength": "software_contract",
+      "id": "unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow",
+      "inherits_from": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ],
+      "path": "diagnostics/aicore-dump/unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow.md",
+      "provenance": {
+        "evidence_refs": [
+          "docs/evidence/cannbot-exception-compute-and-error-code-provenance.json",
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/tools/tool-exception-dump/SKILL.md#L11-L360"
+        ],
+        "source_digest": "4ae68ba4f787ebc533cc4d094982459de194695b06facb4621218e7f5a0de045",
+        "source_locator": "docs/evidence/cannbot-exception-compute-and-error-code-provenance.json",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L3",
+      "title": "Closed-loop 34-step AI Core exception dump workflow across Stars/David register decoding, special scenarios, and 101-107 return codes",
+      "token_estimate": 1246,
+      "triggers": {
+        "error_signatures": [
+          "The built-in sample operator runs successfully, The environment is normal.",
+          "Do not run msaicerr in the directory specified by -p or its subdirectory",
+          "Failed to get dump data of error op!",
+          "dha status 1",
+          "Begin to dump callback exception",
+          "fftsplus task execute failed"
+        ],
+        "keywords": [
+          "tool-exception-dump",
+          "msaicerr",
+          "asys",
+          "Stars",
+          "David",
+          "aicerror",
+          "llvm-symbolizer",
+          "cce-objdump",
+          "return code 101",
+          "return code 104",
+          "return code 105"
+        ]
+      }
+    },
     {
       "category": "measurement",
       "conditions": {
@@ -108,6 +236,68 @@
           "wall clock",
           "warmup",
           "pipe utilization"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "accelerator": "ascend",
+        "repository": "cann/cannbot-skills",
+        "revision": "f305e200aa4b1e1fed73cd21ff1f083b8df25a1e",
+        "tools": [
+          "npu-compute",
+          "npu-check",
+          "ascendc-debug-api"
+        ]
+      },
+      "domain_path": "measurement/npu-compute",
+      "evidence_strength": "software_contract",
+      "id": "unit-ascend-npu-compute-npu-check-and-debug-api-sop",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "measurement/npu-compute/unit-ascend-npu-compute-npu-check-and-debug-api-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "docs/evidence/cannbot-exception-compute-and-error-code-provenance.json",
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/tools/tool-npu-compute/SKILL.md#L8-L176",
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/tools/tool-npu-check/SKILL.md#L6-L126",
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/tools/tools-npu-debug-api/SKILL.md#L10-L72"
+        ],
+        "source_digest": "b71bc139badf896ec20c0ae939a1fc7ad7c9e20c5931a87eedc965c6963df43c",
+        "source_locator": "docs/evidence/cannbot-exception-compute-and-error-code-provenance.json",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "Kernel-level profiling and correctness SOP for npu-compute, npu-check memcheck/synccheck, and AscendC debug APIs",
+      "token_estimate": 1038,
+      "triggers": {
+        "error_signatures": [
+          "npu-compute: report=",
+          "npu-compute: unpacked=",
+          "ResourceConflictRatio",
+          "npu-check --tool memcheck",
+          "npu-check --tool synccheck"
+        ],
+        "keywords": [
+          "npu-compute",
+          "npu-rep",
+          "PipeTrace.json",
+          "ArithmeticUtilization",
+          "PipeUtilization",
+          "ResourceConflictRatio",
+          "npu-check",
+          "memcheck",
+          "synccheck",
+          "asc_dump",
+          "asc_time_stamp"
         ]
       }
     },
