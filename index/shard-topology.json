@@ -29,15 +29,68 @@
       "unit-msprof-analyze-step-overlap-clock-and-intervals",
       "unit-msprof-analyze-mfu-range-flops-attribution"
     ],
+    "unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
+    ],
+    "unit-asys-ep-subcommand-routing-and-six-env-collection-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+    ],
+    "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+    ],
+    "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow": [
+      "unit-msprof-analyze-step-overlap-clock-and-intervals"
+    ],
+    "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+      "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+    ],
+    "unit-msnpureport-permanent-blackbox-and-slog-coremask-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+    ],
     "unit-msprof-analyze-mfu-range-flops-attribution": [],
     "unit-msprof-analyze-step-overlap-clock-and-intervals": [],
-    "unit-observed-dual-die-phy-id-topology": []
+    "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+    ],
+    "unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+    ],
+    "unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
+    ],
+    "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms": [
+      "unit-observed-dual-die-phy-id-topology"
+    ],
+    "unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+      "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+    ],
+    "unit-observed-dual-die-phy-id-topology": [],
+    "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+    ],
+    "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop": [
+      "unit-msprof-analyze-mfu-range-flops-attribution"
+    ]
   },
   "federation": {
     "corpus": {
       "automatic": false,
-      "bytes": 74110,
-      "estimated_tokens": 13675,
+      "bytes": 146898,
+      "estimated_tokens": 26268,
       "kind": "federation",
       "path": ".",
       "unit_ids": [
@@ -48,17 +101,30 @@
         "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop",
         "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
         "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow",
+        "unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop",
+        "unit-asys-ep-subcommand-routing-and-six-env-collection-sop",
+        "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop",
+        "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow",
+        "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop",
+        "unit-msnpureport-permanent-blackbox-and-slog-coremask-sop",
         "unit-msprof-analyze-mfu-range-flops-attribution",
         "unit-msprof-analyze-step-overlap-clock-and-intervals",
-        "unit-observed-dual-die-phy-id-topology"
+        "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms",
+        "unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop",
+        "unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop",
+        "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms",
+        "unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow",
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop",
+        "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop"
       ],
-      "units": 10
+      "units": 23
     },
     "domains": [
       {
         "automatic": false,
-        "bytes": 36618,
-        "estimated_tokens": 7019,
+        "bytes": 68994,
+        "estimated_tokens": 12689,
         "exceeds": [],
         "kind": "federation",
         "path": "diagnostics",
@@ -67,9 +133,15 @@
           "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow",
           "unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow",
           "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop",
-          "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+          "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+          "unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop",
+          "unit-asys-ep-subcommand-routing-and-six-env-collection-sop",
+          "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop",
+          "unit-msnpureport-permanent-blackbox-and-slog-coremask-sop",
+          "unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop",
+          "unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow"
         ],
-        "units": 4
+        "units": 10
       },
       {
         "automatic": false,
@@ -100,18 +172,47 @@
           "unit-msprof-analyze-step-overlap-clock-and-intervals"
         ],
         "units": 5
+      },
+      {
+        "automatic": false,
+        "bytes": 28088,
+        "estimated_tokens": 4893,
+        "exceeds": [],
+        "kind": "federation",
+        "path": "profiling",
+        "recommended_action": "review_federation_boundary",
+        "unit_ids": [
+          "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow",
+          "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms",
+          "unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop",
+          "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop",
+          "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop"
+        ],
+        "units": 5
+      },
+      {
+        "automatic": false,
+        "bytes": 12324,
+        "estimated_tokens": 2030,
+        "exceeds": [],
+        "kind": "federation",
+        "path": "validation",
+        "recommended_action": "review_federation_boundary",
+        "unit_ids": [
+          "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop",
+          "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+        ],
+        "units": 2
       }
     ]
   },
-  "index_build_elapsed_ms": 5.507666035555303,
+  "index_build_elapsed_ms": 8.445375016890466,
   "leaves": [
     {
       "automatic": false,
       "bytes": 19578,
       "estimated_tokens": 3848,
-      "exceeds": [
-        "estimated_tokens"
-      ],
+      "exceeds": [],
       "kind": "leaf",
       "path": "diagnostics/aicore-dump",
       "recommended_action": "review_leaf_split",
@@ -120,6 +221,84 @@
         "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
       ],
       "units": 2
+    },
+    {
+      "automatic": false,
+      "bytes": 5227,
+      "estimated_tokens": 919,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "diagnostics/cann-toolchain/asys-and-msnpureport/blackbox-and-slog",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-msnpureport-permanent-blackbox-and-slog-coremask-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5703,
+      "estimated_tokens": 1039,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "diagnostics/cann-toolchain/asys-and-msnpureport/command-routing-and-collect",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-asys-ep-subcommand-routing-and-six-env-collection-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 4901,
+      "estimated_tokens": 845,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "diagnostics/cann-toolchain/msaicerr-and-objdump/exception-register-decoding",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5657,
+      "estimated_tokens": 981,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "diagnostics/cann-toolchain/msaicerr-and-objdump/pc-offset-disassembly",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5510,
+      "estimated_tokens": 969,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "diagnostics/cann-toolchain/sanitizer-and-debug-api/kernel-debug-instrumentation",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5378,
+      "estimated_tokens": 917,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "diagnostics/cann-toolchain/sanitizer-and-debug-api/mssanitizer-and-npu-check",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop"
+      ],
+      "units": 1
     },
     {
       "automatic": false,
@@ -224,6 +403,97 @@
         "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
       ],
       "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5469,
+      "estimated_tokens": 913,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "profiling/msprof-and-simulator/op-and-camodel/camodel-and-npusim-trace",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5666,
+      "estimated_tokens": 1031,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "profiling/msprof-and-simulator/op-and-camodel/pmu-metrics-and-roofline",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 4980,
+      "estimated_tokens": 797,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "profiling/msprof-and-simulator/op-and-camodel/triton-mfu-decomposition",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 6733,
+      "estimated_tokens": 1242,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "profiling/msprof-and-simulator/system-and-timeline/hccl-overlap-and-precision-flow",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5240,
+      "estimated_tokens": 910,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "profiling/msprof-and-simulator/system-and-timeline/torch-npu-profiler-and-gaps",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5858,
+      "estimated_tokens": 973,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "validation/testing-and-golden/ut-st-benchmarks/tolerance-and-comparators",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 6466,
+      "estimated_tokens": 1057,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "validation/testing-and-golden/ut-st-benchmarks/ut-st-and-whitebox-coverage",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop"
+      ],
+      "units": 1
     }
   ],
   "schema": "mindie-shard-topology/1",
@@ -239,6 +509,48 @@
       "unit_ids": [
         "unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow",
         "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ],
+      "units": 2
+    },
+    {
+      "automatic": false,
+      "bytes": 10930,
+      "estimated_tokens": 1958,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "diagnostics/cann-toolchain/asys-and-msnpureport",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-asys-ep-subcommand-routing-and-six-env-collection-sop",
+        "unit-msnpureport-permanent-blackbox-and-slog-coremask-sop"
+      ],
+      "units": 2
+    },
+    {
+      "automatic": false,
+      "bytes": 10558,
+      "estimated_tokens": 1826,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "diagnostics/cann-toolchain/msaicerr-and-objdump",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop",
+        "unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow"
+      ],
+      "units": 2
+    },
+    {
+      "automatic": false,
+      "bytes": 10888,
+      "estimated_tokens": 1886,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "diagnostics/cann-toolchain/sanitizer-and-debug-api",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop",
+        "unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop"
       ],
       "units": 2
     },
@@ -321,9 +633,52 @@
         "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
       ],
       "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 16115,
+      "estimated_tokens": 2741,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "profiling/msprof-and-simulator/op-and-camodel",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms",
+        "unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop",
+        "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop"
+      ],
+      "units": 3
+    },
+    {
+      "automatic": false,
+      "bytes": 11973,
+      "estimated_tokens": 2152,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "profiling/msprof-and-simulator/system-and-timeline",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow",
+        "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop"
+      ],
+      "units": 2
+    },
+    {
+      "automatic": false,
+      "bytes": 12324,
+      "estimated_tokens": 2030,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "validation/testing-and-golden/ut-st-benchmarks",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop",
+        "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+      ],
+      "units": 2
     }
   ],
-  "unit_count": 10,
+  "unit_count": 23,
   "units": {
     "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": {
       "bytes": 5014,
@@ -419,6 +774,84 @@
       "path": "measurement/end-to-end/unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow.md",
       "tier": "L3"
     },
+    "unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop": {
+      "bytes": 5510,
+      "category": "sop",
+      "content_sha256": "c34e94d8056b37109365a26286517eb9f6ccaf2d6841eb1776f27dea32d3d80d",
+      "domain_path": "diagnostics/cann-toolchain/sanitizer-and-debug-api/kernel-debug-instrumentation",
+      "estimated_tokens": 969,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
+      ],
+      "path": "diagnostics/cann-toolchain/sanitizer-and-debug-api/kernel-debug-instrumentation/unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop.md",
+      "tier": "L2"
+    },
+    "unit-asys-ep-subcommand-routing-and-six-env-collection-sop": {
+      "bytes": 5703,
+      "category": "sop",
+      "content_sha256": "bf3f9cc8db78051ca3316a103236fec3d505cfa583091d4ae372565230865f9c",
+      "domain_path": "diagnostics/cann-toolchain/asys-and-msnpureport/command-routing-and-collect",
+      "estimated_tokens": 1039,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ],
+      "path": "diagnostics/cann-toolchain/asys-and-msnpureport/command-routing-and-collect/unit-asys-ep-subcommand-routing-and-six-env-collection-sop.md",
+      "tier": "L2"
+    },
+    "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop": {
+      "bytes": 6466,
+      "category": "sop",
+      "content_sha256": "cd9d95f3dff6bb81110067f41885687e4a8e1bb800e83e7c4ba76aefd97ea211",
+      "domain_path": "validation/testing-and-golden/ut-st-benchmarks/ut-st-and-whitebox-coverage",
+      "estimated_tokens": 1057,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+      ],
+      "path": "validation/testing-and-golden/ut-st-benchmarks/ut-st-and-whitebox-coverage/unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop.md",
+      "tier": "L2"
+    },
+    "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow": {
+      "bytes": 6733,
+      "category": "workflow",
+      "content_sha256": "299e1a58e2c8de7df0413680da2aee6f967593b3349cbb408c8af58bb326a146",
+      "domain_path": "profiling/msprof-and-simulator/system-and-timeline/hccl-overlap-and-precision-flow",
+      "estimated_tokens": 1242,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-msprof-analyze-step-overlap-clock-and-intervals"
+      ],
+      "path": "profiling/msprof-and-simulator/system-and-timeline/hccl-overlap-and-precision-flow/unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow.md",
+      "tier": "L3"
+    },
+    "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop": {
+      "bytes": 4901,
+      "category": "sop",
+      "content_sha256": "e3a3b7c6d736371b3cb90d38d4dc55dbb7b6a4e5930bfac427e615557204c3ed",
+      "domain_path": "diagnostics/cann-toolchain/msaicerr-and-objdump/exception-register-decoding",
+      "estimated_tokens": 845,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ],
+      "path": "diagnostics/cann-toolchain/msaicerr-and-objdump/exception-register-decoding/unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop.md",
+      "tier": "L2"
+    },
+    "unit-msnpureport-permanent-blackbox-and-slog-coremask-sop": {
+      "bytes": 5227,
+      "category": "sop",
+      "content_sha256": "d7942fa98d115ea71057c340db9e431ec1996f8de40eabe5df56ad6a74228d88",
+      "domain_path": "diagnostics/cann-toolchain/asys-and-msnpureport/blackbox-and-slog",
+      "estimated_tokens": 919,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ],
+      "path": "diagnostics/cann-toolchain/asys-and-msnpureport/blackbox-and-slog/unit-msnpureport-permanent-blackbox-and-slog-coremask-sop.md",
+      "tier": "L2"
+    },
     "unit-msprof-analyze-mfu-range-flops-attribution": {
       "bytes": 3032,
       "category": "sop",
@@ -441,6 +874,71 @@
       "path": "measurement/msprof/overlap/unit-msprof-analyze-step-overlap-clock-and-intervals.md",
       "tier": "L2"
     },
+    "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms": {
+      "bytes": 5666,
+      "category": "measurement",
+      "content_sha256": "66cd87c160902c7d0cf224a7c8c2310d24d719e866e1d58fd6160373e315c030",
+      "domain_path": "profiling/msprof-and-simulator/op-and-camodel/pmu-metrics-and-roofline",
+      "estimated_tokens": 1031,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "profiling/msprof-and-simulator/op-and-camodel/pmu-metrics-and-roofline/unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms.md",
+      "tier": "L1"
+    },
+    "unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop": {
+      "bytes": 5469,
+      "category": "sop",
+      "content_sha256": "1619871ff1de9938b217b90e0b868b4805354a4d7912926135c734b0d1bfaf3d",
+      "domain_path": "profiling/msprof-and-simulator/op-and-camodel/camodel-and-npusim-trace",
+      "estimated_tokens": 913,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "profiling/msprof-and-simulator/op-and-camodel/camodel-and-npusim-trace/unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop.md",
+      "tier": "L2"
+    },
+    "unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop": {
+      "bytes": 5378,
+      "category": "sop",
+      "content_sha256": "cc492dd9ef24a6015f081a0295e3fe11c18c19ed5e8d6d6ceca82ff6e66c8dbe",
+      "domain_path": "diagnostics/cann-toolchain/sanitizer-and-debug-api/mssanitizer-and-npu-check",
+      "estimated_tokens": 917,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
+      ],
+      "path": "diagnostics/cann-toolchain/sanitizer-and-debug-api/mssanitizer-and-npu-check/unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop.md",
+      "tier": "L2"
+    },
+    "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms": {
+      "bytes": 5858,
+      "category": "axiom",
+      "content_sha256": "3ec9e28c7d694800efb88af41e734ceeff90e501b0d4585042549dcde59f31b3",
+      "domain_path": "validation/testing-and-golden/ut-st-benchmarks/tolerance-and-comparators",
+      "estimated_tokens": 973,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-observed-dual-die-phy-id-topology"
+      ],
+      "path": "validation/testing-and-golden/ut-st-benchmarks/tolerance-and-comparators/unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms.md",
+      "tier": "L1"
+    },
+    "unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow": {
+      "bytes": 5657,
+      "category": "workflow",
+      "content_sha256": "10649a4ae72fbaf7d74606cdc9a0998ad99fee655ba6d3e430f366bfaa62a9f9",
+      "domain_path": "diagnostics/cann-toolchain/msaicerr-and-objdump/pc-offset-disassembly",
+      "estimated_tokens": 981,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ],
+      "path": "diagnostics/cann-toolchain/msaicerr-and-objdump/pc-offset-disassembly/unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow.md",
+      "tier": "L3"
+    },
     "unit-observed-dual-die-phy-id-topology": {
       "bytes": 2150,
       "category": "measurement",
@@ -451,6 +949,32 @@
       "inherits_from": [],
       "path": "hardware/topology/unit-observed-dual-die-phy-id-topology.md",
       "tier": "L1"
+    },
+    "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop": {
+      "bytes": 5240,
+      "category": "sop",
+      "content_sha256": "eac07079b4e44baeced67c0e5cee2522a3246d2f139902e529481dbc2d4e6807",
+      "domain_path": "profiling/msprof-and-simulator/system-and-timeline/torch-npu-profiler-and-gaps",
+      "estimated_tokens": 910,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "profiling/msprof-and-simulator/system-and-timeline/torch-npu-profiler-and-gaps/unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop.md",
+      "tier": "L2"
+    },
+    "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop": {
+      "bytes": 4980,
+      "category": "sop",
+      "content_sha256": "f01645437a6ca5d104a62e0c5bb6feec958a635e278b6f573051407de5c0ee09",
+      "domain_path": "profiling/msprof-and-simulator/op-and-camodel/triton-mfu-decomposition",
+      "estimated_tokens": 797,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-msprof-analyze-mfu-range-flops-attribution"
+      ],
+      "path": "profiling/msprof-and-simulator/op-and-camodel/triton-mfu-decomposition/unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop.md",
+      "tier": "L2"
     }
   }
 }

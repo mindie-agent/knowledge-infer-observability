@@ -1,5 +1,5 @@
 {
-  "build_elapsed_ms": 5.507666035555303,
+  "build_elapsed_ms": 8.445375016890466,
   "closure": {
     "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": [
       "unit-observed-dual-die-phy-id-topology",
@@ -30,11 +30,64 @@
       "unit-msprof-analyze-step-overlap-clock-and-intervals",
       "unit-msprof-analyze-mfu-range-flops-attribution"
     ],
+    "unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
+    ],
+    "unit-asys-ep-subcommand-routing-and-six-env-collection-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+    ],
+    "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+    ],
+    "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow": [
+      "unit-msprof-analyze-step-overlap-clock-and-intervals"
+    ],
+    "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+      "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+    ],
+    "unit-msnpureport-permanent-blackbox-and-slog-coremask-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+    ],
     "unit-msprof-analyze-mfu-range-flops-attribution": [],
     "unit-msprof-analyze-step-overlap-clock-and-intervals": [],
-    "unit-observed-dual-die-phy-id-topology": []
+    "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+    ],
+    "unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+    ],
+    "unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
+    ],
+    "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms": [
+      "unit-observed-dual-die-phy-id-topology"
+    ],
+    "unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+      "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+    ],
+    "unit-observed-dual-die-phy-id-topology": [],
+    "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+    ],
+    "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop": [
+      "unit-msprof-analyze-mfu-range-flops-attribution"
+    ]
   },
-  "generation": "d276c7b836a6a1d12e0e1ab5c52c11fea41fc17147c4151292b75d522e6a78c4",
+  "generation": "6f8b56484974eb0a9851a976017b3a57f4c45948ef547a29cb26cdbbfd58678f",
   "id_path": {
     "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": "diagnostics/error-codes/unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow.md",
     "unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow": "diagnostics/aicore-dump/unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow.md",
@@ -43,14 +96,27 @@
     "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop": "diagnostics/aicore-dump/unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop.md",
     "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop": "diagnostics/plog-asys/unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop.md",
     "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow": "measurement/end-to-end/unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow.md",
+    "unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop": "diagnostics/cann-toolchain/sanitizer-and-debug-api/kernel-debug-instrumentation/unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop.md",
+    "unit-asys-ep-subcommand-routing-and-six-env-collection-sop": "diagnostics/cann-toolchain/asys-and-msnpureport/command-routing-and-collect/unit-asys-ep-subcommand-routing-and-six-env-collection-sop.md",
+    "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop": "validation/testing-and-golden/ut-st-benchmarks/ut-st-and-whitebox-coverage/unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop.md",
+    "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow": "profiling/msprof-and-simulator/system-and-timeline/hccl-overlap-and-precision-flow/unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow.md",
+    "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop": "diagnostics/cann-toolchain/msaicerr-and-objdump/exception-register-decoding/unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop.md",
+    "unit-msnpureport-permanent-blackbox-and-slog-coremask-sop": "diagnostics/cann-toolchain/asys-and-msnpureport/blackbox-and-slog/unit-msnpureport-permanent-blackbox-and-slog-coremask-sop.md",
     "unit-msprof-analyze-mfu-range-flops-attribution": "measurement/msprof/mfu/unit-msprof-analyze-mfu-range-flops-attribution.md",
     "unit-msprof-analyze-step-overlap-clock-and-intervals": "measurement/msprof/overlap/unit-msprof-analyze-step-overlap-clock-and-intervals.md",
-    "unit-observed-dual-die-phy-id-topology": "hardware/topology/unit-observed-dual-die-phy-id-topology.md"
+    "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms": "profiling/msprof-and-simulator/op-and-camodel/pmu-metrics-and-roofline/unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms.md",
+    "unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop": "profiling/msprof-and-simulator/op-and-camodel/camodel-and-npusim-trace/unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop.md",
+    "unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop": "diagnostics/cann-toolchain/sanitizer-and-debug-api/mssanitizer-and-npu-check/unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop.md",
+    "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms": "validation/testing-and-golden/ut-st-benchmarks/tolerance-and-comparators/unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms.md",
+    "unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow": "diagnostics/cann-toolchain/msaicerr-and-objdump/pc-offset-disassembly/unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow.md",
+    "unit-observed-dual-die-phy-id-topology": "hardware/topology/unit-observed-dual-die-phy-id-topology.md",
+    "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop": "profiling/msprof-and-simulator/system-and-timeline/torch-npu-profiler-and-gaps/unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop.md",
+    "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop": "profiling/msprof-and-simulator/op-and-camodel/triton-mfu-decomposition/unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop.md"
   },
   "query_budget_excludes_build": true,
   "schema_version": "mindie-routing-manifest/1",
   "token_estimator": "utf8_bytes_div_4_ceiling",
-  "unit_count": 10,
+  "unit_count": 23,
   "units": [
     {
       "category": "workflow",
@@ -560,6 +626,361 @@
     {
       "category": "sop",
       "conditions": {
+        "hardware": [
+          "Ascend 910B (A2)",
+          "Ascend 910C (A3)",
+          "Ascend 950 (A5)"
+        ],
+        "os": [
+          "Linux"
+        ],
+        "software_stack": [
+          "CANN 8.0+",
+          "Ascend C",
+          "msaicerr"
+        ],
+        "workload": [
+          "Device-side tensor/scalar inspection and isolated single-operator fault reproduction"
+        ]
+      },
+      "domain_path": "diagnostics/cann-toolchain/sanitizer-and-debug-api/kernel-debug-instrumentation",
+      "evidence_strength": "software_contract",
+      "id": "unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop",
+      "inherits_from": [
+        "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
+      ],
+      "path": "diagnostics/cann-toolchain/sanitizer-and-debug-api/kernel-debug-instrumentation/unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/cann/kernel-debug-api/SKILL.md#L1-L210",
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/cann/msaicerr-dump-analysis/SKILL.md#L210-L320"
+        ],
+        "promotion_status": "verified",
+        "source_locator": "cann/cannbot-skills@f305e200aa4b1e1fed73cd21ff1f083b8df25a1e:cann/kernel-debug-api/SKILL.md",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "Ascend C Device printf/DumpTensor/assert Instrumentation and msaicerr Dirty-UB Single-Op Repro SOP",
+      "token_estimate": 969,
+      "triggers": {
+        "error_signatures": [
+          "DumpTensor",
+          "ASCENDC_DUMP=0",
+          "error_single_op"
+        ],
+        "keywords": [
+          "AscendC::DumpTensor",
+          "ascendc_assert",
+          "run_dirty_ub",
+          "host_single_op"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "hardware": [
+          "Ascend 910B (A2)",
+          "Ascend 910C (A3)",
+          "Atlas 300I Duo"
+        ],
+        "os": [
+          "Linux"
+        ],
+        "software_stack": [
+          "CANN 8.0+",
+          "asys"
+        ],
+        "workload": [
+          "Ascend EP failure log bundling, stackcore/coretrace extraction, and hardware stress diagnostics"
+        ]
+      },
+      "domain_path": "diagnostics/cann-toolchain/asys-and-msnpureport/command-routing-and-collect",
+      "evidence_strength": "software_contract",
+      "id": "unit-asys-ep-subcommand-routing-and-six-env-collection-sop",
+      "inherits_from": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ],
+      "path": "diagnostics/cann-toolchain/asys-and-msnpureport/command-routing-and-collect/unit-asys-ep-subcommand-routing-and-six-env-collection-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/cann/asys-Troubleshooting/SKILL.md#L1-L395"
+        ],
+        "promotion_status": "verified",
+        "source_locator": "cann/cannbot-skills@f305e200aa4b1e1fed73cd21ff1f083b8df25a1e:cann/asys-Troubleshooting/SKILL.md",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "asys EP Subcommand Matrix, Output Prefix Rules, and Six-Var Environment Collection SOP",
+      "token_estimate": 1039,
+      "triggers": {
+        "error_signatures": [
+          "asys collect --task_dir=",
+          "asys analyze -r=aicore_error",
+          "asys diagnose -r=stress_detect"
+        ],
+        "keywords": [
+          "asys launch",
+          "asys analyze stackcore",
+          "ASCEND_WORK_PATH",
+          "asys_output_"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "hardware": [
+          "Ascend 910B (A2)",
+          "Ascend 910C (A3)",
+          "Ascend 950 (A5)"
+        ],
+        "os": [
+          "Linux"
+        ],
+        "software_stack": [
+          "CANN 8.0+",
+          "Ascend C",
+          "tikicpulib",
+          "GTest",
+          "lcov"
+        ],
+        "workload": [
+          "Operator UT/ST test suite design, whitebox TilingKey branch coverage, empty tensor semantics, and LLT coverage verification"
+        ]
+      },
+      "domain_path": "validation/testing-and-golden/ut-st-benchmarks/ut-st-and-whitebox-coverage",
+      "evidence_strength": "software_contract",
+      "id": "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop",
+      "inherits_from": [
+        "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+      ],
+      "path": "validation/testing-and-golden/ut-st-benchmarks/ut-st-and-whitebox-coverage/unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/cann/cannbot-knowledge/blob/be5882ef29fa9943305085652d2025a038ba491c/knowledge/contrib/ascendc/guides/testing/kernel_cpu_simulation_and_aicpu_test_boundaries.md#L1-L120",
+          "https://gitcode.com/cann/cannbot-knowledge/blob/be5882ef29fa9943305085652d2025a038ba491c/knowledge/contrib/ascendc/guides/testing/empty_tensor_semantics.md#L1-L120",
+          "https://gitcode.com/cann/cannbot-knowledge/blob/be5882ef29fa9943305085652d2025a038ba491c/knowledge/contrib/ascendc/guides/testing/whitebox_test_case_design_workflow.md#L1-L120",
+          "https://gitcode.com/cann/cannbot-knowledge/blob/be5882ef29fa9943305085652d2025a038ba491c/knowledge/contrib/ascendc/guides/testing/coverage_denominators_and_execution_evidence.md#L1-L120"
+        ],
+        "promotion_status": "verified",
+        "source_locator": "cann/cannbot-knowledge@be5882ef29fa9943305085652d2025a038ba491c:knowledge/contrib/ascendc/guides/testing/index.md",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "Ascend C CPU/NPU Twin UT/ST Boundaries, Whitebox TilingKey Predicates, and Edge-Shape Coverage SOP",
+      "token_estimate": 1057,
+      "triggers": {
+        "error_signatures": [
+          "ICPU_RUN_KF",
+          "NodeDefBuilder",
+          "GmAlloc"
+        ],
+        "keywords": [
+          "tikicpulib",
+          "empty tensor semantics",
+          "whitebox TilingKey",
+          "TTK 26-column CSV"
+        ]
+      }
+    },
+    {
+      "category": "workflow",
+      "conditions": {
+        "hardware": [
+          "Ascend 910B (A2)",
+          "Ascend 910C (A3)",
+          "Ascend 950 (A5)"
+        ],
+        "os": [
+          "Linux"
+        ],
+        "software_stack": [
+          "CANN 8.0+",
+          "msprof",
+          "HCCL",
+          "Ascend C"
+        ],
+        "workload": [
+          "Multi-rank communication overlap optimization and deterministic 8-step operator precision failure debugging"
+        ]
+      },
+      "domain_path": "profiling/msprof-and-simulator/system-and-timeline/hccl-overlap-and-precision-flow",
+      "evidence_strength": "software_contract",
+      "id": "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow",
+      "inherits_from": [
+        "unit-msprof-analyze-step-overlap-clock-and-intervals"
+      ],
+      "inherits_from_closure": [
+        "unit-msprof-analyze-step-overlap-clock-and-intervals"
+      ],
+      "path": "profiling/msprof-and-simulator/system-and-timeline/hccl-overlap-and-precision-flow/unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/cann/precision-debug/SKILL.md#L1-L260",
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/cann/end-to-end-profiling/SKILL.md#L1-L220"
+        ],
+        "promotion_status": "verified",
+        "source_locator": "cann/cannbot-skills@f305e200aa4b1e1fed73cd21ff1f083b8df25a1e:cann/precision-debug/SKILL.md",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L3",
+      "title": "End-to-End HCCL Communication Overlap Analysis and Eight-Step Operator Precision Triage Workflow",
+      "token_estimate": 1242,
+      "triggers": {
+        "error_signatures": [
+          "batch_precision_check.py",
+          "DISABLE_L2_CACHE=1",
+          "Not Overlapped Communication"
+        ],
+        "keywords": [
+          "8-step precision workflow",
+          "stage dump bisection",
+          "1-ULP rounding proof",
+          "communication overlap ratio"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "hardware": [
+          "Ascend 910B (A2)",
+          "Ascend 910C (A3)",
+          "Ascend 950 (A5)"
+        ],
+        "os": [
+          "Linux"
+        ],
+        "software_stack": [
+          "CANN 8.0+",
+          "msaicerr"
+        ],
+        "workload": [
+          "AI Core exception register decoding across Stars and David chip architectures"
+        ]
+      },
+      "domain_path": "diagnostics/cann-toolchain/msaicerr-and-objdump/exception-register-decoding",
+      "evidence_strength": "software_contract",
+      "id": "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop",
+      "inherits_from": [
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ],
+      "path": "diagnostics/cann-toolchain/msaicerr-and-objdump/exception-register-decoding/unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/cann/msaicerr-dump-analysis/SKILL.md#L1-L320"
+        ],
+        "promotion_status": "verified",
+        "source_locator": "cann/cannbot-skills@f305e200aa4b1e1fed73cd21ff1f083b8df25a1e:cann/msaicerr-dump-analysis/SKILL.md",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "msaicerr Stars Hex Bitmask vs David Decimal Bit-Index Six-Subdomain Register Decoding SOP",
+      "token_estimate": 845,
+      "triggers": {
+        "error_signatures": [
+          "aicore_err_extend_info",
+          "aic_error_info_dict",
+          "soc_err_info_dict"
+        ],
+        "keywords": [
+          "Stars bitmask",
+          "David bit index",
+          "fmc_err_info_dict",
+          "unzip_err_info_dict"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "hardware": [
+          "Ascend 910B (A2)",
+          "Ascend 910C (A3)",
+          "Atlas 300I Duo"
+        ],
+        "os": [
+          "Linux"
+        ],
+        "software_stack": [
+          "CANN 8.0+",
+          "msnpureport",
+          "ascend-dmi"
+        ],
+        "workload": [
+          "Device-side slog, stackcore, and blackbox firmware crash export and AIC/AIV core-mask isolation"
+        ]
+      },
+      "domain_path": "diagnostics/cann-toolchain/asys-and-msnpureport/blackbox-and-slog",
+      "evidence_strength": "software_contract",
+      "id": "unit-msnpureport-permanent-blackbox-and-slog-coremask-sop",
+      "inherits_from": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ],
+      "path": "diagnostics/cann-toolchain/asys-and-msnpureport/blackbox-and-slog/unit-msnpureport-permanent-blackbox-and-slog-coremask-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/cann/msnpureport-log-export/SKILL.md#L1-L260"
+        ],
+        "promotion_status": "verified",
+        "source_locator": "cann/cannbot-skills@f305e200aa4b1e1fed73cd21ff1f083b8df25a1e:cann/msnpureport-log-export/SKILL.md",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "msnpureport One-Shot vs Permanent Blackbox Export, Logical/Physical ID Semantics, and Debug Flags SOP",
+      "token_estimate": 919,
+      "triggers": {
+        "error_signatures": [
+          "msnpureport --permanent",
+          "msnpureport --accelerator_recover",
+          "msnpureport --singlecommit"
+        ],
+        "keywords": [
+          "msnpureport",
+          "--aic_switch",
+          "--aiv_switch",
+          "--icachecheck"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
         "repository": "Ascend/msprof-analyze",
         "revision": "639eb8702c1884813dfab59ddb371f7838caab6d"
       },
@@ -649,6 +1070,307 @@
     {
       "category": "measurement",
       "conditions": {
+        "hardware": [
+          "Ascend 910B (A2)",
+          "Ascend 910C (A3)",
+          "Ascend 950 (A5)"
+        ],
+        "os": [
+          "Linux"
+        ],
+        "software_stack": [
+          "CANN 8.0+",
+          "msprof op"
+        ],
+        "workload": [
+          "Single-operator hardware PMU profiling, stable latency measurement, and vector roofline bound analysis"
+        ]
+      },
+      "domain_path": "profiling/msprof-and-simulator/op-and-camodel/pmu-metrics-and-roofline",
+      "evidence_strength": "software_contract",
+      "id": "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "profiling/msprof-and-simulator/op-and-camodel/pmu-metrics-and-roofline/unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/cann/ops-profiling/SKILL.md#L1-L240"
+        ],
+        "promotion_status": "verified",
+        "source_locator": "cann/cannbot-skills@f305e200aa4b1e1fed73cd21ff1f083b8df25a1e:cann/ops-profiling/SKILL.md",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L1",
+      "title": "msprof op 10-Pair Median Timing, PMU Metric Groups, and Ascend 950 Vector Roofline Axioms",
+      "token_estimate": 1031,
+      "triggers": {
+        "error_signatures": [
+          "vec_bankgroup_cflt_ratio",
+          "vec_bank_cflt_ratio",
+          "gm_rw_contention"
+        ],
+        "keywords": [
+          "msprof op 10-pair warmup",
+          "Ascend 950 vector roofline",
+          "core_split_units",
+          "fill_drain"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "hardware": [
+          "Ascend 910B (A2)",
+          "Ascend 910C (A3)",
+          "Ascend 950 (A5)"
+        ],
+        "os": [
+          "Linux"
+        ],
+        "software_stack": [
+          "CANN 8.0+",
+          "msprof op simulator",
+          "npusim",
+          "Triton-Ascend"
+        ],
+        "workload": [
+          "Cycle-accurate CAModel instruction trace analysis, source-line attribution, and pipeline bubble diagnosis"
+        ]
+      },
+      "domain_path": "profiling/msprof-and-simulator/op-and-camodel/camodel-and-npusim-trace",
+      "evidence_strength": "software_contract",
+      "id": "unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "profiling/msprof-and-simulator/op-and-camodel/camodel-and-npusim-trace/unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/plugins-community/triton-profiler-assistant/skills/triton-simulator-profiler/SKILL.md#L1-L260",
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/cann/npusim/SKILL.md#L1-L180"
+        ],
+        "promotion_status": "verified",
+        "source_locator": "cann/cannbot-skills@f305e200aa4b1e1fed73cd21ff1f083b8df25a1e:plugins-community/triton-profiler-assistant/skills/triton-simulator-profiler/SKILL.md",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "msprof op simulator Four-Table Instruction Cross-Analysis and npusim Bubble Diagnosis SOP",
+      "token_estimate": 913,
+      "triggers": {
+        "error_signatures": [
+          "libruntime_camodel.so",
+          "WAIT_FLAG_DEVI",
+          "fixp_l0c2ub"
+        ],
+        "keywords": [
+          "msprof op simulator",
+          "instr_exe.csv",
+          "code_exe.csv",
+          "npusim",
+          "simd_vf_metrics"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "hardware": [
+          "Ascend 910B (A2)",
+          "Ascend 910C (A3)",
+          "Ascend 950 (A5)"
+        ],
+        "os": [
+          "Linux"
+        ],
+        "software_stack": [
+          "CANN 8.0+",
+          "mssanitizer",
+          "npu-check"
+        ],
+        "workload": [
+          "Ascend C and Triton-Ascend kernel memory out-of-bounds, multi-core race, uninitialized read, and event sync verification"
+        ]
+      },
+      "domain_path": "diagnostics/cann-toolchain/sanitizer-and-debug-api/mssanitizer-and-npu-check",
+      "evidence_strength": "software_contract",
+      "id": "unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop",
+      "inherits_from": [
+        "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
+      ],
+      "path": "diagnostics/cann-toolchain/sanitizer-and-debug-api/mssanitizer-and-npu-check/unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/cann/mssanitizer-Detection/SKILL.md#L1-L310",
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/cann/npu-check/SKILL.md#L1-L150"
+        ],
+        "promotion_status": "verified",
+        "source_locator": "cann/cannbot-skills@f305e200aa4b1e1fed73cd21ff1f083b8df25a1e:cann/mssanitizer-Detection/SKILL.md",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "mssanitizer Six Memory Anomaly Classes, Caching Allocator Hooks, and npu-check synccheck SOP",
+      "token_estimate": 917,
+      "triggers": {
+        "error_signatures": [
+          "SanitizerReportMalloc",
+          "SanitizerReportFree",
+          "--check-unused-memory=yes"
+        ],
+        "keywords": [
+          "mssanitizer",
+          "Multi-core Overwrite",
+          "SET_FLAG->WAIT_FLAG",
+          "GET_BUF->RLS_BUF"
+        ]
+      }
+    },
+    {
+      "category": "axiom",
+      "conditions": {
+        "hardware": [
+          "Ascend 910B (A2)",
+          "Ascend 910C (A3)",
+          "Ascend 950 (A5)"
+        ],
+        "os": [
+          "Linux"
+        ],
+        "software_stack": [
+          "CANN 8.0+",
+          "Ascend C",
+          "PyTorch (`torch_npu`)",
+          "GTest"
+        ],
+        "workload": [
+          "Operator accuracy verification, golden reference construction, and C++/Python comparator design"
+        ]
+      },
+      "domain_path": "validation/testing-and-golden/ut-st-benchmarks/tolerance-and-comparators",
+      "evidence_strength": "software_contract",
+      "id": "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms",
+      "inherits_from": [
+        "unit-observed-dual-die-phy-id-topology"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology"
+      ],
+      "path": "validation/testing-and-golden/ut-st-benchmarks/tolerance-and-comparators/unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/cann/ops-precision-standard/SKILL.md#L1-L210",
+          "https://gitcode.com/cann/cannbot-knowledge/blob/be5882ef29fa9943305085652d2025a038ba491c/knowledge/contrib/ascendc/guides/testing/standalone_host_bf16_and_comparator_counterexamples.md#L1-L120",
+          "https://gitcode.com/cann/cannbot-knowledge/blob/be5882ef29fa9943305085652d2025a038ba491c/knowledge/contrib/ascendc/guides/testing/registry_st_comparison_failures_and_coverage.md#L1-L120"
+        ],
+        "promotion_status": "verified",
+        "source_locator": "cann/cannbot-skills@f305e200aa4b1e1fed73cd21ff1f083b8df25a1e:cann/ops-precision-standard/SKILL.md",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L1",
+      "title": "Multi-Dtype Precision Standards (MERE/MARE vs allclose), NaN Comparator Traps, and Host BF16 Conversion Axioms",
+      "token_estimate": 973,
+      "triggers": {
+        "error_signatures": [
+          "std::max(0, NaN)",
+          "FloatToBf16",
+          "MERE",
+          "MARE"
+        ],
+        "keywords": [
+          "ops-precision-standard",
+          "round-to-odd",
+          "round-to-nearest-even",
+          "comparator silent pass"
+        ]
+      }
+    },
+    {
+      "category": "workflow",
+      "conditions": {
+        "hardware": [
+          "Ascend 910B (A2)",
+          "Ascend 910C (A3)",
+          "Ascend 950 (A5)"
+        ],
+        "os": [
+          "Linux"
+        ],
+        "software_stack": [
+          "CANN 8.0+",
+          "npu-objdump",
+          "msobjdump",
+          "cce-objdump",
+          "llvm-objdump"
+        ],
+        "workload": [
+          "Disassembling fatbin/kernel_meta .o binaries and mapping AI Core fault PCs to source lines"
+        ]
+      },
+      "domain_path": "diagnostics/cann-toolchain/msaicerr-and-objdump/pc-offset-disassembly",
+      "evidence_strength": "software_contract",
+      "id": "unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow",
+      "inherits_from": [
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ],
+      "path": "diagnostics/cann-toolchain/msaicerr-and-objdump/pc-offset-disassembly/unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/cann/npu-objdump/SKILL.md#L1-L160",
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/cann/msaicerr-dump-analysis/SKILL.md#L150-L310"
+        ],
+        "promotion_status": "verified",
+        "source_locator": "cann/cannbot-skills@f305e200aa4b1e1fed73cd21ff1f083b8df25a1e:cann/npu-objdump/SKILL.md",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L3",
+      "title": "npu-objdump/cce-objdump Mix-Kernel Symbol Selection, ERR_INFO PC Normalization, and Source Mapping Workflow",
+      "token_estimate": 981,
+      "triggers": {
+        "error_signatures": [
+          "msobjdump --dump-elf",
+          "npu-objdump --extract-elf",
+          "Current PC is not in kernel text range"
+        ],
+        "keywords": [
+          "msobjdump --list-elf",
+          "_mix_aic",
+          "_mix_aiv",
+          "_loc.json"
+        ]
+      }
+    },
+    {
+      "category": "measurement",
+      "conditions": {
         "device_name": "Ascend910",
         "machine_identity_sha256": "c09dc2994a84315148b486a9b4f2e34b656d0112fe5c9d9e663bd57fb2922bab",
         "npu_smi_version": "26.0.rc1",
@@ -686,6 +1408,120 @@
           "one",
           "dual-die",
           "machine"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "hardware": [
+          "Ascend 910B (A2)",
+          "Ascend 910C (A3)",
+          "Ascend 950 (A5)"
+        ],
+        "os": [
+          "Linux"
+        ],
+        "software_stack": [
+          "CANN 8.0+",
+          "PyTorch (`torch_npu`)"
+        ],
+        "workload": [
+          "PyTorch NPU operator/model timeline profiling, op_statistic.csv comparison, and host dispatch gap triage"
+        ]
+      },
+      "domain_path": "profiling/msprof-and-simulator/system-and-timeline/torch-npu-profiler-and-gaps",
+      "evidence_strength": "software_contract",
+      "id": "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "profiling/msprof-and-simulator/system-and-timeline/torch-npu-profiler-and-gaps/unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/cann/torch-npu-profiler/SKILL.md#L1-L220"
+        ],
+        "promotion_status": "verified",
+        "source_locator": "cann/cannbot-skills@f305e200aa4b1e1fed73cd21ff1f083b8df25a1e:cann/torch-npu-profiler/SKILL.md",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "torch_npu.profiler Deterministic Schedule, Dual-Path Baseline, and Host-to-Device Launch Gap Attribution SOP",
+      "token_estimate": 910,
+      "triggers": {
+        "error_signatures": [
+          "ASCEND_PROFILER_OUTPUT",
+          "op_statistic.csv",
+          "AiCoreMetrics.PipeUtilization"
+        ],
+        "keywords": [
+          "torch_npu.profiler",
+          "ExperimentalConfig",
+          "aclrtLaunchKernel",
+          "AICPU fallback"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "hardware": [
+          "Ascend 910B (A2)",
+          "Ascend 910C (A3)"
+        ],
+        "os": [
+          "Linux"
+        ],
+        "software_stack": [
+          "CANN 8.0+",
+          "Triton-Ascend",
+          "PyTorch (`torch_npu`)"
+        ],
+        "workload": [
+          "Operator-level MFU ceiling discovery, shape scaling grid search, and per-kernel FLOPs decomposition"
+        ]
+      },
+      "domain_path": "profiling/msprof-and-simulator/op-and-camodel/triton-mfu-decomposition",
+      "evidence_strength": "software_contract",
+      "id": "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop",
+      "inherits_from": [
+        "unit-msprof-analyze-mfu-range-flops-attribution"
+      ],
+      "inherits_from_closure": [
+        "unit-msprof-analyze-mfu-range-flops-attribution"
+      ],
+      "path": "profiling/msprof-and-simulator/op-and-camodel/triton-mfu-decomposition/unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/cann/cannbot-skills/blob/f305e200aa4b1e1fed73cd21ff1f083b8df25a1e/plugins-community/triton-profiler-assistant/skills/triton-mfu-analyzer/SKILL.md#L1-L260",
+          "https://gitcode.com/cann/cannbot-knowledge/blob/be5882ef29fa9943305085652d2025a038ba491c/knowledge/contrib/ops/triton/guides/tooling/mfu_workflow_and_metrics.md#L1-L110"
+        ],
+        "promotion_status": "verified",
+        "source_locator": "cann/cannbot-skills@f305e200aa4b1e1fed73cd21ff1f083b8df25a1e:plugins-community/triton-profiler-assistant/skills/triton-mfu-analyzer/SKILL.md",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "Triton-Ascend Operator MFU 2D Grid Search, Five-Gate Shape Filter, and Per-Dtype Peak Calibration SOP",
+      "token_estimate": 797,
+      "triggers": {
+        "error_signatures": [
+          "MFU_nom",
+          "MFU_ach",
+          "peak_calib.py"
+        ],
+        "keywords": [
+          "triton-mfu-analyzer",
+          "check_flops.py",
+          "traced_flops",
+          "hardware_flops"
         ]
       }
     }
