@@ -38,16 +38,13 @@ triggers:
 ---
 At msprof-analyze revision 639eb8702c1884813dfab59ddb371f7838caab6d, MFUCalculator joins CPU-op/kernel correlation with kernel shapes on kernel_name, kernel_ts and kernel_end. A recorded MSTX FLOPs range selects op_ts with the closed condition startNs <= op_ts <= endNs, then drops duplicate kernel_ts/kernel_end pairs. The sum of task_duration is only a positivity gate. Dtype is taken from the first selected row before non-positive task durations are removed. Each remaining kernel receives the entire recorded range FLOPs, using flops / (task_duration * 1e-9) / chip_peak. FLOPs are not divided among the selected kernels. The 1e-9 conversion belongs to this database path; it does not inherit the separate CSV column label Task Duration(us). This source reading establishes the attribution formula, not a measured hardware-utilization result. Exporter schemas and clock definitions remain outside the admitted source set.
 
-Reviewed limits and corrections:
+Scope and caveats:
 
 - Keep the inclusive point-selection predicate and full-range FLOPs attribution explicit.
 - Do not describe total_duration as a per-kernel FLOPs weighting.
 - Keep database timing units separate from the other analyzer's CSV labels.
 
 Adoption boundary: Use to interpret an MFU table only after checking the actual exporter clock, dtype and FLOPs-range semantics. No NPU execution or measured efficiency is established here.
-
-Evidence scope: Root accepted only the rewritten mechanism. Independent Cursor reading and its broader findings remain in the immutable author packet. Root source reading is enumerated separately.
-
 This unit is a source-derived inspection procedure at the exact repository revision in conditions. It does not establish a reproduced hardware outcome or measured performance benefit.
 
 Pinned source ranges:

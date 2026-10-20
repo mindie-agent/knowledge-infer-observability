@@ -1,13 +1,32 @@
 {
-  "build_elapsed_ms": 0.9352919878438115,
+  "build_elapsed_ms": 2.1710420260205865,
   "closure": {
+    "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms": [
+      "unit-observed-dual-die-phy-id-topology"
+    ],
+    "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+    ],
+    "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop": [
+      "unit-observed-dual-die-phy-id-topology"
+    ],
+    "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-analyze-step-overlap-clock-and-intervals",
+      "unit-msprof-analyze-mfu-range-flops-attribution"
+    ],
     "unit-msprof-analyze-mfu-range-flops-attribution": [],
     "unit-msprof-analyze-step-overlap-clock-and-intervals": [],
     "unit-observed-dual-die-phy-id-topology": []
   },
-  "digest": "174c49fdcca2ce7d0549c0e64dba5b35100485bbf72ce7089def11c12f90343c",
-  "generation": "449d068121f7d4e3d39284f7a02c96dcbc7f403a69ff74e1743ee542d884a35b",
+  "generation": "db1fbfdabccd86639292e7eefa79face0fdf95b7cd2f7162641d5d3a541cf860",
   "id_path": {
+    "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms": "measurement/msprof/unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms.md",
+    "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop": "diagnostics/aicore-dump/unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop.md",
+    "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop": "diagnostics/plog-asys/unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop.md",
+    "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow": "measurement/end-to-end/unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow.md",
     "unit-msprof-analyze-mfu-range-flops-attribution": "measurement/msprof/mfu/unit-msprof-analyze-mfu-range-flops-attribution.md",
     "unit-msprof-analyze-step-overlap-clock-and-intervals": "measurement/msprof/overlap/unit-msprof-analyze-step-overlap-clock-and-intervals.md",
     "unit-observed-dual-die-phy-id-topology": "hardware/topology/unit-observed-dual-die-phy-id-topology.md"
@@ -15,17 +34,345 @@
   "query_budget_excludes_build": true,
   "schema_version": "mindie-routing-manifest/1",
   "token_estimator": "utf8_bytes_div_4_ceiling",
-  "unit_count": 3,
+  "unit_count": 7,
   "units": [
     {
+      "category": "measurement",
+      "conditions": {
+        "artifact": [
+          "op_summary_*.csv",
+          "step_trace_time.csv"
+        ],
+        "clock_domains": [
+          "host wall clock",
+          "device task timestamps"
+        ],
+        "profiler_family": [
+          "msprof",
+          "torch_npu.profiler"
+        ],
+        "required_sync": "torch.npu.synchronize or an equivalent device or stream boundary",
+        "warmup_policy": "compile, capture and DVFS warmup are excluded from the steady-state sample"
+      },
+      "domain_path": "measurement/msprof",
+      "evidence_strength": "software_contract",
+      "id": "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "inherits_from": [
+        "unit-observed-dual-die-phy-id-topology"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology"
+      ],
+      "path": "measurement/msprof/unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms.md",
+      "provenance": {
+        "evidence_refs": [
+          "docs/evidence/cannbot-observability-provenance.json#source_records.src-msprof-op-summary-fields",
+          "docs/evidence/cannbot-observability-provenance.json#observed_measurements.obs-op-summary-wait",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:plugins-community/collaborative-agent-kernel-evolution/skills/code-performance-advisor/references/standards/op_summary_header_guide.md#L17-L64",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:ops/ops-profiling/references/csv_fields_reference.md#L30-L64",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:ops/ops-profiling/references/msprof-guide.md#L48-L67",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:model/model-infer-profiling/SKILL.md#L185-L245",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:plugins-community/triton-optimizer/skills/triton-npu-optimize/scripts/profile-operator/torch_npu_profiler_parser.py#L113-L136"
+        ],
+        "source_digest": "814abc1f4a1141018c23b53388f21ee219ba15a1be1b87c1543f491685c1b68d",
+        "source_locator": "docs/evidence/cannbot-observability-provenance.json",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L1",
+      "title": "Ascend msprof pipe ratios and host wall clock are separate measurement domains",
+      "token_estimate": 1571,
+      "triggers": {
+        "error_signatures": [
+          "host wall clock and Task Duration disagree",
+          "Task Wait Time exceeds Task Duration",
+          "step_trace Free dominates Stage",
+          "Task Duration changes while host wall clock is unchanged"
+        ],
+        "keywords": [
+          "msprof",
+          "op_summary",
+          "Task Duration",
+          "Task Wait Time",
+          "aic_mac_ratio",
+          "aiv_vec_ratio",
+          "aic_mte2_ratio",
+          "aiv_mte2_ratio",
+          "aiv_mte3_ratio",
+          "step_trace",
+          "Stage",
+          "Computing",
+          "Free",
+          "torch.npu.synchronize",
+          "wall clock",
+          "warmup",
+          "pipe utilization"
+        ]
+      }
+    },
+    {
       "category": "sop",
-      "closure_digest": "sha256:1ad91fd3c428661574a516ef2c235381b3e881143facec06f773425dfc58bddf",
+      "conditions": {
+        "binary_forms": [
+          "standalone device ELF",
+          "fused host ELF with .aicore_binary",
+          ".o and .json kernel artifacts",
+          "supported .ascend.kernel packages"
+        ],
+        "core_types": [
+          "AIC",
+          "AIV",
+          "MIX_AIC",
+          "MIX_AIV"
+        ],
+        "disassembler": "npu-objdump or msobjdump plus a CANN llvm-objdump with the Ascend backend",
+        "first_error_policy": "first exception tuple in log time order",
+        "pc_fields": [
+          "pc start",
+          "current",
+          "*_ERR_INFO"
+        ]
+      },
+      "domain_path": "diagnostics/aicore-dump",
+      "evidence_strength": "software_contract",
+      "id": "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop",
+      "inherits_from": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ],
+      "path": "diagnostics/aicore-dump/unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "docs/evidence/cannbot-observability-provenance.json#source_records.src-objdump-skill",
+          "docs/evidence/cannbot-observability-provenance.json#source_records.src-objdump-fault-pc",
+          "docs/evidence/cannbot-observability-provenance.json#aic_error_families",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:tools/npu-objdump-toolkit/SKILL.md#L20-L62",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:tools/npu-objdump-toolkit/references/fault-pc-disassembly.md#L5-L154",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:tools/tool-exception-dump/references/error-line-location.md#L94-L128",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:tools/tool-exception-dump/references/error-type-decode.md#L9-L169",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:ops/ascendc-runtime-debug/references/error_codes.md#L19-L27",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:ops/ascendc-runtime-debug/references/debug_workflow.md#L161-L275"
+        ],
+        "source_digest": "814abc1f4a1141018c23b53388f21ee219ba15a1be1b87c1543f491685c1b68d",
+        "source_locator": "docs/evidence/cannbot-observability-provenance.json",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "Five-step PC and aic_error bitmask triage for Ascend AI Core exception dumps",
+      "token_estimate": 2602,
+      "triggers": {
+        "error_signatures": [
+          "there is an aicore error exception",
+          "there is an aivec error exception",
+          "aic error mask",
+          "CURRENT_PC",
+          "pc start",
+          "trap_or_timeout",
+          "507035",
+          "507015"
+        ],
+        "keywords": [
+          "npu-objdump",
+          "msobjdump",
+          "bisheng-objdump",
+          "llvm-objdump",
+          "disassembly",
+          "aic_error",
+          "ERR_INFO",
+          "MTE2",
+          "UB",
+          "misaligned",
+          "NaN",
+          "Inf",
+          "queue deadlock",
+          "PC offset",
+          "AI Core Error",
+          "exception dump"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "collection_tool": "asys",
+        "default_plog_glob": "~/ascend/log/debug/plog/plog-<pid>_*.log",
+        "dump_analyzer": "msaicerr",
+        "first_error_policy": "first timestamp-ordered error, not the last error",
+        "log_family": "CANN plog",
+        "product_form": "Ascend EP"
+      },
+      "domain_path": "diagnostics/plog-asys",
+      "evidence_strength": "software_contract",
+      "id": "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+      "inherits_from": [
+        "unit-observed-dual-die-phy-id-topology"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology"
+      ],
+      "path": "diagnostics/plog-asys/unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "docs/evidence/cannbot-observability-provenance.json#source_records.src-asys-command",
+          "docs/evidence/cannbot-observability-provenance.json#source_records.src-msaicerr-command",
+          "docs/evidence/cannbot-observability-provenance.json#observed_measurements.obs-aicpu-507018",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:tools/asys-toolkit/SKILL.md#L71-L107",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:tools/asys-toolkit/references/analyze-files.md#L331-L389",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:tools/msaicerr-toolkit/SKILL.md#L8-L79",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:tools/msaicerr-toolkit/references/aicore-error-analysis.md#L17-L72",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:tools/tool-exception-dump/SKILL.md#L203-L229",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:ops/cann-error-code-standard/references/development-standard.md#L10-L23",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:ops/ops-error-code-remediation/references/trigger-coverage.md#L30-L37",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:ops/ascendc-runtime-debug/references/error_codes.md#L19-L27",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:ops/pypto-op-knowledge/references/experience_classified/machine.md#L26-L34",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:tools/msnpureport-toolkit/SKILL.md#L8-L18"
+        ],
+        "source_digest": "814abc1f4a1141018c23b53388f21ee219ba15a1be1b87c1543f491685c1b68d",
+        "source_locator": "docs/evidence/cannbot-observability-provenance.json",
+        "source_type": "ecosystem_repo",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "Five-step SOP from plog first error to asys and msaicerr evidence",
+      "token_estimate": 2288,
+      "triggers": {
+        "error_signatures": [
+          "EZ9999",
+          "EL0004",
+          "EI0006",
+          "507015",
+          "507018",
+          "507035",
+          "there is an aicore error exception",
+          "there is an aivec error exception",
+          "Getting socket times out",
+          "Failed to allocate memory",
+          "rtStreamSynchronize:ErrCode="
+        ],
+        "keywords": [
+          "plog",
+          "asys",
+          "asys collect",
+          "asys analyze",
+          "msaicerr",
+          "aicore error",
+          "aivec error",
+          "CANN error code",
+          "RTS return code",
+          "HCCL socket timeout",
+          "memory allocation failure",
+          "first error",
+          "fault information collection",
+          "npu-smi"
+        ]
+      }
+    },
+    {
+      "category": "workflow",
+      "conditions": {
+        "execution_modes": [
+          "eager",
+          "ACLGraph replay"
+        ],
+        "load_control": "matched concurrency, input and output lengths, warmup and prefix-cache state",
+        "measurement_sources": [
+          "serving histogram",
+          "step_trace_time.csv",
+          "op_summary_*.csv",
+          "trace_view.json",
+          "cluster communication DB"
+        ],
+        "metrics": [
+          "TTFT",
+          "TPOT"
+        ],
+        "workload": "online LLM serving"
+      },
+      "domain_path": "measurement/end-to-end",
+      "evidence_strength": "reproduced_empirical",
+      "id": "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-msprof-analyze-step-overlap-clock-and-intervals",
+        "unit-msprof-analyze-mfu-range-flops-attribution"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-msprof-analyze-step-overlap-clock-and-intervals",
+        "unit-msprof-analyze-mfu-range-flops-attribution"
+      ],
+      "path": "measurement/end-to-end/unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow.md",
+      "provenance": {
+        "evidence_refs": [
+          "docs/evidence/cannbot-observability-provenance.json#observed_measurements.obs-serving-single-request",
+          "docs/evidence/cannbot-observability-provenance.json#observed_measurements.obs-serving-concurrent-32",
+          "docs/evidence/cannbot-observability-provenance.json#observed_measurements.obs-step-trace-128k",
+          "docs/evidence/cannbot-observability-provenance.json#observed_measurements.obs-itl-stall",
+          "docs/evidence/cannbot-observability-provenance.json#observed_measurements.obs-op-summary-wait",
+          "docs/evidence/cannbot-observability-provenance.json#observed_measurements.obs-aclgraph-replay",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:model/model-infer-profiling/SKILL.md#L185-L283",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:model/model-infer-graph-mode/references/llm-model-guide.md#L11-L75",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:model/model-infer-graph-mode/references/llm-model-guide.md#L213-L221",
+          "cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:plugins-community/triton-optimizer/skills/triton-npu-optimize/references/triton-npu-analyze-round-performance/triton-npu-profiling-analysis.md#L41-L71",
+          "Ascend/msagent@521f8ead0ebda5db5b282f0c3c4147006e01e016:skills/profiler/ascend-communication-analysis/SKILL.md#L8-L15",
+          "Ascend/msagent@521f8ead0ebda5db5b282f0c3c4147006e01e016:skills/profiler/ascend-communication-analysis/SKILL.md#L168-L196"
+        ],
+        "source_digest": "814abc1f4a1141018c23b53388f21ee219ba15a1be1b87c1543f491685c1b68d",
+        "source_locator": "docs/evidence/cannbot-observability-provenance.json",
+        "source_type": "run_manifest",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L3",
+      "title": "Four-stage attribution of serving TTFT and TPOT regressions across host, graph, HCCL and AICore",
+      "token_estimate": 2685,
+      "triggers": {
+        "error_signatures": [
+          "TTFT regression",
+          "TPOT regression",
+          "long-tail ITL spike",
+          "generation throughput=0",
+          "graph break",
+          "aclgraph capture failure",
+          ".item() sync in forward",
+          "HCCL collective wait"
+        ],
+        "keywords": [
+          "TTFT",
+          "TPOT",
+          "ITL",
+          "serving",
+          "ACLGraph",
+          "graph capture",
+          "graph replay",
+          "D2H",
+          "item",
+          "HCCL",
+          "collective wait",
+          "op_summary",
+          "step_trace",
+          "AICore",
+          "AIV",
+          "attribution",
+          "prefill",
+          "decode"
+        ]
+      }
+    },
+    {
+      "category": "sop",
       "conditions": {
         "repository": "Ascend/msprof-analyze",
         "revision": "639eb8702c1884813dfab59ddb371f7838caab6d"
       },
-      "content_digest": "sha256:67c9ea7f5458e067a0eb36b7c16b324fb0e02e1a234eba8fd707b334aa6620a3",
-      "content_sha256": "67c9ea7f5458e067a0eb36b7c16b324fb0e02e1a234eba8fd707b334aa6620a3",
       "domain_path": "measurement/msprof/mfu",
       "evidence_strength": "single_observation",
       "id": "unit-msprof-analyze-mfu-range-flops-attribution",
@@ -45,7 +392,7 @@
       "revision": 1,
       "tier": "L2",
       "title": "Recorded FLOPs are assigned to every selected kernel in msprof MFU",
-      "token_estimate": 519,
+      "token_estimate": 466,
       "triggers": {
         "error_signatures": [],
         "keywords": [
@@ -66,13 +413,10 @@
     },
     {
       "category": "sop",
-      "closure_digest": "sha256:0801a5b4ed24e3675c28fa4a0170a0e3a97b6f9d098d0b40c2a64feee37145a9",
       "conditions": {
         "repository": "Ascend/msprof-analyze",
         "revision": "639eb8702c1884813dfab59ddb371f7838caab6d"
       },
-      "content_digest": "sha256:aa930636bf2fd97a76e483b379501b0ec1149919d78560cb552c3c9655b616b9",
-      "content_sha256": "aa930636bf2fd97a76e483b379501b0ec1149919d78560cb552c3c9655b616b9",
       "domain_path": "measurement/msprof/overlap",
       "evidence_strength": "single_observation",
       "id": "unit-msprof-analyze-step-overlap-clock-and-intervals",
@@ -94,7 +438,7 @@
       "revision": 1,
       "tier": "L2",
       "title": "Linearity selects overlapping events without clipping them to the step",
-      "token_estimate": 668,
+      "token_estimate": 614,
       "triggers": {
         "error_signatures": [],
         "keywords": [
@@ -114,15 +458,12 @@
     },
     {
       "category": "measurement",
-      "closure_digest": "sha256:3a678617711efd5384ee6303953e593b1401cda46d81d21e99bb8ad456c0a0d8",
       "conditions": {
         "device_name": "Ascend910",
         "machine_identity_sha256": "c09dc2994a84315148b486a9b4f2e34b656d0112fe5c9d9e663bd57fb2922bab",
         "npu_smi_version": "26.0.rc1",
         "topology_sha256": "69790a51d503a1816fb4145c0516d46168123b646d9da24063edc4f0099fa638"
       },
-      "content_digest": "sha256:0d2597e6da58b50f8ad69425dd708d6ae40fecd9c7729c8ef4a6b429a79790ea",
-      "content_sha256": "0d2597e6da58b50f8ad69425dd708d6ae40fecd9c7729c8ef4a6b429a79790ea",
       "domain_path": "hardware/topology",
       "evidence_strength": "reproduced_empirical",
       "id": "unit-observed-dual-die-phy-id-topology",

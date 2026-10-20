@@ -1,0 +1,923 @@
+{
+  "schema_version": "mindie-cannbot-observability-provenance/1",
+  "domain": "infer-observability",
+  "purpose": "Revision-pinned provenance and recorded-measurement packet for four infer-observability units distilled from CANNBot skills and a redacted engineering transcript. The packet separates software contracts from observed measurements; it does not promote one into the other.",
+  "source_snapshot": {
+    "repository": "cannbot-skills (includes the cannbot-knowledge subtree)",
+    "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+    "revision_date": "2026-10-19T21:41:44+08:00",
+    "locator_form": "<repository>@<revision>:<path>#Lx-Ly",
+    "inspection": "read-only",
+    "privacy": "Absolute workspace paths, hostnames, container identifiers, usernames and internal endpoints are omitted.",
+    "secondary_repository": "Ascend/msagent",
+    "secondary_revision": "521f8ead0ebda5db5b282f0c3c4147006e01e016",
+    "secondary_revision_date": "2026-10-19T15:04:48+08:00"
+  },
+  "source_records": [
+    {
+      "id": "src-msprof-op-summary-fields",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "plugins-community/collaborative-agent-kernel-evolution/skills/code-performance-advisor/references/standards/op_summary_header_guide.md",
+      "line_ranges": [
+        "L17-L24",
+        "L35-L64",
+        "L74-L76"
+      ],
+      "sha256": "1e15cf852f1663c73ab83285f6835b90c07b17ed5512d0440307cdb7403db150",
+      "claims": [
+        "Task Start Time, Task Duration and Task Wait Time are distinct columns; Task Wait Time is not part of Task Duration.",
+        "aic_mac_ratio, aiv_vec_ratio, aic_mte2_ratio, aiv_mte2_ratio and aiv_mte3_ratio are 0-1 cycle-share ratios, not wall-clock percentages.",
+        "Task Type determines which AIC/AIV columns are meaningful; a blank or 0 value is not by itself proof of a zero measurement."
+      ],
+      "unit_ids": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ]
+    },
+    {
+      "id": "src-msprof-csv-reference",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "ops/ops-profiling/references/csv_fields_reference.md",
+      "line_ranges": [
+        "L30-L64",
+        "L124-L147"
+      ],
+      "sha256": "98675589438cfdb85e121244f0e4052072535718662396bd4c42ab657202500a",
+      "claims": [
+        "Task Duration(us) is the core per-task time metric; Block Dim and Mix Block Dim are launch-shape fields.",
+        "Pipe ratios are per-core row values; the reference gives producer-side interpretation thresholds, not universal pass/fail laws.",
+        "Memory fields expose transfer paths separately from pipe-cycle ratios."
+      ],
+      "unit_ids": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ]
+    },
+    {
+      "id": "src-msprof-standard-timing",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "ops/ops-profiling/references/msprof-guide.md",
+      "line_ranges": [
+        "L48-L67",
+        "L94-L113",
+        "L237-L243"
+      ],
+      "sha256": "5d412365e0b0af9244668bd3638ff3548b58b72094c7e4c1c94f0e05d1bb7160",
+      "claims": [
+        "The standard comparable protocol uses adjacent warmup -> target pairs, excludes warmup from total_us, and takes the median of ten target sums.",
+        "Native msprof supports one --aic-metrics group per run; op_summary_*.csv is a per-op aggregate rather than per-core data.",
+        "Per-core analysis requires the sample-based aicore.db path; warmup is mandatory to avoid DVFS and first-run effects."
+      ],
+      "unit_ids": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ]
+    },
+    {
+      "id": "src-msprof-torch-profiler",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "model/model-infer-profiling/SKILL.md",
+      "line_ranges": [
+        "L185-L210",
+        "L212-L245",
+        "L247-L283",
+        "L340-L346"
+      ],
+      "sha256": "226d8b4d0b2889afde1e31ded6f8fe35c1be9b4664a7aebeaf327f4b557238fb",
+      "claims": [
+        "Level1 plus PipeUtilization supplies the detailed 47-column kernel_details view; without ExperimentalConfig only about nine columns remain.",
+        "The profiler schedule must leave the active window; prof.step() calls must cover skip_first + warmup + active plus a closing step.",
+        "Graph compile/JIT must be warmed outside the capture window; prefill and decode should be captured separately when the question is TTFT or TPOT.",
+        "The published capture patterns place torch.npu.synchronize() after the timed work and before prof.step()."
+      ],
+      "unit_ids": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ]
+    },
+    {
+      "id": "src-msprof-step-trace-parser",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "plugins-community/triton-optimizer/skills/triton-npu-optimize/scripts/profile-operator/torch_npu_profiler_parser.py",
+      "line_ranges": [
+        "L113-L136"
+      ],
+      "sha256": "c78af51203211ca6486d8fd679a427689822c566cc7f4717f9fe537689873602",
+      "claims": [
+        "step_trace_time.csv carries Computing, Communication(Not Overlapped), Overlapped, Communication, Free, Stage, Bubble, Preparing and a related exclude-receive field.",
+        "These are separate columns, so a step budget must preserve the overlap term rather than adding Communication and Computing directly."
+      ],
+      "unit_ids": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ]
+    },
+    {
+      "id": "src-msprof-profiling-analysis",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "plugins-community/triton-optimizer/skills/triton-npu-optimize/references/triton-npu-analyze-round-performance/triton-npu-profiling-analysis.md",
+      "line_ranges": [
+        "L41-L71"
+      ],
+      "sha256": "9c12006bac560650f0377e827ae6009fc2b1ca9646cd0e3c898dbd2c4e1e052e",
+      "claims": [
+        "High Task Wait Time is a scheduling/overlap symptom, not a kernel-execution-time proof.",
+        "Weak aic_mac_ratio or low cube utilization suggests poor tile feeding; high MTE ratios suggest movement pressure.",
+        "The reference explicitly separates op_summary interpretation from task_time gap analysis and api_statistic host overhead."
+      ],
+      "unit_ids": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ]
+    },
+    {
+      "id": "src-asys-command",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "tools/asys-toolkit/SKILL.md",
+      "line_ranges": [
+        "L71-L96",
+        "L100-L107",
+        "L115-L125"
+      ],
+      "sha256": "e02f63ece64a6cd0b62f8ce503299b9fb9713dc0675c7797a8303a4412dc1651",
+      "claims": [
+        "asys collect and asys launch produce {output}/asys_output_timestamp; asys analyze produces the same shape and reports the info.txt path.",
+        "asys is EP-only; collection must not be parallelized and environment variables must match the service runtime.",
+        "Device firmware logs, stackcore and coretrace have privilege and product-support constraints."
+      ],
+      "unit_ids": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ]
+    },
+    {
+      "id": "src-asys-aicore-analysis",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "tools/asys-toolkit/references/analyze-files.md",
+      "line_ranges": [
+        "L331-L389"
+      ],
+      "sha256": "131c8426ce6c7eddec9ca7b77a7d3a3e1638f689ab56cf6dc9a56cdfe4166b5c",
+      "claims": [
+        "The aicore_error triggers are 'there is an aivec error exception' and 'there is an aicore error exception'.",
+        "asys analyze -r=aicore_error accepts a collected path or auto-collects; it analyzes only the first AI Core Error in log time order.",
+        "The output info.txt is the analysis entry point, and --output must not be nested inside --path."
+      ],
+      "unit_ids": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ]
+    },
+    {
+      "id": "src-msaicerr-command",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "tools/msaicerr-toolkit/SKILL.md",
+      "line_ranges": [
+        "L8-L18",
+        "L34-L79"
+      ],
+      "sha256": "c3263e16b11404cc9255280fdba6e99eea2d69894a0545b1b90daa7e4542ff38",
+      "claims": [
+        "msaicerr is local-only, needs Python 3.7.5+, is not supported on RC, and must run from its own tool directory.",
+        "-p selects the fault-information directory; -out must be a disjoint path and must not be inside -p.",
+        "The tool parses the first AI Core Error by log time; info.txt is the result and debug_info.txt is the tool log."
+      ],
+      "unit_ids": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ]
+    },
+    {
+      "id": "src-msaicerr-aicore",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "tools/msaicerr-toolkit/references/aicore-error-analysis.md",
+      "line_ranges": [
+        "L17-L62",
+        "L66-L72"
+      ],
+      "sha256": "b1cd2ced97f37739894bd2a804b9c2a0d7979fe78bdd9a742c8a008e808375c9",
+      "claims": [
+        "The collection must contain dfx/data-dump, dfx/ops .o/.json artifacts, and dfx/log/host/cann logs; missing elements block extraction.",
+        "The command form is python3 msaicerr.py -p <collect> -out <result> -dev <device>; -out may not be inside -p.",
+        "The recommended order is unsupported-op gate, three-element check, disjoint paths, info.txt, then debug_info.txt if the tool itself fails."
+      ],
+      "unit_ids": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ]
+    },
+    {
+      "id": "src-msnpureport",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "tools/msnpureport-toolkit/SKILL.md",
+      "line_ranges": [
+        "L8-L18",
+        "L37-L66",
+        "L71-L82"
+      ],
+      "sha256": "fc5bfddb016497b2fff1754f1da8a4b6d840e0b25138312104531b3896de580a",
+      "claims": [
+        "msnpureport exports device-side logs and DFX data; report, config --get and config --set are distinct entry points.",
+        "Export and config --set operations have privilege and product-form constraints; -d uses logical IDs, not the physical IDs shown by npu-smi.",
+        "stackcore and ub_info outputs are parsed by asys, which is the downstream analysis tool."
+      ],
+      "unit_ids": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ]
+    },
+    {
+      "id": "src-exception-workflow",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "tools/tool-exception-dump/SKILL.md",
+      "line_ranges": [
+        "L13-L22",
+        "L64-L132",
+        "L203-L229",
+        "L285-L332",
+        "L333-L402",
+        "L405-L438"
+      ],
+      "sha256": "4ae68ba4f787ebc533cc4d094982459de194695b06facb4621218e7f5a0de045",
+      "claims": [
+        "The workflow runs Phase 0 through Phase 5 locally, with input checks, three-element validation, scene classification, msaicerr analysis, register decoding, reproduction and evidence-chain reporting.",
+        "A missing plog is a stop condition; missing dump or .o/.json lowers confidence but may allow a constructed-data path.",
+        "Register decode, dump validation, disassembly and single-op reproduction are separate evidence chains and must not be collapsed."
+      ],
+      "unit_ids": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop",
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ]
+    },
+    {
+      "id": "src-exception-line-location",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "tools/tool-exception-dump/references/error-line-location.md",
+      "line_ranges": [
+        "L94-L128",
+        "L135-L161",
+        "L201-L223",
+        "L276-L298"
+      ],
+      "sha256": "d139f9ace75300e89866e323ccb83a7f8c5433b97a59bd218316b9aeb18c24d9",
+      "claims": [
+        "info.txt has six sections; the third section reports Original Info and, when available, Corrected Info with start pc, current pc and an estimated assembly offset.",
+        "Corrected Info is preferred because it is backfilled from AI Core error registers; the offset is an estimate, not a source line.",
+        "The objdump fallback resolves the offset to a cce line and then through _loc.json to a TBE source line; L0 stops at the assembly offset.",
+        "Dump failure has three concrete signatures: dump callback failure, D2H failure and invalid address."
+      ],
+      "unit_ids": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ]
+    },
+    {
+      "id": "src-exception-error-decode",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "tools/tool-exception-dump/references/error-type-decode.md",
+      "line_ranges": [
+        "L9-L63",
+        "L65-L114",
+        "L116-L169",
+        "L171-L214",
+        "L223-L237"
+      ],
+      "sha256": "c90d227e8135152d4e4eec63006d543a6151208822023cfb706245241fac5dea",
+      "claims": [
+        "Chip dialect must be decided before decoding: hexadecimal error codes point to Stars/910B, decimal bit lists to David/950, and a bare 0 is ambiguous.",
+        "The high-frequency bit table gives concrete Stars and David bit names for OOB reads, UB overflow/wrap, atomic errors and INF/NaN inputs.",
+        "The six *_ERR_INFO subregisters have unit-specific bit fields; David has no subregister decode and uses error-name prefixes instead.",
+        "No error bit set produces trap_or_timeout, which is a fallback and not proof of a confirmed timeout; conclusion codes 101-107 are separate from tool status codes."
+      ],
+      "unit_ids": [
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ]
+    },
+    {
+      "id": "src-objdump-skill",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "tools/npu-objdump-toolkit/SKILL.md",
+      "line_ranges": [
+        "L20-L62"
+      ],
+      "sha256": "24ab38b34ec9cf2dde7699036a7df72be6c6427a590868aac7af50582b005858",
+      "claims": [
+        "npu-objdump or msobjdump supports dump-elf, list-elf, extract-elf and, only when detected, sass.",
+        "Inputs include standalone device ELF, fused host ELF with .aicore_binary, static libraries and supported .ascend.kernel packages; format is detected from content, not extension.",
+        "sass means Ascend AICore instructions; the disassembly backend is a CANN llvm-objdump with the Ascend target, not a host GNU objdump."
+      ],
+      "unit_ids": [
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ]
+    },
+    {
+      "id": "src-objdump-fault-pc",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "tools/npu-objdump-toolkit/references/fault-pc-disassembly.md",
+      "line_ranges": [
+        "L5-L154"
+      ],
+      "sha256": "7797bcfdcd395e3667af4dc840cb219d46baecb491b374509c8f723a0cb0a5fe",
+      "claims": [
+        "The workflow records the actual metadata and instruction-disassembly tools, selects the exact object by runtime identity/SHA256, and chooses _mix_aic or _mix_aiv from the exception core type.",
+        "ERR_INFO PC rules are unit-specific: CCU bits[30:23]||[7:0], MTE/VEC bits[39:32]||[7:0], CUBE bits[31:24]||[7:0], IFU whole value; the 16-bit instruction address is multiplied by 4.",
+        "Decoded PC and current_pc - start_pc are comparable only in the same byte-address domain; an object-relative offset needs a matching base.",
+        "A narrow instruction window must contain the target instruction; disassembly alone does not prove runtime load identity or root cause."
+      ],
+      "unit_ids": [
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ]
+    },
+    {
+      "id": "src-error-code-standard",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "ops/cann-error-code-standard/SKILL.md",
+      "line_ranges": [
+        "L18-L37"
+      ],
+      "sha256": "8ab12252917c5240edaf4dd96b508a99585bc1246552f2376155cedc40daed76",
+      "claims": [
+        "Public error-code documentation proves public semantics and user guidance, not target-version registration or execution.",
+        "Four evidence layers are separate: public catalog, target-version registration, target build include chain, and negative runtime behavior.",
+        "A code being documented must not be read as 'registered and callable in this build'."
+      ],
+      "unit_ids": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ]
+    },
+    {
+      "id": "src-error-code-development",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "ops/cann-error-code-standard/references/development-standard.md",
+      "line_ranges": [
+        "L10-L23",
+        "L25-L50",
+        "L52-L64"
+      ],
+      "sha256": "7b4b28cf8b5dbf54b6d80fc49b572e075651d6025dfc5d5b69cbed045e72eff6",
+      "claims": [
+        "E*9*** is an internal-code pattern, not a semantic code for new development; generic internal codes must not be used as a fallback.",
+        "The root-cause layer reports once; outer layers add PLOG context and pass the original return through.",
+        "When a lower layer already reported a concrete error, adding EZ9999 is duplicate reporting and must not be treated as the root cause."
+      ],
+      "unit_ids": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ]
+    },
+    {
+      "id": "src-documented-error-codes",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "ops/cann-error-code-standard/references/documented-error-codes.json",
+      "line_ranges": [
+        "entry:EI0006",
+        "entry:EL0004"
+      ],
+      "sha256": "b50cdf7e0b8a2959f8b69e9753c8a38e7381e17e36002cf93210f372b8df940a",
+      "claims": [
+        "EI0006 is the HCCL communication error 'Getting socket times out'; its Reason field identifies srcRank/dstRank and the recommended checks.",
+        "EL0004 is the driver memory-allocation failure 'Failed to allocate memory'; the documented cause is insufficient memory and the suggested action is to close unused applications.",
+        "EZ9999 is not present in this documented catalog; a full-file search found no EZ9999 entry."
+      ],
+      "unit_ids": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ],
+      "scope_note": "Line ranges are JSON entry locators because the file is machine-readable; the SHA256 is over the complete file."
+    },
+    {
+      "id": "src-ez9999-routing",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "ops/ops-error-code-remediation/references/remediation-routing.md",
+      "line_ranges": [
+        "L50-L65"
+      ],
+      "sha256": "d88eed58e2c658eabccbdc3c9a67481d1e46cc250d6b71994a58567d08a63169",
+      "claims": [
+        "op_common::OP_LOGE and several wrapper macros commonly end at EZ9999; the audit must inspect the actual macro and REPORT_INNER_ERR_MSG leaf.",
+        "EZ9999 is a generalized internal code and must be reclassified by actual root cause; it is not a precise fault category.",
+        "Detection of an internal code authorizes review, not mechanical replacement with another code."
+      ],
+      "unit_ids": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ]
+    },
+    {
+      "id": "src-ez9999-trigger-coverage",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "ops/ops-error-code-remediation/references/trigger-coverage.md",
+      "line_ranges": [
+        "L30-L37"
+      ],
+      "sha256": "ac4bd03e00a9df0c855218f47843027eebc3884fa3b5f4cb2b4a81224bce8008",
+      "claims": [
+        "ACLNN_ERR_INNER*, ACL_ERROR_FAILURE and 5-prefixed errors map statically to EZ9999 and must be reclassified by root cause.",
+        "Static mapping is an audit aid; the target-version implementation remains authoritative."
+      ],
+      "unit_ids": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ]
+    },
+    {
+      "id": "src-runtime-507035",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "ops/ascendc-runtime-debug/references/error_codes.md",
+      "line_ranges": [
+        "L19-L27"
+      ],
+      "sha256": "86abd2a4ecfeefb332e95e60d03a374a71d728f2857fbeb51a7f2a4b43ed648d",
+      "claims": [
+        "507035 is the ACL/RT vector-core exception, usually raised through aclrtStreamSynchronize.",
+        "Typical causes are UB-side 32-byte misalignment, GM-to-UB padParams violations, or UB overflow.",
+        "507035 is distinct from 507046 stream-sync timeout."
+      ],
+      "unit_ids": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ]
+    },
+    {
+      "id": "src-runtime-507035-workflow",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "ops/ascendc-runtime-debug/references/debug_workflow.md",
+      "line_ranges": [
+        "L161-L275"
+      ],
+      "sha256": "4eba507a443fe59baeb0a2cae5b55eb80e1b51bc93b39a16acce60aaa2a1ec2d",
+      "claims": [
+        "The 507035 checklist checks UB-side DataCopy/DataCopyPad start addresses, VEC operand starts, blockLen units and padParams, dynamic chunk alignment, tmpBuf sizing and total UB usage.",
+        "blockLen itself has no 32-byte alignment requirement; the 32-byte constraint is on the UB-side address, and padParams left/right padding is limited to 32 bytes.",
+        "507035 is a runtime signal; it is not by itself a specific aic_error bit."
+      ],
+      "unit_ids": [
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ]
+    },
+    {
+      "id": "src-pypto-507018",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "ops/pypto-op-knowledge/references/experience_classified/machine.md",
+      "line_ranges": [
+        "L26-L34",
+        "L80-L86"
+      ],
+      "sha256": "2965651367c97a7960e9336748d9cd3b110b96a21a4d5011550bf987a43498d0",
+      "claims": [
+        "Observed AICPU failure signature: 'AICPU error: errorCode=0x2a, taskid: 1, retcode: 507018'.",
+        "The same experience page also records 'aicore error (507018 / 0x2a)' when a heavy loop is expanded in Python rather than emitted as a device loop.",
+        "These are experience reports, not a universal mapping; 507018 should be treated as an AICPU/task-side exception and confirmed from the first plog line."
+      ],
+      "unit_ids": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ]
+    },
+    {
+      "id": "src-graph-mode-llm",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "model/model-infer-graph-mode/references/llm-model-guide.md",
+      "line_ranges": [
+        "L11-L21",
+        "L52-L75",
+        "L213-L221"
+      ],
+      "sha256": "c1c1f59b85c3249a07e0b9702a8b1da9de1ebe8494a04c6a1f0733465b86f588",
+      "claims": [
+        "The LLM graph-mode guide identifies memory-address changes, shape changes, Python control flow and .item() as the main causes of graph break or recompilation.",
+        "A .item() in forward converts a Tensor to a Python scalar and forces a graph break; the recommended pattern is a static parameter or a precomputed value.",
+        "Recompilation is diagnosed with torch._logging.set_logs(recompiles=True); dynamic=False plus guard settings are the next checks."
+      ],
+      "unit_ids": [
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ]
+    },
+    {
+      "id": "src-graph-mode-skill",
+      "repository": "cannbot-skills",
+      "revision": "1fa2cbbc9fdddb4377ca26734e9b94d91c42b975",
+      "path": "model/model-infer-graph-mode/SKILL.md",
+      "line_ranges": [
+        "L69-L91",
+        "L151-L162",
+        "L166-L183"
+      ],
+      "sha256": "eabd0a51cd06bf2f1a73fb78582dda11c635f78cf13f063a48563c3096e635a1",
+      "claims": [
+        "npugraph_ex uses capture-and-replay (aclgraph); GE converts the FX graph to Ascend IR, so replay evidence differs by backend.",
+        "Forward code must not use .item(); fixed tensors are created outside the graph and marked static.",
+        "The troubleshooting order is aot_eager, force_eager, then graph-mode recompile or graph-break analysis."
+      ],
+      "unit_ids": [
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ]
+    },
+    {
+      "id": "src-hccl-wait",
+      "repository": "Ascend/msagent",
+      "revision": "521f8ead0ebda5db5b282f0c3c4147006e01e016",
+      "path": "skills/profiler/ascend-communication-analysis/SKILL.md",
+      "line_ranges": [
+        "L8-L15",
+        "L168-L196"
+      ],
+      "sha256": "64cced92a2a1b9f7777a80e2cd19b2eb84800c841fc51cd12167d3193bd8497e",
+      "claims": [
+        "Collective cost must be split into wait-caused high duration and real transfer/link bottlenecks.",
+        "Wait diagnosis uses Notify Wait and cross-rank same-op alignment; a single rank's communication time cannot establish low bandwidth.",
+        "The gate is explicit: if wait-caused, stop before retry/relay/bandwidth conclusions; if insufficient evidence, state the missing tables or fields."
+      ],
+      "unit_ids": [
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ]
+    }
+  ],
+  "observed_measurements": [
+    {
+      "id": "obs-serving-single-request",
+      "kind": "serving_metric",
+      "artifact_locator": "transcript://codex-session-01a09c11-01b6-7ef2-bf23-6dae53e42dae/work/environment-new/eval-results/pr-0f9ab5e-mla-draftgraph-121508-core128-20260914-122413/c128-single.metrics-before.txt#L530-L554,L722-L743",
+      "artifact_sha256": "4517dec3f9d48d1f375c851c859097037ec9c83a37730ba3a3d38201f0bbe0fe",
+      "scope": "One successful engine-0 request, 158 generation tokens, before the concurrent C128 phase.",
+      "values": {
+        "time_to_first_token_seconds_sum": 1.2577669620513916,
+        "time_to_first_token_seconds_count": 1,
+        "request_time_per_output_token_seconds_sum": 0.014902740828159034,
+        "request_time_per_output_token_seconds_count": 1,
+        "derived_ttft_mean_seconds": 1.2577669620513916,
+        "derived_tpot_mean_seconds": 0.014902740828159034
+      },
+      "interpretation": "A single-request baseline: TTFT about 1.26 s and TPOT about 14.9 ms on this engine.",
+      "limits": "This is one request on one engine; it does not establish a fleet baseline or a percentile."
+    },
+    {
+      "id": "obs-serving-concurrent-32",
+      "kind": "serving_metric",
+      "artifact_locator": "transcript://codex-session-01a09c11-01b6-7ef2-bf23-6dae53e42dae/work/environment-new/eval-results/pr-0f9ab5e-mla-draftgraph-121508-core128-20260914-122413/c128-single.metrics-after.txt#L556-L580,L748-L769",
+      "artifact_sha256": "546b4f0441e1b99989408e1208a34b6536a46813ea6dc0cc456d356df856d40a",
+      "scope": "Engine 0 after a 128-concurrency phase; 32 successful requests on this engine, 129 successful requests across four engines.",
+      "values": {
+        "time_to_first_token_seconds_sum": 2443.9901399612427,
+        "time_to_first_token_seconds_count": 32,
+        "request_time_per_output_token_seconds_sum": 22.406163289385198,
+        "request_time_per_output_token_seconds_count": 32,
+        "derived_ttft_mean_seconds": 76.37469187378883,
+        "derived_tpot_mean_seconds": 0.7001926027932874,
+        "generation_tokens_total_engine_0": 3608
+      },
+      "interpretation": "At high concurrency, queueing moves mean TTFT to about 76 s and mean TPOT to about 700 ms on the same engine.",
+      "limits": "This is not a clean regression against the single-request run: concurrency, batching and queueing differ. It demonstrates why the load protocol must be matched before comparing TTFT or TPOT."
+    },
+    {
+      "id": "obs-step-trace-128k",
+      "kind": "step_trace",
+      "artifact_locator": "transcript://codex-session-01a09c11-01b6-7ef2-bf23-6dae53e42dae/work/profile-128k-0916/kernel-summary.md#L7-L17",
+      "artifact_sha256": "039c2cb13cc5da274555b3a099076fab69cee6175b92fbad53c3c7b330e709bb",
+      "scope": "Rank 0, three intermediate decode steps, 128K input and 1K output, TP8/DP4/EP32/DCP1 with MLA DSpark3.",
+      "values": {
+        "stage_ms": 2525.01,
+        "computing_ms": 554.151,
+        "communication_ms": 1903.954,
+        "overlapped_ms": 9.408,
+        "communication_not_covered_ms": 1894.546,
+        "free_ms": 76.314,
+        "communication_not_covered_fraction": 0.7503
+      },
+      "interpretation": "The observed identity is Stage = Computing + Communication - Overlapped + Free. This window is communication-dominated, but single-rank Communication includes wait and is not a bandwidth proof.",
+      "limits": "Profiling overhead is inside the window; the report explicitly warns that this is not an unprofiled steady-state TPOT."
+    },
+    {
+      "id": "obs-step-trace-gmm",
+      "kind": "step_trace",
+      "artifact_locator": "transcript://codex-session-01a09c11-01b6-7ef2-bf23-6dae53e42dae/work/gmm-cannbot-0917/chain-traces/e14-m128/split_chain/<host>_<pid>_<timestamp>_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv#L2-L6",
+      "artifact_sha256": "b959dbfbabbf5601863ffb7e5011a6a9863dc5c0b4175f759f0c0d9753b7e7c0",
+      "scope": "Five adjacent steps from one small operator-chain capture.",
+      "values": {
+        "step_rows": 5,
+        "computing_us_range": [
+          102.389,
+          105.106
+        ],
+        "free_us_range": [
+          37.249,
+          387.163
+        ],
+        "stage_us_range": [
+          139.5,
+          489.5
+        ]
+      },
+      "interpretation": "Computing is nearly flat while Free varies by about 10x, so aggregate wall time is dominated by per-step host/launch gaps in this sample.",
+      "limits": "Five steps from one capture; it is an illustration of the field, not a general host-overhead law."
+    },
+    {
+      "id": "obs-op-summary-wait",
+      "kind": "op_summary",
+      "artifact_locator": "transcript://codex-session-01a09c11-01b6-7ef2-bf23-6dae53e42dae/work/mlapo-dcp8-pipeline-0921/round_001/op_summary_PipeUtilization.csv#L3,L145",
+      "artifact_sha256": "0a4229e075c2851e56ce0a91f112b2c41635a76fe57ee0f08d951c509d1afa4e",
+      "scope": "Two adjacent rows in a real PipeUtilization export from one MIX_AIC workload.",
+      "values": {
+        "muls": {
+          "task_type": "AI_VECTOR_CORE",
+          "task_duration_us": 14.158,
+          "task_wait_time_us": 5300.659,
+          "block_num": 64,
+          "aiv_vec_ratio": 0.516,
+          "aiv_mte2_ratio": 0.635,
+          "aiv_mte3_ratio": 0.562
+        },
+        "mla_prolog_v3": {
+          "task_type": "MIX_AIC",
+          "task_duration_us": 52.778,
+          "task_wait_time_us": 1650.358,
+          "block_num": 32,
+          "mix_block_num": 64,
+          "aic_mac_ratio": 0.259,
+          "aic_mte2_ratio": 0.582,
+          "aic_fixpipe_ratio": 0.189,
+          "cube_utilization_pct": 91.09
+        }
+      },
+      "interpretation": "Task Wait Time can be hundreds of times Task Duration. For MlaPrologV3 the device row is only about 53 us while the wait column is about 1.65 ms; for Muls the wait is about 5.3 ms against a 14 us duration. Those waits are scheduling/queue evidence, not kernel execution.",
+      "limits": "The wait column's exact queue semantics depend on the exporter; use it as a scheduling signal and corroborate with task_time/trace gaps."
+    },
+    {
+      "id": "obs-op-summary-pipe",
+      "kind": "op_summary",
+      "artifact_locator": "transcript://codex-session-01a09c11-01b6-7ef2-bf23-6dae53e42dae/work/mlapo-dcp8-pipeline-0921/round_001/summary.txt#L1-L15",
+      "artifact_sha256": "b4e226d0f75e16643149d7df2d69d089d60d16219e40a4575cbbd518437b6b15",
+      "scope": "msprof summary for one MlaPrologV3 row.",
+      "values": {
+        "task_duration_us": 52.778,
+        "aicore_time_us": 51.88,
+        "head_overhead_us": 0.898,
+        "head_overhead_fraction": 0.017,
+        "aic_mte2_ratio": 0.582,
+        "aic_mac_ratio": 0.259,
+        "cube_utilization_pct": 91.09
+      },
+      "interpretation": "The head overhead is small here; MTE2 is the largest AIC pipe ratio while MAC ratio is only about 26%, so a high cube_utilization number must not be read as a high MAC share.",
+      "limits": "A single row; use the per-pipe ratios and the actual shape/tiling before declaring a bound."
+    },
+    {
+      "id": "obs-itl-stall",
+      "kind": "log_observation",
+      "artifact_locator": "transcript://codex-session-01a09c11-01b6-7ef2-bf23-6dae53e42dae/work/itl-triage-0918/FINDINGS.md#L12-L24,L32,L54",
+      "artifact_sha256": "73bc67ced0dd285f397c11c6587ed92f063a23a03748c15a356b6d63318f81ee",
+      "scope": "TP8/DP8/EP64/DCP8 serving run with GQA DSpark7 and EPLB policy3; two profiler-stop windows and three throughput-zero windows.",
+      "values": {
+        "stop_profile_wait_seconds": [
+          45,
+          56
+        ],
+        "running_requests_during_zero_throughput": [
+          19,
+          23
+        ],
+        "graph_replay_calls_per_window": [
+          52,
+          48
+        ],
+        "model_execute_events_per_window": [
+          52,
+          48
+        ],
+        "eplb_blocking_example_max_step_ms": 1225,
+        "post_fix_candidate_max_step_ms": [
+          7,
+          9
+        ],
+        "post_fix_followup_max_step_ms": 9.65
+      },
+      "interpretation": "Profiler stop/parse and an EPLB Queue.get path can both create multi-second forward stalls while requests remain running. Graph replay counts were present, so a graph-out small op alone does not prove a full eager fallback.",
+      "limits": "The 45/56 s are stop_profile request durations, not per-token ITL. The 1225 ms and 7-9 ms are a constructed A/B, not a whole-service ITL gain."
+    },
+    {
+      "id": "obs-aicpu-507018",
+      "kind": "log_observation",
+      "artifact_locator": "transcript://codex-session-01a09c11-01b6-7ef2-bf23-6dae53e42dae/work/environment-new/JOURNAL.md#L84-L88",
+      "artifact_sha256": "427ab7ac4f00016ef9720c5c82120de59f4d20ac72abdeb9dfd77d500d23803b",
+      "scope": "One four-node serving startup; first effective error before graph capture.",
+      "values": {
+        "operation": "TP8 BF16 ALLREDUCE SUM count=7168",
+        "kernel": "AicpuAllReduceSoleMeshOneShot_device",
+        "lower_level": "HcclLaunchAicpuKernel/libscatter_aicpu_kernel.so",
+        "ret_code": "0x2a",
+        "acl_surface": "507018 / 0x715002a",
+        "comm_init": "succeeded",
+        "compare_exchange": "succeeded",
+        "failure_delay_seconds": 0.393,
+        "explicit_timeout": false
+      },
+      "interpretation": "507018 appeared as an AICPU/task-side exception in a collective launch, not as a proven timeout. The first error must be read from the lower-level AICPU line rather than inferred from the ACL return code.",
+      "limits": "One incident; the 0x2a mapping is not universal across CANN/SoC versions."
+    },
+    {
+      "id": "obs-aclgraph-replay",
+      "kind": "log_observation",
+      "artifact_locator": "transcript://codex-session-01a09c11-01b6-7ef2-bf23-6dae53e42dae/work/itl-triage-0918/FINDINGS.md#L19-L24",
+      "artifact_sha256": "73bc67ced0dd285f397c11c6587ed92f063a23a03748c15a356b6d63318f81ee",
+      "scope": "Two adjacent rank-0 profiling windows covering 50 decode steps.",
+      "values": {
+        "window_1": {
+          "preprocess_mamba": 26,
+          "aclmdlRIExecuteAsync": 52,
+          "MODEL_EXECUTE": 52
+        },
+        "window_2": {
+          "preprocess_mamba": 24,
+          "aclmdlRIExecuteAsync": 48,
+          "MODEL_EXECUTE": 48
+        },
+        "full_model_eager_fallback_observed": false,
+        "sample_duration_seconds": 6
+      },
+      "interpretation": "The captured steps show graph replay calls at the expected main+draft rate; metadata/sampling/logits matmul outside the graph do not by themselves prove a whole-model fallback.",
+      "limits": "The windows cover about six seconds; absence of fallback there does not prove absence elsewhere."
+    }
+  ],
+  "code_decoding": {
+    "six_character_codes": {
+      "EZ9999": {
+        "layer": "generic internal operator/wrapper code",
+        "documented_catalog": false,
+        "meaning": "A generalized internal code emitted by wrappers such as op_common::OP_LOGE; it is not a precise root cause.",
+        "action": "Find the lower-level EE/EI/EL or first [ERROR] line; do not add another EZ9999 or treat it as the root cause.",
+        "sources": [
+          "src-error-code-development",
+          "src-ez9999-routing",
+          "src-ez9999-trigger-coverage",
+          "src-documented-error-codes"
+        ]
+      },
+      "EL0004": {
+        "layer": "driver",
+        "documented_catalog": true,
+        "meaning": "Failed to allocate memory; documented cause is insufficient memory.",
+        "action": "Check HBM/free memory, process footprint, allocator/OOM evidence and npu-smi; do not attribute to a kernel OOB without address evidence.",
+        "sources": [
+          "src-documented-error-codes"
+        ]
+      },
+      "EI0006": {
+        "layer": "HCCL",
+        "documented_catalog": true,
+        "meaning": "Getting socket times out; the Reason field names srcRank/dstRank and the recommended checks.",
+        "action": "Read the Reason, compare both endpoints, check process liveness and network reachability; redact endpoints in reports.",
+        "sources": [
+          "src-documented-error-codes"
+        ]
+      }
+    },
+    "rts_surface_codes": {
+      "507015": {
+        "surface": "rtStreamSynchronize ErrCode=507015, desc=[aicore exception]",
+        "meaning": "An ACL/RT surface for an AI Core exception; not the fault bitmask.",
+        "action": "Route to the first plog AI Core Error line and msaicerr; do not stop at the return code.",
+        "sources": [
+          "src-exception-workflow",
+          "src-exception-line-location"
+        ]
+      },
+      "507018": {
+        "surface": "AICPU/task-side exception; observed with AICPU errorCode=0x2a and ACL 507018 / 0x715002a.",
+        "meaning": "An AICPU or task execution failure; not by itself a timeout and not a specific AICore arithmetic bit.",
+        "action": "Read the first AICPU line, identify the task/kernel and collective, and check both the AICPU launch and the downstream ACL surface.",
+        "sources": [
+          "src-pypto-507018",
+          "obs-aicpu-507018"
+        ]
+      },
+      "507035": {
+        "surface": "ACL/RT vector-core exception, usually reported by aclrtStreamSynchronize.",
+        "meaning": "A runtime signal for a vector-core fault; common causes are UB-side 32-byte misalignment, padParams violations and UB overflow.",
+        "action": "Run the UB alignment/overflow checklist; do not invent a single aic_error bit for it.",
+        "sources": [
+          "src-runtime-507035",
+          "src-runtime-507035-workflow"
+        ]
+      }
+    }
+  },
+  "aic_error_families": {
+    "mte2_oob_gm_read": {
+      "candidate_bits": [
+        {
+          "dialect": "Stars/910B",
+          "bit": 23,
+          "name": "mte_biu_rdwr_resp",
+          "meaning": "MTE access to an invalid GM address or cross-device timeout"
+        },
+        {
+          "dialect": "Stars/910B",
+          "bit": 32,
+          "name": "mte_gdma_read_overflow",
+          "meaning": "MTE instruction reads an on-chip buffer out of bounds"
+        },
+        {
+          "dialect": "Stars/910B",
+          "bit": 0,
+          "name": "biu_l2_read_oob",
+          "meaning": "bus read OOB; check L2-side access"
+        },
+        {
+          "dialect": "David/950",
+          "bit": 95,
+          "name": "MTE_BIU_RDWR_RESP",
+          "meaning": "invalid GM access or cross-device timeout"
+        },
+        {
+          "dialect": "David/950",
+          "bit": 81,
+          "name": "MTE_GDMA_READ_OVERFLOW",
+          "meaning": "MTE2 read UB / MTE3 read L1-UB out of bounds"
+        }
+      ],
+      "corroboration": "GM address, transfer length, allocation range, LD/ST instruction, dump tensor bounds; a single bit does not prove the exact buffer."
+    },
+    "ub_unaligned": {
+      "candidate_bits": [
+        {
+          "dialect": "David/950",
+          "bit": 79,
+          "name": "MTE_ATM_ADD_ADDR_MISALIGN",
+          "meaning": "MTE atomic instruction address is not aligned; atomic-only"
+        }
+      ],
+      "runtime_signature": "507035 vector-core exception is the usual surface for a UB-side 32-byte misalignment or overflow; it is not a single stable aic_error bit.",
+      "corroboration": "UB-side DataCopy/DataCopyPad start address, VEC operand start, dynamic chunk alignment, blockLen bytes, padParams, total UB usage."
+    },
+    "vector_nan_inf": {
+      "candidate_bits": [
+        {
+          "dialect": "Stars/910B",
+          "bit": 156,
+          "name": "vec_idata_inf_nan",
+          "meaning": "instruction input is INF or NAN"
+        },
+        {
+          "dialect": "Stars/910B",
+          "bit": 9,
+          "name": "cube_invld_input",
+          "meaning": "L0A/L0B data is INF or NAN"
+        },
+        {
+          "dialect": "David/950",
+          "bit": 336,
+          "name": "VEC_ERR_IDATA_INF_NAN_T0",
+          "meaning": "instruction input is INF or NAN"
+        },
+        {
+          "dialect": "David/950",
+          "bit": 4,
+          "name": "CUBE_INVLD_INPUT",
+          "meaning": "L0A/L0B data is INF or NAN"
+        }
+      ],
+      "corroboration": "Dump NaN/INF check, input value range, upstream producer; the bit identifies the unit, not which input tensor is bad."
+    },
+    "queue_deadlock": {
+      "candidate_bits": [],
+      "runtime_signature": "No dedicated aic_error bit. Suspect no-progress plus 507014 aicore timeout, fftsplus task execute failed, or trap_or_timeout when no bit is set.",
+      "corroboration": "set_flag/wait_flag pairing, stream/task dependency graph, collective ordering across ranks, task/stream IDs, and whether the first error is elsewhere.",
+      "warning": "trap_or_timeout is the no-bit fallback and must not be read as a confirmed queue deadlock."
+    }
+  },
+  "redaction": {
+    "excluded": [
+      "internal IPv4 addresses and hostnames",
+      "usernames and account identifiers",
+      "absolute user-home paths",
+      "container identifiers and private service directories",
+      "credentials and proxy settings"
+    ],
+    "method": "Only relative artifact locators, SHA256 digests and numeric/structural observations are retained. Quoted log semantics are paraphrased rather than copied with endpoints.",
+    "verification": "Manual scan of the packet and all four units for IP literals, absolute user-home paths and account names before index rebuild."
+  },
+  "limitations": [
+    "The CANNBot documents are community/ecosystem software contracts, not target-version runtime registration proof.",
+    "RTS codes are ACL/RT surface codes; their exact lower-level cause depends on CANN, driver and SoC version.",
+    "The observed measurements come from several different runs and parallelism settings; they illustrate field behaviour and are not a controlled A/B.",
+    "reproduced_empirical in the dependent unit refers to the recorded runs in this packet; this distillation did not execute new NPU work.",
+    "No observed value here establishes a universal performance threshold or a hardware defect rate."
+  ]
+}

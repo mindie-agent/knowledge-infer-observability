@@ -1,25 +1,58 @@
 {
   "closure": {
+    "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms": [
+      "unit-observed-dual-die-phy-id-topology"
+    ],
+    "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+    ],
+    "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop": [
+      "unit-observed-dual-die-phy-id-topology"
+    ],
+    "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-analyze-step-overlap-clock-and-intervals",
+      "unit-msprof-analyze-mfu-range-flops-attribution"
+    ],
     "unit-msprof-analyze-mfu-range-flops-attribution": [],
     "unit-msprof-analyze-step-overlap-clock-and-intervals": [],
     "unit-observed-dual-die-phy-id-topology": []
   },
-  "digest": "6a9d60d47b4092c2e6492825e0e40c9119b19a670d77c8cafcb679f6b46ea459",
   "federation": {
     "corpus": {
       "automatic": false,
-      "bytes": 9569,
-      "estimated_tokens": 1469,
+      "bytes": 56652,
+      "estimated_tokens": 10508,
       "kind": "federation",
       "path": ".",
       "unit_ids": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop",
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow",
         "unit-msprof-analyze-mfu-range-flops-attribution",
         "unit-msprof-analyze-step-overlap-clock-and-intervals",
         "unit-observed-dual-die-phy-id-topology"
       ],
-      "units": 3
+      "units": 7
     },
     "domains": [
+      {
+        "automatic": false,
+        "bytes": 24980,
+        "estimated_tokens": 4890,
+        "exceeds": [],
+        "kind": "federation",
+        "path": "diagnostics",
+        "recommended_action": "review_federation_boundary",
+        "unit_ids": [
+          "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop",
+          "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+        ],
+        "units": 2
+      },
       {
         "automatic": false,
         "bytes": 2150,
@@ -35,23 +68,50 @@
       },
       {
         "automatic": false,
-        "bytes": 7419,
-        "estimated_tokens": 1187,
+        "bytes": 29522,
+        "estimated_tokens": 5336,
         "exceeds": [],
         "kind": "federation",
         "path": "measurement",
         "recommended_action": "review_federation_boundary",
         "unit_ids": [
+          "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+          "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow",
           "unit-msprof-analyze-mfu-range-flops-attribution",
           "unit-msprof-analyze-step-overlap-clock-and-intervals"
         ],
-        "units": 2
+        "units": 4
       }
     ]
   },
-  "index_build_elapsed_ms": 0.9352919878438115,
-  "index_digest": "174c49fdcca2ce7d0549c0e64dba5b35100485bbf72ce7089def11c12f90343c",
+  "index_build_elapsed_ms": 2.1710420260205865,
   "leaves": [
+    {
+      "automatic": false,
+      "bytes": 12954,
+      "estimated_tokens": 2602,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "diagnostics/aicore-dump",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 12026,
+      "estimated_tokens": 2288,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "diagnostics/plog-asys",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ],
+      "units": 1
+    },
     {
       "automatic": false,
       "bytes": 2150,
@@ -67,8 +127,34 @@
     },
     {
       "automatic": false,
-      "bytes": 3245,
-      "estimated_tokens": 519,
+      "bytes": 13783,
+      "estimated_tokens": 2685,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "measurement/end-to-end",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 8746,
+      "estimated_tokens": 1571,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "measurement/msprof",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 3032,
+      "estimated_tokens": 466,
       "exceeds": [],
       "kind": "leaf",
       "path": "measurement/msprof/mfu",
@@ -80,8 +166,8 @@
     },
     {
       "automatic": false,
-      "bytes": 4174,
-      "estimated_tokens": 668,
+      "bytes": 3961,
+      "estimated_tokens": 614,
       "exceeds": [],
       "kind": "leaf",
       "path": "measurement/msprof/overlap",
@@ -96,6 +182,32 @@
   "two_level_subtrees": [
     {
       "automatic": false,
+      "bytes": 12954,
+      "estimated_tokens": 2602,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "diagnostics/aicore-dump",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 12026,
+      "estimated_tokens": 2288,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "diagnostics/plog-asys",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
       "bytes": 2150,
       "estimated_tokens": 282,
       "exceeds": [],
@@ -109,38 +221,106 @@
     },
     {
       "automatic": false,
-      "bytes": 7419,
-      "estimated_tokens": 1187,
+      "bytes": 13783,
+      "estimated_tokens": 2685,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "measurement/end-to-end",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 15739,
+      "estimated_tokens": 2651,
       "exceeds": [],
       "kind": "subtree",
       "path": "measurement/msprof",
       "recommended_action": "review_two_level_subtree_split",
       "unit_ids": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
         "unit-msprof-analyze-mfu-range-flops-attribution",
         "unit-msprof-analyze-step-overlap-clock-and-intervals"
       ],
-      "units": 2
+      "units": 3
     }
   ],
-  "unit_count": 3,
+  "unit_count": 7,
   "units": {
-    "unit-msprof-analyze-mfu-range-flops-attribution": {
-      "bytes": 3245,
+    "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms": {
+      "bytes": 8746,
+      "category": "measurement",
+      "content_sha256": "0e25837fde7cd77ffef559d27c9113e9c8ce6f73f9fd88e36f4f9d4e5215befc",
+      "domain_path": "measurement/msprof",
+      "estimated_tokens": 1571,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-observed-dual-die-phy-id-topology"
+      ],
+      "path": "measurement/msprof/unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms.md",
+      "tier": "L1"
+    },
+    "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop": {
+      "bytes": 12954,
       "category": "sop",
-      "content_sha256": "67c9ea7f5458e067a0eb36b7c16b324fb0e02e1a234eba8fd707b334aa6620a3",
+      "content_sha256": "fdcfda318d288659435c0219c9a7bd5757cefd19ee35191af35a2a586f608cd2",
+      "domain_path": "diagnostics/aicore-dump",
+      "estimated_tokens": 2602,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ],
+      "path": "diagnostics/aicore-dump/unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop.md",
+      "tier": "L2"
+    },
+    "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop": {
+      "bytes": 12026,
+      "category": "sop",
+      "content_sha256": "f795fefe5ed4e52b03598047967c7561fb90596b24929fa79dd064cbfb9346a6",
+      "domain_path": "diagnostics/plog-asys",
+      "estimated_tokens": 2288,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-observed-dual-die-phy-id-topology"
+      ],
+      "path": "diagnostics/plog-asys/unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop.md",
+      "tier": "L2"
+    },
+    "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow": {
+      "bytes": 13783,
+      "category": "workflow",
+      "content_sha256": "51930f04dc707ca0a122a2a010eec3edda7f34294c68f724e4c179f7bf85bfdd",
+      "domain_path": "measurement/end-to-end",
+      "estimated_tokens": 2685,
+      "evidence_strength": "reproduced_empirical",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-msprof-analyze-mfu-range-flops-attribution",
+        "unit-msprof-analyze-step-overlap-clock-and-intervals"
+      ],
+      "path": "measurement/end-to-end/unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow.md",
+      "tier": "L3"
+    },
+    "unit-msprof-analyze-mfu-range-flops-attribution": {
+      "bytes": 3032,
+      "category": "sop",
+      "content_sha256": "f3f0ec9986dc3c3ac7222bf92a1dcb6baa24df6b64cc9b4c7b4a4347d3d9dc98",
       "domain_path": "measurement/msprof/mfu",
-      "estimated_tokens": 519,
+      "estimated_tokens": 466,
       "evidence_strength": "single_observation",
       "inherits_from": [],
       "path": "measurement/msprof/mfu/unit-msprof-analyze-mfu-range-flops-attribution.md",
       "tier": "L2"
     },
     "unit-msprof-analyze-step-overlap-clock-and-intervals": {
-      "bytes": 4174,
+      "bytes": 3961,
       "category": "sop",
-      "content_sha256": "aa930636bf2fd97a76e483b379501b0ec1149919d78560cb552c3c9655b616b9",
+      "content_sha256": "0fe7aa741df2694c938dd3aafab97cc82609c0e256ee23273334838d91436150",
       "domain_path": "measurement/msprof/overlap",
-      "estimated_tokens": 668,
+      "estimated_tokens": 614,
       "evidence_strength": "single_observation",
       "inherits_from": [],
       "path": "measurement/msprof/overlap/unit-msprof-analyze-step-overlap-clock-and-intervals.md",
@@ -149,7 +329,7 @@
     "unit-observed-dual-die-phy-id-topology": {
       "bytes": 2150,
       "category": "measurement",
-      "content_sha256": "0d2597e6da58b50f8ad69425dd708d6ae40fecd9c7729c8ef4a6b429a79790ea",
+      "content_sha256": "606183ed01ed82efd2eadd2b70d7a797123e79dae3b32acb05d464d7a5c4e49b",
       "domain_path": "hardware/topology",
       "estimated_tokens": 282,
       "evidence_strength": "reproduced_empirical",
