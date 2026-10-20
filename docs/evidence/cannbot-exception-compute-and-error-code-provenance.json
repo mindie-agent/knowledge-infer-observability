@@ -1,0 +1,52 @@
+{
+  "schema": "mindie-observability-provenance/1",
+  "domain": "infer-observability",
+  "generated_at_utc": "2026-10-21T04:23:30Z",
+  "purpose": "Provenance ledger for CANNBot 34-step AI Core exception dump workflow, npu-compute/npu-check/AscendC debug APIs, and CANN operator error-code governance and remediation units.",
+  "source_repositories": [
+    {
+      "id": "cannbot-skills",
+      "repository": "cann/cannbot-skills",
+      "remote": "https://gitcode.com/cann/cannbot-skills",
+      "revision": "f305e200aa4b1e1fed73cd21ff1f083b8df25a1e",
+      "files": [
+        {
+          "path": "tools/tool-exception-dump/SKILL.md",
+          "sha256": "4ae68ba4f787ebc533cc4d094982459de194695b06facb4621218e7f5a0de045",
+          "line_ranges": ["11-360"],
+          "used_for": "Phase 0-5 34-step AI Core Error workflow, Stars vs David register decoding, 5 special scenarios, and 101-107 return codes"
+        },
+        {
+          "path": "tools/tool-npu-compute/SKILL.md",
+          "sha256": "b71bc139badf896ec20c0ae939a1fc7ad7c9e20c5931a87eedc965c6963df43c",
+          "line_ranges": ["8-176"],
+          "used_for": "npu-compute Set and Section collection, .npu-rep unpacking, and PipeTrace/CSV metric analysis"
+        },
+        {
+          "path": "tools/tool-npu-check/SKILL.md",
+          "sha256": "05b7f864c1e09ec47f031e8952f1989b328a62134b4decbe0232bf1a2993d66b",
+          "line_ranges": ["6-126"],
+          "used_for": "npu-check memcheck 32B-aligned GM bounds checking and synccheck SET_FLAG/WAIT_FLAG and GET_BUF/RLS_BUF pairing"
+        },
+        {
+          "path": "tools/tools-npu-debug-api/SKILL.md",
+          "sha256": "74f1788debfe9c4989509ad296cc3b7321cabba67f90d80d31a6ba6a548b8880",
+          "line_ranges": ["10-72"],
+          "used_for": "AscendC kernel debug APIs: printf, assert/ascendc_assert, __trap, asc_dump, clock, and asc_time_stamp"
+        },
+        {
+          "path": "ops/cann-error-code-standard/SKILL.md",
+          "sha256": "8ab12252917c5240edaf4dd96b508a99585bc1246552f2376155cedc40daed76",
+          "line_ranges": ["6-39"],
+          "used_for": "CANN error-code 4-layer evidence hierarchy and standard output contract"
+        },
+        {
+          "path": "ops/ops-error-code-remediation/SKILL.md",
+          "sha256": "cad5302e2dfa4eaeec30182dda55f298fd1e1e60da892ffa76877dbf5ba227b3",
+          "line_ranges": ["6-106"],
+          "used_for": "Operator error-code include/macro resolution, innermost first-report rule, and candidate-to-audit reconciliation"
+        }
+      ]
+    }
+  ]
+}

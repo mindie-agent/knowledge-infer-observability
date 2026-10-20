@@ -1,7 +1,20 @@
 {
   "closure": {
+    "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+    ],
+    "unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
+      "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+    ],
     "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms": [
       "unit-observed-dual-die-phy-id-topology"
+    ],
+    "unit-ascend-npu-compute-npu-check-and-debug-api-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop": [
       "unit-observed-dual-die-phy-id-topology",
@@ -23,12 +36,15 @@
   "federation": {
     "corpus": {
       "automatic": false,
-      "bytes": 56652,
-      "estimated_tokens": 10508,
+      "bytes": 74110,
+      "estimated_tokens": 13675,
       "kind": "federation",
       "path": ".",
       "unit_ids": [
+        "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow",
+        "unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-ascend-npu-compute-npu-check-and-debug-api-sop",
         "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop",
         "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
         "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow",
@@ -36,22 +52,24 @@
         "unit-msprof-analyze-step-overlap-clock-and-intervals",
         "unit-observed-dual-die-phy-id-topology"
       ],
-      "units": 7
+      "units": 10
     },
     "domains": [
       {
         "automatic": false,
-        "bytes": 24980,
-        "estimated_tokens": 4890,
+        "bytes": 36618,
+        "estimated_tokens": 7019,
         "exceeds": [],
         "kind": "federation",
         "path": "diagnostics",
         "recommended_action": "review_federation_boundary",
         "unit_ids": [
+          "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow",
+          "unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow",
           "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop",
           "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
         ],
-        "units": 2
+        "units": 4
       },
       {
         "automatic": false,
@@ -68,34 +86,51 @@
       },
       {
         "automatic": false,
-        "bytes": 29522,
-        "estimated_tokens": 5336,
+        "bytes": 35342,
+        "estimated_tokens": 6374,
         "exceeds": [],
         "kind": "federation",
         "path": "measurement",
         "recommended_action": "review_federation_boundary",
         "unit_ids": [
           "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+          "unit-ascend-npu-compute-npu-check-and-debug-api-sop",
           "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow",
           "unit-msprof-analyze-mfu-range-flops-attribution",
           "unit-msprof-analyze-step-overlap-clock-and-intervals"
         ],
-        "units": 4
+        "units": 5
       }
     ]
   },
-  "index_build_elapsed_ms": 2.1710420260205865,
+  "index_build_elapsed_ms": 5.507666035555303,
   "leaves": [
     {
       "automatic": false,
-      "bytes": 12954,
-      "estimated_tokens": 2602,
-      "exceeds": [],
+      "bytes": 19578,
+      "estimated_tokens": 3848,
+      "exceeds": [
+        "estimated_tokens"
+      ],
       "kind": "leaf",
       "path": "diagnostics/aicore-dump",
       "recommended_action": "review_leaf_split",
       "unit_ids": [
+        "unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow",
         "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ],
+      "units": 2
+    },
+    {
+      "automatic": false,
+      "bytes": 5014,
+      "estimated_tokens": 883,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "diagnostics/error-codes",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow"
       ],
       "units": 1
     },
@@ -176,20 +211,47 @@
         "unit-msprof-analyze-step-overlap-clock-and-intervals"
       ],
       "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5820,
+      "estimated_tokens": 1038,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "measurement/npu-compute",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
+      ],
+      "units": 1
     }
   ],
   "schema": "mindie-shard-topology/1",
   "two_level_subtrees": [
     {
       "automatic": false,
-      "bytes": 12954,
-      "estimated_tokens": 2602,
+      "bytes": 19578,
+      "estimated_tokens": 3848,
       "exceeds": [],
       "kind": "subtree",
       "path": "diagnostics/aicore-dump",
       "recommended_action": "review_two_level_subtree_split",
       "unit_ids": [
+        "unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow",
         "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
+      ],
+      "units": 2
+    },
+    {
+      "automatic": false,
+      "bytes": 5014,
+      "estimated_tokens": 883,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "diagnostics/error-codes",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow"
       ],
       "units": 1
     },
@@ -246,10 +308,50 @@
         "unit-msprof-analyze-step-overlap-clock-and-intervals"
       ],
       "units": 3
+    },
+    {
+      "automatic": false,
+      "bytes": 5820,
+      "estimated_tokens": 1038,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "measurement/npu-compute",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
+      ],
+      "units": 1
     }
   ],
-  "unit_count": 7,
+  "unit_count": 10,
   "units": {
+    "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": {
+      "bytes": 5014,
+      "category": "workflow",
+      "content_sha256": "e881264dcc2a8d23f7ed9046de1deec4800ff57f557ed87ee0db62bd279d8220",
+      "domain_path": "diagnostics/error-codes",
+      "estimated_tokens": 883,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ],
+      "path": "diagnostics/error-codes/unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow.md",
+      "tier": "L3"
+    },
+    "unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow": {
+      "bytes": 6624,
+      "category": "workflow",
+      "content_sha256": "769b8db585be2d0c4f6373d1c931d01ec5de769ef295bc702ec8955ca3639c6c",
+      "domain_path": "diagnostics/aicore-dump",
+      "estimated_tokens": 1246,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop",
+        "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
+      ],
+      "path": "diagnostics/aicore-dump/unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow.md",
+      "tier": "L3"
+    },
     "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms": {
       "bytes": 8746,
       "category": "measurement",
@@ -262,6 +364,19 @@
       ],
       "path": "measurement/msprof/unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms.md",
       "tier": "L1"
+    },
+    "unit-ascend-npu-compute-npu-check-and-debug-api-sop": {
+      "bytes": 5820,
+      "category": "sop",
+      "content_sha256": "a88b66e1d24d6431c688dbada3b782c374737aa05147ad15d2cfa16e8be9ec8a",
+      "domain_path": "measurement/npu-compute",
+      "estimated_tokens": 1038,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "measurement/npu-compute/unit-ascend-npu-compute-npu-check-and-debug-api-sop.md",
+      "tier": "L2"
     },
     "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop": {
       "bytes": 12954,
