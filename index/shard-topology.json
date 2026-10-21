@@ -50,12 +50,68 @@
       "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
       "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
     ],
+    "unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
+    ],
+    "unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
+    ],
+    "unit-msmemscope-block-watch-corruption-and-step-compare-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+    ],
+    "unit-msmemscope-ld-preload-hooks-leak-and-inefficient-memory-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+    ],
+    "unit-msmodeling-profiling-db-axis-density-and-optix-search-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-analyze-step-overlap-clock-and-intervals",
+      "unit-msprof-analyze-mfu-range-flops-attribution",
+      "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+    ],
+    "unit-msmodeling-tensorcast-device-profile-commgrid-and-op-mapping-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-analyze-step-overlap-clock-and-intervals",
+      "unit-msprof-analyze-mfu-range-flops-attribution",
+      "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+    ],
+    "unit-msmodeling-throughput-optimizer-aggregation-to-text-generate-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-analyze-step-overlap-clock-and-intervals",
+      "unit-msprof-analyze-mfu-range-flops-attribution",
+      "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+    ],
     "unit-msnpureport-permanent-blackbox-and-slog-coremask-sop": [
       "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
     ],
+    "unit-msprobe-cross-rank-nan-source-and-construct-chain-triage-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+    ],
+    "unit-msprof-analyze-aicpu-elimination-and-fused-affinity-api-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+    ],
+    "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-analyze-step-overlap-clock-and-intervals"
+    ],
     "unit-msprof-analyze-mfu-range-flops-attribution": [],
     "unit-msprof-analyze-step-overlap-clock-and-intervals": [],
+    "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+    ],
     "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms": [
       "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
@@ -72,25 +128,48 @@
     "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms": [
       "unit-observed-dual-die-phy-id-topology"
     ],
+    "unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+    ],
     "unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow": [
       "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
       "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
     ],
     "unit-observed-dual-die-phy-id-topology": [],
+    "unit-ops-test-kit-error-manager-cleaner-and-xpu-circuit-breaker-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms",
+      "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop"
+    ],
     "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop": [
       "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop": [
       "unit-msprof-analyze-mfu-range-flops-attribution"
+    ],
+    "unit-vllm-ascend-ms-service-metric-multiproc-and-symbol-hook-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-analyze-step-overlap-clock-and-intervals",
+      "unit-msprof-analyze-mfu-range-flops-attribution",
+      "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+    ],
+    "unit-vllm-ascend-torch-profiler-and-msserviceprofiler-pd-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-analyze-step-overlap-clock-and-intervals",
+      "unit-msprof-analyze-mfu-range-flops-attribution",
+      "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
     ]
   },
   "federation": {
     "corpus": {
       "automatic": false,
-      "bytes": 146898,
-      "estimated_tokens": 26268,
+      "bytes": 219947,
+      "estimated_tokens": 39859,
       "kind": "federation",
       "path": ".",
       "unit_ids": [
@@ -106,19 +185,34 @@
         "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop",
         "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow",
         "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop",
+        "unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms",
+        "unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop",
+        "unit-msmemscope-block-watch-corruption-and-step-compare-workflow",
+        "unit-msmemscope-ld-preload-hooks-leak-and-inefficient-memory-sop",
+        "unit-msmodeling-profiling-db-axis-density-and-optix-search-workflow",
+        "unit-msmodeling-tensorcast-device-profile-commgrid-and-op-mapping-sop",
+        "unit-msmodeling-throughput-optimizer-aggregation-to-text-generate-sop",
         "unit-msnpureport-permanent-blackbox-and-slog-coremask-sop",
+        "unit-msprobe-cross-rank-nan-source-and-construct-chain-triage-workflow",
+        "unit-msprof-analyze-aicpu-elimination-and-fused-affinity-api-sop",
+        "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow",
         "unit-msprof-analyze-mfu-range-flops-attribution",
         "unit-msprof-analyze-step-overlap-clock-and-intervals",
+        "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop",
         "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms",
         "unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop",
         "unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop",
         "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms",
+        "unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop",
         "unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow",
         "unit-observed-dual-die-phy-id-topology",
+        "unit-ops-test-kit-error-manager-cleaner-and-xpu-circuit-breaker-sop",
         "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop",
-        "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop"
+        "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop",
+        "unit-vllm-ascend-ms-service-metric-multiproc-and-symbol-hook-sop",
+        "unit-vllm-ascend-torch-profiler-and-msserviceprofiler-pd-workflow"
       ],
-      "units": 23
+      "units": 38
     },
     "domains": [
       {
@@ -175,38 +269,77 @@
       },
       {
         "automatic": false,
-        "bytes": 28088,
-        "estimated_tokens": 4893,
+        "bytes": 14262,
+        "estimated_tokens": 2591,
+        "exceeds": [],
+        "kind": "federation",
+        "path": "memory",
+        "recommended_action": "review_federation_boundary",
+        "unit_ids": [
+          "unit-msmemscope-block-watch-corruption-and-step-compare-workflow",
+          "unit-msmemscope-ld-preload-hooks-leak-and-inefficient-memory-sop",
+          "unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop"
+        ],
+        "units": 3
+      },
+      {
+        "automatic": false,
+        "bytes": 14234,
+        "estimated_tokens": 2624,
+        "exceeds": [],
+        "kind": "federation",
+        "path": "modeling",
+        "recommended_action": "review_federation_boundary",
+        "unit_ids": [
+          "unit-msmodeling-profiling-db-axis-density-and-optix-search-workflow",
+          "unit-msmodeling-tensorcast-device-profile-commgrid-and-op-mapping-sop",
+          "unit-msmodeling-throughput-optimizer-aggregation-to-text-generate-sop"
+        ],
+        "units": 3
+      },
+      {
+        "automatic": false,
+        "bytes": 62926,
+        "estimated_tokens": 11474,
         "exceeds": [],
         "kind": "federation",
         "path": "profiling",
         "recommended_action": "review_federation_boundary",
         "unit_ids": [
           "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow",
+          "unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms",
+          "unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop",
+          "unit-msprof-analyze-aicpu-elimination-and-fused-affinity-api-sop",
+          "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow",
+          "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop",
           "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms",
           "unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop",
           "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop",
-          "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop"
+          "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop",
+          "unit-vllm-ascend-ms-service-metric-multiproc-and-symbol-hook-sop",
+          "unit-vllm-ascend-torch-profiler-and-msserviceprofiler-pd-workflow"
         ],
-        "units": 5
+        "units": 12
       },
       {
         "automatic": false,
-        "bytes": 12324,
-        "estimated_tokens": 2030,
+        "bytes": 22039,
+        "estimated_tokens": 3825,
         "exceeds": [],
         "kind": "federation",
         "path": "validation",
         "recommended_action": "review_federation_boundary",
         "unit_ids": [
           "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop",
-          "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+          "unit-msprobe-cross-rank-nan-source-and-construct-chain-triage-workflow",
+          "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms",
+          "unit-ops-test-kit-error-manager-cleaner-and-xpu-circuit-breaker-sop"
         ],
-        "units": 2
+        "units": 4
       }
     ]
   },
-  "index_build_elapsed_ms": 8.445375016890466,
+  "index_build_elapsed_ms": 18.13133293762803,
   "leaves": [
     {
       "automatic": false,
@@ -406,6 +539,149 @@
     },
     {
       "automatic": false,
+      "bytes": 4995,
+      "estimated_tokens": 920,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "memory/msmemscope/hal-and-mstx-hooks/step-leak-and-inefficient-memory",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-msmemscope-ld-preload-hooks-leak-and-inefficient-memory-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 4219,
+      "estimated_tokens": 693,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "memory/msmemscope/watch-and-decompose/memory-corruption-and-breakdown",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-msmemscope-block-watch-corruption-and-step-compare-workflow"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5048,
+      "estimated_tokens": 978,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "memory/pytorch-snapshot/pickle-to-sqlite/fragmentation-and-oom-cte",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5309,
+      "estimated_tokens": 991,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "modeling/profiling-database/axis-density-and-optix/strict-bucketing-and-calibration",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-msmodeling-profiling-db-axis-density-and-optix-search-workflow"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 4566,
+      "estimated_tokens": 852,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "modeling/serving-cast/throughput-optimizer/prefill-decode-decomposition",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-msmodeling-throughput-optimizer-aggregation-to-text-generate-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 4359,
+      "estimated_tokens": 781,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "modeling/tensor-cast/device-profile-and-op-mapping/empirical-vs-analytic-sim",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-msmodeling-tensorcast-device-profile-commgrid-and-op-mapping-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 4749,
+      "estimated_tokens": 899,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "profiling/mskpp/dsl-and-pipe-modeling/mmad-mov-vec-prediction",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 4391,
+      "estimated_tokens": 805,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "profiling/mskpp/interpolation-and-roofline/prof-data-910b-calibration",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5305,
+      "estimated_tokens": 996,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "profiling/msprof-analyze/aicpu-and-fusion-advisor/dtype-cast-and-affinity-api",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-msprof-analyze-aicpu-elimination-and-fused-affinity-api-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5467,
+      "estimated_tokens": 1032,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "profiling/msprof-analyze/cluster-fast-slow-rank/pseudo-fast-rank-and-wait",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5484,
+      "estimated_tokens": 1082,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "profiling/msprof-analyze/sqlite-db-explorer/canonical-cte-macros",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
       "bytes": 5469,
       "estimated_tokens": 913,
       "exceeds": [],
@@ -466,6 +742,58 @@
       "recommended_action": "review_leaf_split",
       "unit_ids": [
         "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 4252,
+      "estimated_tokens": 779,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "profiling/vllm-ascend/prometheus-metrics/ms-service-metric-hooks",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-vllm-ascend-ms-service-metric-multiproc-and-symbol-hook-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5190,
+      "estimated_tokens": 988,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "profiling/vllm-ascend/service-profiler/torch-and-msserviceprofiler",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-vllm-ascend-torch-profiler-and-msserviceprofiler-pd-workflow"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 4610,
+      "estimated_tokens": 870,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "validation/msprobe-accuracy/nan-overflow-triage/cross-rank-source-and-construct",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-msprobe-cross-rank-nan-source-and-construct-chain-triage-workflow"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5105,
+      "estimated_tokens": 925,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "validation/ops-test-kit/forkserver-and-remote-xpu/error-cleaner-and-circuit-breaker",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-ops-test-kit-error-manager-cleaner-and-xpu-circuit-breaker-sop"
       ],
       "units": 1
     },
@@ -636,6 +964,149 @@
     },
     {
       "automatic": false,
+      "bytes": 4995,
+      "estimated_tokens": 920,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "memory/msmemscope/hal-and-mstx-hooks",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-msmemscope-ld-preload-hooks-leak-and-inefficient-memory-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 4219,
+      "estimated_tokens": 693,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "memory/msmemscope/watch-and-decompose",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-msmemscope-block-watch-corruption-and-step-compare-workflow"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5048,
+      "estimated_tokens": 978,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "memory/pytorch-snapshot/pickle-to-sqlite",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5309,
+      "estimated_tokens": 991,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "modeling/profiling-database/axis-density-and-optix",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-msmodeling-profiling-db-axis-density-and-optix-search-workflow"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 4566,
+      "estimated_tokens": 852,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "modeling/serving-cast/throughput-optimizer",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-msmodeling-throughput-optimizer-aggregation-to-text-generate-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 4359,
+      "estimated_tokens": 781,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "modeling/tensor-cast/device-profile-and-op-mapping",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-msmodeling-tensorcast-device-profile-commgrid-and-op-mapping-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 4749,
+      "estimated_tokens": 899,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "profiling/mskpp/dsl-and-pipe-modeling",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 4391,
+      "estimated_tokens": 805,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "profiling/mskpp/interpolation-and-roofline",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5305,
+      "estimated_tokens": 996,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "profiling/msprof-analyze/aicpu-and-fusion-advisor",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-msprof-analyze-aicpu-elimination-and-fused-affinity-api-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5467,
+      "estimated_tokens": 1032,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "profiling/msprof-analyze/cluster-fast-slow-rank",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5484,
+      "estimated_tokens": 1082,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "profiling/msprof-analyze/sqlite-db-explorer",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
       "bytes": 16115,
       "estimated_tokens": 2741,
       "exceeds": [],
@@ -665,6 +1136,58 @@
     },
     {
       "automatic": false,
+      "bytes": 4252,
+      "estimated_tokens": 779,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "profiling/vllm-ascend/prometheus-metrics",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-vllm-ascend-ms-service-metric-multiproc-and-symbol-hook-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5190,
+      "estimated_tokens": 988,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "profiling/vllm-ascend/service-profiler",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-vllm-ascend-torch-profiler-and-msserviceprofiler-pd-workflow"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 4610,
+      "estimated_tokens": 870,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "validation/msprobe-accuracy/nan-overflow-triage",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-msprobe-cross-rank-nan-source-and-construct-chain-triage-workflow"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5105,
+      "estimated_tokens": 925,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "validation/ops-test-kit/forkserver-and-remote-xpu",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-ops-test-kit-error-manager-cleaner-and-xpu-circuit-breaker-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
       "bytes": 12324,
       "estimated_tokens": 2030,
       "exceeds": [],
@@ -678,7 +1201,7 @@
       "units": 2
     }
   ],
-  "unit_count": 23,
+  "unit_count": 38,
   "units": {
     "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": {
       "bytes": 5014,
@@ -839,6 +1362,97 @@
       "path": "diagnostics/cann-toolchain/msaicerr-and-objdump/exception-register-decoding/unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop.md",
       "tier": "L2"
     },
+    "unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms": {
+      "bytes": 4391,
+      "category": "axiom",
+      "content_sha256": "a88d2620dfafcf002e270d0cc9de3ee3e2c2cf5d4cf97ab075f52333e9b5c101",
+      "domain_path": "profiling/mskpp/interpolation-and-roofline/prof-data-910b-calibration",
+      "estimated_tokens": 805,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
+      ],
+      "path": "profiling/mskpp/interpolation-and-roofline/prof-data-910b-calibration/unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms.md",
+      "tier": "L1"
+    },
+    "unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop": {
+      "bytes": 4749,
+      "category": "sop",
+      "content_sha256": "8a2cd98173c91771b1f29928fd4efaabea53e80ff331de434bc69b24ce9f9068",
+      "domain_path": "profiling/mskpp/dsl-and-pipe-modeling/mmad-mov-vec-prediction",
+      "estimated_tokens": 899,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
+      ],
+      "path": "profiling/mskpp/dsl-and-pipe-modeling/mmad-mov-vec-prediction/unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop.md",
+      "tier": "L2"
+    },
+    "unit-msmemscope-block-watch-corruption-and-step-compare-workflow": {
+      "bytes": 4219,
+      "category": "workflow",
+      "content_sha256": "11d9d1f07e3575ac2d426f052cbd0e464d964271cfe127bbede651fbaed22eb8",
+      "domain_path": "memory/msmemscope/watch-and-decompose/memory-corruption-and-breakdown",
+      "estimated_tokens": 693,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "memory/msmemscope/watch-and-decompose/memory-corruption-and-breakdown/unit-msmemscope-block-watch-corruption-and-step-compare-workflow.md",
+      "tier": "L3"
+    },
+    "unit-msmemscope-ld-preload-hooks-leak-and-inefficient-memory-sop": {
+      "bytes": 4995,
+      "category": "sop",
+      "content_sha256": "3ac595134f6bee3423ddd23e5025496ac13a66047d7ca174338d44581ea339f6",
+      "domain_path": "memory/msmemscope/hal-and-mstx-hooks/step-leak-and-inefficient-memory",
+      "estimated_tokens": 920,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "memory/msmemscope/hal-and-mstx-hooks/step-leak-and-inefficient-memory/unit-msmemscope-ld-preload-hooks-leak-and-inefficient-memory-sop.md",
+      "tier": "L2"
+    },
+    "unit-msmodeling-profiling-db-axis-density-and-optix-search-workflow": {
+      "bytes": 5309,
+      "category": "workflow",
+      "content_sha256": "4bd17fc32717ad53cac76501ec041afa2fa12aa690d057f51254b1501ed968d9",
+      "domain_path": "modeling/profiling-database/axis-density-and-optix/strict-bucketing-and-calibration",
+      "estimated_tokens": 991,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "path": "modeling/profiling-database/axis-density-and-optix/strict-bucketing-and-calibration/unit-msmodeling-profiling-db-axis-density-and-optix-search-workflow.md",
+      "tier": "L3"
+    },
+    "unit-msmodeling-tensorcast-device-profile-commgrid-and-op-mapping-sop": {
+      "bytes": 4359,
+      "category": "sop",
+      "content_sha256": "f81e3886466eac0e53c9f6789a677da00a523443f330a89dc4327592dd7d1974",
+      "domain_path": "modeling/tensor-cast/device-profile-and-op-mapping/empirical-vs-analytic-sim",
+      "estimated_tokens": 781,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "path": "modeling/tensor-cast/device-profile-and-op-mapping/empirical-vs-analytic-sim/unit-msmodeling-tensorcast-device-profile-commgrid-and-op-mapping-sop.md",
+      "tier": "L2"
+    },
+    "unit-msmodeling-throughput-optimizer-aggregation-to-text-generate-sop": {
+      "bytes": 4566,
+      "category": "sop",
+      "content_sha256": "64531ee66006371a99806d3d2586fe44d4850f2b57402fba6bd859633472161f",
+      "domain_path": "modeling/serving-cast/throughput-optimizer/prefill-decode-decomposition",
+      "estimated_tokens": 852,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "path": "modeling/serving-cast/throughput-optimizer/prefill-decode-decomposition/unit-msmodeling-throughput-optimizer-aggregation-to-text-generate-sop.md",
+      "tier": "L2"
+    },
     "unit-msnpureport-permanent-blackbox-and-slog-coremask-sop": {
       "bytes": 5227,
       "category": "sop",
@@ -851,6 +1465,46 @@
       ],
       "path": "diagnostics/cann-toolchain/asys-and-msnpureport/blackbox-and-slog/unit-msnpureport-permanent-blackbox-and-slog-coremask-sop.md",
       "tier": "L2"
+    },
+    "unit-msprobe-cross-rank-nan-source-and-construct-chain-triage-workflow": {
+      "bytes": 4610,
+      "category": "workflow",
+      "content_sha256": "fe0ec23a1096239668b7ea26d73e82f0f9c26b0f799490c17575dfd096ec8042",
+      "domain_path": "validation/msprobe-accuracy/nan-overflow-triage/cross-rank-source-and-construct",
+      "estimated_tokens": 870,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+      ],
+      "path": "validation/msprobe-accuracy/nan-overflow-triage/cross-rank-source-and-construct/unit-msprobe-cross-rank-nan-source-and-construct-chain-triage-workflow.md",
+      "tier": "L3"
+    },
+    "unit-msprof-analyze-aicpu-elimination-and-fused-affinity-api-sop": {
+      "bytes": 5305,
+      "category": "sop",
+      "content_sha256": "37468e3bbbe6c9c530d8b495c0e5a2770cc856852dcc5b684a605ad73240c0f4",
+      "domain_path": "profiling/msprof-analyze/aicpu-and-fusion-advisor/dtype-cast-and-affinity-api",
+      "estimated_tokens": 996,
+      "evidence_strength": "reproduced_empirical",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "profiling/msprof-analyze/aicpu-and-fusion-advisor/dtype-cast-and-affinity-api/unit-msprof-analyze-aicpu-elimination-and-fused-affinity-api-sop.md",
+      "tier": "L2"
+    },
+    "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow": {
+      "bytes": 5467,
+      "category": "workflow",
+      "content_sha256": "bf75ea9dc553b675160201086286cbd89487ca63023329549a13cf022a2b70cc",
+      "domain_path": "profiling/msprof-analyze/cluster-fast-slow-rank/pseudo-fast-rank-and-wait",
+      "estimated_tokens": 1032,
+      "evidence_strength": "reproduced_empirical",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-msprof-analyze-step-overlap-clock-and-intervals"
+      ],
+      "path": "profiling/msprof-analyze/cluster-fast-slow-rank/pseudo-fast-rank-and-wait/unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow.md",
+      "tier": "L3"
     },
     "unit-msprof-analyze-mfu-range-flops-attribution": {
       "bytes": 3032,
@@ -872,6 +1526,19 @@
       "evidence_strength": "single_observation",
       "inherits_from": [],
       "path": "measurement/msprof/overlap/unit-msprof-analyze-step-overlap-clock-and-intervals.md",
+      "tier": "L2"
+    },
+    "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop": {
+      "bytes": 5484,
+      "category": "sop",
+      "content_sha256": "10502fb2209c18a3cf7317965d656f8289647c272a1d8b6dba581692ce2ffaa6",
+      "domain_path": "profiling/msprof-analyze/sqlite-db-explorer/canonical-cte-macros",
+      "estimated_tokens": 1082,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "profiling/msprof-analyze/sqlite-db-explorer/canonical-cte-macros/unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop.md",
       "tier": "L2"
     },
     "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms": {
@@ -926,6 +1593,19 @@
       "path": "validation/testing-and-golden/ut-st-benchmarks/tolerance-and-comparators/unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms.md",
       "tier": "L1"
     },
+    "unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop": {
+      "bytes": 5048,
+      "category": "sop",
+      "content_sha256": "59d309c5933dd3edae4e327709a6cc5cea2a6155cc52d77d713acc7dc31c167f",
+      "domain_path": "memory/pytorch-snapshot/pickle-to-sqlite/fragmentation-and-oom-cte",
+      "estimated_tokens": 978,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "memory/pytorch-snapshot/pickle-to-sqlite/fragmentation-and-oom-cte/unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop.md",
+      "tier": "L2"
+    },
     "unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow": {
       "bytes": 5657,
       "category": "workflow",
@@ -949,6 +1629,19 @@
       "inherits_from": [],
       "path": "hardware/topology/unit-observed-dual-die-phy-id-topology.md",
       "tier": "L1"
+    },
+    "unit-ops-test-kit-error-manager-cleaner-and-xpu-circuit-breaker-sop": {
+      "bytes": 5105,
+      "category": "sop",
+      "content_sha256": "4ff4367f1ea9b82fba8773df4e0de3a6f3dbc541794e52255173cddc96109a14",
+      "domain_path": "validation/ops-test-kit/forkserver-and-remote-xpu/error-cleaner-and-circuit-breaker",
+      "estimated_tokens": 925,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop"
+      ],
+      "path": "validation/ops-test-kit/forkserver-and-remote-xpu/error-cleaner-and-circuit-breaker/unit-ops-test-kit-error-manager-cleaner-and-xpu-circuit-breaker-sop.md",
+      "tier": "L2"
     },
     "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop": {
       "bytes": 5240,
@@ -975,6 +1668,32 @@
       ],
       "path": "profiling/msprof-and-simulator/op-and-camodel/triton-mfu-decomposition/unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop.md",
       "tier": "L2"
+    },
+    "unit-vllm-ascend-ms-service-metric-multiproc-and-symbol-hook-sop": {
+      "bytes": 4252,
+      "category": "sop",
+      "content_sha256": "a84ae666edee7801ccb10ef7166a29191ffacd02c5b406ca96d2115484bdbc5b",
+      "domain_path": "profiling/vllm-ascend/prometheus-metrics/ms-service-metric-hooks",
+      "estimated_tokens": 779,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "path": "profiling/vllm-ascend/prometheus-metrics/ms-service-metric-hooks/unit-vllm-ascend-ms-service-metric-multiproc-and-symbol-hook-sop.md",
+      "tier": "L2"
+    },
+    "unit-vllm-ascend-torch-profiler-and-msserviceprofiler-pd-workflow": {
+      "bytes": 5190,
+      "category": "workflow",
+      "content_sha256": "b4d38bae4eb07d0f2533cfe33f1c4fe530589050663fb6acb059e15e98534340",
+      "domain_path": "profiling/vllm-ascend/service-profiler/torch-and-msserviceprofiler",
+      "estimated_tokens": 988,
+      "evidence_strength": "software_contract",
+      "inherits_from": [
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "path": "profiling/vllm-ascend/service-profiler/torch-and-msserviceprofiler/unit-vllm-ascend-torch-profiler-and-msserviceprofiler-pd-workflow.md",
+      "tier": "L3"
     }
   }
 }
