@@ -1,5 +1,5 @@
 {
-  "build_elapsed_ms": 8.445375016890466,
+  "build_elapsed_ms": 18.13133293762803,
   "closure": {
     "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": [
       "unit-observed-dual-die-phy-id-topology",
@@ -51,12 +51,68 @@
       "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
       "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
     ],
+    "unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
+    ],
+    "unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
+    ],
+    "unit-msmemscope-block-watch-corruption-and-step-compare-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+    ],
+    "unit-msmemscope-ld-preload-hooks-leak-and-inefficient-memory-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+    ],
+    "unit-msmodeling-profiling-db-axis-density-and-optix-search-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-analyze-step-overlap-clock-and-intervals",
+      "unit-msprof-analyze-mfu-range-flops-attribution",
+      "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+    ],
+    "unit-msmodeling-tensorcast-device-profile-commgrid-and-op-mapping-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-analyze-step-overlap-clock-and-intervals",
+      "unit-msprof-analyze-mfu-range-flops-attribution",
+      "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+    ],
+    "unit-msmodeling-throughput-optimizer-aggregation-to-text-generate-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-analyze-step-overlap-clock-and-intervals",
+      "unit-msprof-analyze-mfu-range-flops-attribution",
+      "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+    ],
     "unit-msnpureport-permanent-blackbox-and-slog-coremask-sop": [
       "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
     ],
+    "unit-msprobe-cross-rank-nan-source-and-construct-chain-triage-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+    ],
+    "unit-msprof-analyze-aicpu-elimination-and-fused-affinity-api-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+    ],
+    "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-analyze-step-overlap-clock-and-intervals"
+    ],
     "unit-msprof-analyze-mfu-range-flops-attribution": [],
     "unit-msprof-analyze-step-overlap-clock-and-intervals": [],
+    "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+    ],
     "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms": [
       "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
@@ -73,21 +129,44 @@
     "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms": [
       "unit-observed-dual-die-phy-id-topology"
     ],
+    "unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+    ],
     "unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow": [
       "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
       "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
     ],
     "unit-observed-dual-die-phy-id-topology": [],
+    "unit-ops-test-kit-error-manager-cleaner-and-xpu-circuit-breaker-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms",
+      "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop"
+    ],
     "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop": [
       "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop": [
       "unit-msprof-analyze-mfu-range-flops-attribution"
+    ],
+    "unit-vllm-ascend-ms-service-metric-multiproc-and-symbol-hook-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-analyze-step-overlap-clock-and-intervals",
+      "unit-msprof-analyze-mfu-range-flops-attribution",
+      "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+    ],
+    "unit-vllm-ascend-torch-profiler-and-msserviceprofiler-pd-workflow": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-msprof-analyze-step-overlap-clock-and-intervals",
+      "unit-msprof-analyze-mfu-range-flops-attribution",
+      "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
     ]
   },
-  "generation": "6f8b56484974eb0a9851a976017b3a57f4c45948ef547a29cb26cdbbfd58678f",
+  "generation": "59f7e41b63db0984516f46359769456604a5a27c1b8177b8f5e3a08350e19e1a",
   "id_path": {
     "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": "diagnostics/error-codes/unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow.md",
     "unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow": "diagnostics/aicore-dump/unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow.md",
@@ -101,22 +180,37 @@
     "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop": "validation/testing-and-golden/ut-st-benchmarks/ut-st-and-whitebox-coverage/unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop.md",
     "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow": "profiling/msprof-and-simulator/system-and-timeline/hccl-overlap-and-precision-flow/unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow.md",
     "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop": "diagnostics/cann-toolchain/msaicerr-and-objdump/exception-register-decoding/unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop.md",
+    "unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms": "profiling/mskpp/interpolation-and-roofline/prof-data-910b-calibration/unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms.md",
+    "unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop": "profiling/mskpp/dsl-and-pipe-modeling/mmad-mov-vec-prediction/unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop.md",
+    "unit-msmemscope-block-watch-corruption-and-step-compare-workflow": "memory/msmemscope/watch-and-decompose/memory-corruption-and-breakdown/unit-msmemscope-block-watch-corruption-and-step-compare-workflow.md",
+    "unit-msmemscope-ld-preload-hooks-leak-and-inefficient-memory-sop": "memory/msmemscope/hal-and-mstx-hooks/step-leak-and-inefficient-memory/unit-msmemscope-ld-preload-hooks-leak-and-inefficient-memory-sop.md",
+    "unit-msmodeling-profiling-db-axis-density-and-optix-search-workflow": "modeling/profiling-database/axis-density-and-optix/strict-bucketing-and-calibration/unit-msmodeling-profiling-db-axis-density-and-optix-search-workflow.md",
+    "unit-msmodeling-tensorcast-device-profile-commgrid-and-op-mapping-sop": "modeling/tensor-cast/device-profile-and-op-mapping/empirical-vs-analytic-sim/unit-msmodeling-tensorcast-device-profile-commgrid-and-op-mapping-sop.md",
+    "unit-msmodeling-throughput-optimizer-aggregation-to-text-generate-sop": "modeling/serving-cast/throughput-optimizer/prefill-decode-decomposition/unit-msmodeling-throughput-optimizer-aggregation-to-text-generate-sop.md",
     "unit-msnpureport-permanent-blackbox-and-slog-coremask-sop": "diagnostics/cann-toolchain/asys-and-msnpureport/blackbox-and-slog/unit-msnpureport-permanent-blackbox-and-slog-coremask-sop.md",
+    "unit-msprobe-cross-rank-nan-source-and-construct-chain-triage-workflow": "validation/msprobe-accuracy/nan-overflow-triage/cross-rank-source-and-construct/unit-msprobe-cross-rank-nan-source-and-construct-chain-triage-workflow.md",
+    "unit-msprof-analyze-aicpu-elimination-and-fused-affinity-api-sop": "profiling/msprof-analyze/aicpu-and-fusion-advisor/dtype-cast-and-affinity-api/unit-msprof-analyze-aicpu-elimination-and-fused-affinity-api-sop.md",
+    "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow": "profiling/msprof-analyze/cluster-fast-slow-rank/pseudo-fast-rank-and-wait/unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow.md",
     "unit-msprof-analyze-mfu-range-flops-attribution": "measurement/msprof/mfu/unit-msprof-analyze-mfu-range-flops-attribution.md",
     "unit-msprof-analyze-step-overlap-clock-and-intervals": "measurement/msprof/overlap/unit-msprof-analyze-step-overlap-clock-and-intervals.md",
+    "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop": "profiling/msprof-analyze/sqlite-db-explorer/canonical-cte-macros/unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop.md",
     "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms": "profiling/msprof-and-simulator/op-and-camodel/pmu-metrics-and-roofline/unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms.md",
     "unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop": "profiling/msprof-and-simulator/op-and-camodel/camodel-and-npusim-trace/unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop.md",
     "unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop": "diagnostics/cann-toolchain/sanitizer-and-debug-api/mssanitizer-and-npu-check/unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop.md",
     "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms": "validation/testing-and-golden/ut-st-benchmarks/tolerance-and-comparators/unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms.md",
+    "unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop": "memory/pytorch-snapshot/pickle-to-sqlite/fragmentation-and-oom-cte/unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop.md",
     "unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow": "diagnostics/cann-toolchain/msaicerr-and-objdump/pc-offset-disassembly/unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow.md",
     "unit-observed-dual-die-phy-id-topology": "hardware/topology/unit-observed-dual-die-phy-id-topology.md",
+    "unit-ops-test-kit-error-manager-cleaner-and-xpu-circuit-breaker-sop": "validation/ops-test-kit/forkserver-and-remote-xpu/error-cleaner-and-circuit-breaker/unit-ops-test-kit-error-manager-cleaner-and-xpu-circuit-breaker-sop.md",
     "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop": "profiling/msprof-and-simulator/system-and-timeline/torch-npu-profiler-and-gaps/unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop.md",
-    "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop": "profiling/msprof-and-simulator/op-and-camodel/triton-mfu-decomposition/unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop.md"
+    "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop": "profiling/msprof-and-simulator/op-and-camodel/triton-mfu-decomposition/unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop.md",
+    "unit-vllm-ascend-ms-service-metric-multiproc-and-symbol-hook-sop": "profiling/vllm-ascend/prometheus-metrics/ms-service-metric-hooks/unit-vllm-ascend-ms-service-metric-multiproc-and-symbol-hook-sop.md",
+    "unit-vllm-ascend-torch-profiler-and-msserviceprofiler-pd-workflow": "profiling/vllm-ascend/service-profiler/torch-and-msserviceprofiler/unit-vllm-ascend-torch-profiler-and-msserviceprofiler-pd-workflow.md"
   },
   "query_budget_excludes_build": true,
   "schema_version": "mindie-routing-manifest/1",
   "token_estimator": "utf8_bytes_div_4_ceiling",
-  "unit_count": 23,
+  "unit_count": 38,
   "units": [
     {
       "category": "workflow",
@@ -921,6 +1015,369 @@
       }
     },
     {
+      "category": "axiom",
+      "conditions": {
+        "domain": "profiling",
+        "hardware": [
+          "Ascend 910B"
+        ]
+      },
+      "domain_path": "profiling/mskpp/interpolation-and-roofline/prof-data-910b-calibration",
+      "evidence_strength": "software_contract",
+      "id": "unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms",
+      "inherits_from": [
+        "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
+      ],
+      "path": "profiling/mskpp/interpolation-and-roofline/prof-data-910b-calibration/unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/Ascend/mskpp/blob/5fcea15fdddf0bca9aa72745b07fea6d3093e555/csrc/prof_data/resource910b.h#L17-L86",
+          "https://gitcode.com/Ascend/mskpp/blob/5fcea15fdddf0bca9aa72745b07fea6d3093e555/csrc/prof_data/linearInterpolate.h#L1-L45"
+        ],
+        "source_locator": "Ascend/mskpp@5fcea15fdddf0bca9aa72745b07fea6d3093e555:csrc/prof_data/resource910b.h",
+        "source_type": "source_contract",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L1",
+      "title": "Ascend 910B msKPP Hardware Profile Calibration Tables & Linear Interpolation Axioms (MovType, MmadType, VecType)",
+      "token_estimate": 805,
+      "triggers": {
+        "error_signatures": [
+          "GetMovTypeData",
+          "GetMmadTypeData",
+          "GetVecTypeData"
+        ],
+        "keywords": [
+          "mskpp",
+          "resource910b",
+          "linear-interpolate",
+          "mov-type",
+          "mmad-type",
+          "vec-type",
+          "ops-per-cycle"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "domain": "profiling",
+        "hardware": [
+          "Ascend 910B",
+          "Ascend 910C"
+        ]
+      },
+      "domain_path": "profiling/mskpp/dsl-and-pipe-modeling/mmad-mov-vec-prediction",
+      "evidence_strength": "software_contract",
+      "id": "unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop",
+      "inherits_from": [
+        "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
+      ],
+      "path": "profiling/mskpp/dsl-and-pipe-modeling/mmad-mov-vec-prediction/unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/Ascend/mskpp/blob/5fcea15fdddf0bca9aa72745b07fea6d3093e555/README_EN.md#L25-L53",
+          "https://gitcode.com/Ascend/mskpp/blob/5fcea15fdddf0bca9aa72745b07fea6d3093e555/test/cases/test_mmad.py#L20-L123"
+        ],
+        "source_locator": "Ascend/mskpp@5fcea15fdddf0bca9aa72745b07fea6d3093e555:test/cases/test_mmad.py",
+        "source_type": "source_contract",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "MindStudio Kernel Performance Prediction (msKPP) Chip DSL, Memory Hierarchy & Tiling Prediction SOP",
+      "token_estimate": 899,
+      "triggers": {
+        "error_signatures": [
+          "instruction_cycle_consumption.html",
+          "L1-TO-L0A EVENT",
+          "mmad invalid param"
+        ],
+        "keywords": [
+          "mskpp",
+          "kernel-performance-prediction",
+          "mmad",
+          "l0a",
+          "l0b",
+          "l0c",
+          "tiling-design",
+          "task-schedule"
+        ]
+      }
+    },
+    {
+      "category": "workflow",
+      "conditions": {
+        "domain": "memory",
+        "hardware": [
+          "Ascend 910B",
+          "Ascend 910C"
+        ]
+      },
+      "domain_path": "memory/msmemscope/watch-and-decompose/memory-corruption-and-breakdown",
+      "evidence_strength": "software_contract",
+      "id": "unit-msmemscope-block-watch-corruption-and-step-compare-workflow",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "memory/msmemscope/watch-and-decompose/memory-corruption-and-breakdown/unit-msmemscope-block-watch-corruption-and-step-compare-workflow.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/Ascend/msmemscope/blob/2cd53f2fd34745240a1e8c4a9e66edeb25dea0d8/docs/en/overview.md#L9-L25",
+          "https://gitcode.com/Ascend/msmemscope/blob/2cd53f2fd34745240a1e8c4a9e66edeb25dea0d8/example/watch/README.md#L1-L55",
+          "https://gitcode.com/Ascend/msmemscope/blob/2cd53f2fd34745240a1e8c4a9e66edeb25dea0d8/example/compare/README.md#L1-L50",
+          "https://gitcode.com/Ascend/msmemscope/blob/2cd53f2fd34745240a1e8c4a9e66edeb25dea0d8/example/decompose/README.md#L1-L50"
+        ],
+        "source_locator": "Ascend/msmemscope@2cd53f2fd34745240a1e8c4a9e66edeb25dea0d8:docs/en/overview.md",
+        "source_type": "source_contract",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L3",
+      "title": "Ascend msMemScope Memory Block Corruption Watch, Step Comparison & Layer Decomposition Workflow",
+      "token_estimate": 693,
+      "triggers": {
+        "error_signatures": [
+          "memory corruption between operators",
+          "OOM between steps",
+          "memory decomposition mismatch"
+        ],
+        "keywords": [
+          "msmemscope",
+          "memory-watch",
+          "memory-compare",
+          "memory-decomposition",
+          "silent-data-corruption",
+          "tensor-stomping"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "domain": "memory",
+        "hardware": [
+          "Ascend 910B",
+          "Ascend 910C"
+        ]
+      },
+      "domain_path": "memory/msmemscope/hal-and-mstx-hooks/step-leak-and-inefficient-memory",
+      "evidence_strength": "software_contract",
+      "id": "unit-msmemscope-ld-preload-hooks-leak-and-inefficient-memory-sop",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "memory/msmemscope/hal-and-mstx-hooks/step-leak-and-inefficient-memory/unit-msmemscope-ld-preload-hooks-leak-and-inefficient-memory-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/Ascend/msmemscope/blob/2cd53f2fd34745240a1e8c4a9e66edeb25dea0d8/docs/en/overview.md#L1-L25",
+          "https://gitcode.com/Ascend/msmemscope/blob/2cd53f2fd34745240a1e8c4a9e66edeb25dea0d8/example/leaks/README.md#L1-L69",
+          "https://gitcode.com/Ascend/msmemscope/blob/2cd53f2fd34745240a1e8c4a9e66edeb25dea0d8/example/inefficient/README.md#L1-L46"
+        ],
+        "source_locator": "Ascend/msmemscope@2cd53f2fd34745240a1e8c4a9e66edeb25dea0d8:docs/en/overview.md",
+        "source_type": "source_contract",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "Ascend msMemScope LD_PRELOAD Hook Instrumentation, Intra-Step Leak Detection & Inefficient Memory SOP",
+      "token_estimate": 920,
+      "triggers": {
+        "error_signatures": [
+          "libleaks_ascend_hal_hook.so",
+          "Early Allocation",
+          "Late Deallocation",
+          "Temporary Idleness"
+        ],
+        "keywords": [
+          "msmemscope",
+          "memscope",
+          "memory-leak",
+          "inefficient-memory",
+          "hal-hook",
+          "mstx-hook",
+          "kernel-hook"
+        ]
+      }
+    },
+    {
+      "category": "workflow",
+      "conditions": {
+        "domain": "modeling",
+        "hardware": [
+          "Ascend 910B",
+          "Ascend 910C"
+        ]
+      },
+      "domain_path": "modeling/profiling-database/axis-density-and-optix/strict-bucketing-and-calibration",
+      "evidence_strength": "software_contract",
+      "id": "unit-msmodeling-profiling-db-axis-density-and-optix-search-workflow",
+      "inherits_from": [
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-msprof-analyze-step-overlap-clock-and-intervals",
+        "unit-msprof-analyze-mfu-range-flops-attribution",
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "path": "modeling/profiling-database/axis-density-and-optix/strict-bucketing-and-calibration/unit-msmodeling-profiling-db-axis-density-and-optix-search-workflow.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/Ascend/msmodeling/blob/1adde03a04264fa976893fdf50495270175043e6/.agents/skills/profiling_database_axis_density/SKILL.md#L1-L150",
+          "https://gitcode.com/Ascend/msmodeling/blob/1adde03a04264fa976893fdf50495270175043e6/.agents/skills/optix-assistant/SKILL.md#L1-L106"
+        ],
+        "source_locator": "Ascend/msmodeling@1adde03a04264fa976893fdf50495270175043e6:.agents/skills/profiling_database_axis_density/SKILL.md",
+        "source_type": "source_contract",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L3",
+      "title": "MindStudio-Modeling Profiling Database V1 Axis Density Calibration & OptiX Closed-Loop Search Workflow",
+      "token_estimate": 991,
+      "triggers": {
+        "error_signatures": [
+          "strict_signature mismatch",
+          "config_preflight failed",
+          "validate_candidates rejected"
+        ],
+        "keywords": [
+          "msmodeling",
+          "profiling-database-axis-density",
+          "strict-signature",
+          "max-gap",
+          "max-ratio",
+          "optix-assistant",
+          "pso-mode",
+          "benchmark-spec"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "domain": "modeling",
+        "hardware": [
+          "Ascend 910B",
+          "Ascend 910C"
+        ]
+      },
+      "domain_path": "modeling/tensor-cast/device-profile-and-op-mapping/empirical-vs-analytic-sim",
+      "evidence_strength": "software_contract",
+      "id": "unit-msmodeling-tensorcast-device-profile-commgrid-and-op-mapping-sop",
+      "inherits_from": [
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-msprof-analyze-step-overlap-clock-and-intervals",
+        "unit-msprof-analyze-mfu-range-flops-attribution",
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "path": "modeling/tensor-cast/device-profile-and-op-mapping/empirical-vs-analytic-sim/unit-msmodeling-tensorcast-device-profile-commgrid-and-op-mapping-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/Ascend/msmodeling/blob/1adde03a04264fa976893fdf50495270175043e6/AGENTS.md#L56-L207",
+          "https://gitcode.com/Ascend/msmodeling/blob/1adde03a04264fa976893fdf50495270175043e6/docs/ai-native/architecture.md#L1-L44"
+        ],
+        "source_locator": "Ascend/msmodeling@1adde03a04264fa976893fdf50495270175043e6:AGENTS.md",
+        "source_type": "source_contract",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "MindStudio-Modeling TensorCast DeviceProfile, CommGrid Invariants & op_mapping.yaml Calibration SOP",
+      "token_estimate": 781,
+      "triggers": {
+        "error_signatures": [
+          "Duplicate DeviceProfile name",
+          "grid.ndim != len(topologies)",
+          "op_mapping.yaml missing kernel"
+        ],
+        "keywords": [
+          "msmodeling",
+          "tensor-cast",
+          "device-profile",
+          "comm-grid",
+          "op-mapping",
+          "empirical-performance-model",
+          "analytic-performance-model"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "domain": "modeling",
+        "hardware": [
+          "Ascend 910B",
+          "Ascend 910C"
+        ]
+      },
+      "domain_path": "modeling/serving-cast/throughput-optimizer/prefill-decode-decomposition",
+      "evidence_strength": "software_contract",
+      "id": "unit-msmodeling-throughput-optimizer-aggregation-to-text-generate-sop",
+      "inherits_from": [
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-msprof-analyze-step-overlap-clock-and-intervals",
+        "unit-msprof-analyze-mfu-range-flops-attribution",
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "path": "modeling/serving-cast/throughput-optimizer/prefill-decode-decomposition/unit-msmodeling-throughput-optimizer-aggregation-to-text-generate-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/Ascend/msmodeling/blob/1adde03a04264fa976893fdf50495270175043e6/.agents/skills/throughput-optimizer-explainer/SKILL.md#L1-L117"
+        ],
+        "source_locator": "Ascend/msmodeling@1adde03a04264fa976893fdf50495270175043e6:.agents/skills/throughput-optimizer-explainer/SKILL.md",
+        "source_type": "source_contract",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "MindStudio-Modeling ServingCast Throughput Optimizer Evidence Grading & Prefill/Decode Decomposition SOP",
+      "token_estimate": 852,
+      "triggers": {
+        "error_signatures": [
+          "percentage_breakdowns missing",
+          "dump-op-bound-results",
+          "insufficient evidence"
+        ],
+        "keywords": [
+          "serving-cast",
+          "throughput-optimizer",
+          "text-generate",
+          "prefill-batch-size",
+          "cube-vec-comm-mem",
+          "pd-ratio"
+        ]
+      }
+    },
+    {
       "category": "sop",
       "conditions": {
         "hardware": [
@@ -975,6 +1432,158 @@
           "--aic_switch",
           "--aiv_switch",
           "--icachecheck"
+        ]
+      }
+    },
+    {
+      "category": "workflow",
+      "conditions": {
+        "domain": "validation",
+        "hardware": [
+          "Ascend 910B",
+          "Ascend 910C"
+        ]
+      },
+      "domain_path": "validation/msprobe-accuracy/nan-overflow-triage/cross-rank-source-and-construct",
+      "evidence_strength": "software_contract",
+      "id": "unit-msprobe-cross-rank-nan-source-and-construct-chain-triage-workflow",
+      "inherits_from": [
+        "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+      ],
+      "path": "validation/msprobe-accuracy/nan-overflow-triage/cross-rank-source-and-construct/unit-msprobe-cross-rank-nan-source-and-construct-chain-triage-workflow.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/Ascend/msagent/blob/521f8ead0ebda5db5b282f0c3c4147006e01e016/skills/accuracy/nan-overflow-detection/SKILL.md#L1-L143"
+        ],
+        "source_locator": "Ascend/msagent@521f8ead0ebda5db5b282f0c3c4147006e01e016:skills/accuracy/nan-overflow-detection/SKILL.md",
+        "source_type": "source_contract",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L3",
+      "title": "Ascend MSProbe Distributed NaN/Inf Source-Rank Isolation & Construct-Chain Root-Cause Triage Workflow",
+      "token_estimate": 870,
+      "triggers": {
+        "error_signatures": [
+          "loss is nan",
+          "gnorm is nan",
+          "Distributed.all_reduce"
+        ],
+        "keywords": [
+          "msprobe",
+          "nan-overflow-detection",
+          "dump-json",
+          "construct-json",
+          "stack-json",
+          "source-rank",
+          "propagation-rank"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "domain": "profiling",
+        "hardware": [
+          "Ascend 910B",
+          "Ascend 910C"
+        ]
+      },
+      "domain_path": "profiling/msprof-analyze/aicpu-and-fusion-advisor/dtype-cast-and-affinity-api",
+      "evidence_strength": "reproduced_empirical",
+      "id": "unit-msprof-analyze-aicpu-elimination-and-fused-affinity-api-sop",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "profiling/msprof-analyze/aicpu-and-fusion-advisor/dtype-cast-and-affinity-api/unit-msprof-analyze-aicpu-elimination-and-fused-affinity-api-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/Ascend/msprof-analyze/blob/639eb8702c1884813dfab59ddb371f7838caab6d/docs/en/aicpu_operator_replacement_example.md#L1-L176",
+          "https://gitcode.com/Ascend/msprof-analyze/blob/639eb8702c1884813dfab59ddb371f7838caab6d/docs/en/fused_operator_api_replacement_example.md#L1-L250"
+        ],
+        "source_locator": "Ascend/msprof-analyze@639eb8702c1884813dfab59ddb371f7838caab6d:docs/en/aicpu_operator_replacement_example.md",
+        "source_type": "reproduced_run+source_contract",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "Ascend msprof-analyze AICPU Operator Elimination & torch_npu Fused Affinity API Replacement SOP",
+      "token_estimate": 996,
+      "triggers": {
+        "error_signatures": [
+          "aclnnIndexPutImpl_IndexPut_IndexPut",
+          "AICPU operator detected",
+          "npu_scaled_masked_softmax"
+        ],
+        "keywords": [
+          "msprof-analyze",
+          "advisor",
+          "aicpu-operator",
+          "npu-rms-norm",
+          "npu-swiglu",
+          "npu-confusion-transpose",
+          "index-put"
+        ]
+      }
+    },
+    {
+      "category": "workflow",
+      "conditions": {
+        "domain": "profiling",
+        "hardware": [
+          "Ascend 910B",
+          "Ascend 910C"
+        ]
+      },
+      "domain_path": "profiling/msprof-analyze/cluster-fast-slow-rank/pseudo-fast-rank-and-wait",
+      "evidence_strength": "reproduced_empirical",
+      "id": "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-msprof-analyze-step-overlap-clock-and-intervals"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-msprof-analyze-step-overlap-clock-and-intervals"
+      ],
+      "path": "profiling/msprof-analyze/cluster-fast-slow-rank/pseudo-fast-rank-and-wait/unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/Ascend/msagent/blob/521f8ead0ebda5db5b282f0c3c4147006e01e016/skills/profiler/ascend-cluster-fast-slow-rank-detector/SKILL.md#L1-L121",
+          "https://gitcode.com/Ascend/msprof-analyze/blob/639eb8702c1884813dfab59ddb371f7838caab6d/README_EN.md#L21-L50"
+        ],
+        "source_locator": "Ascend/msagent@521f8ead0ebda5db5b282f0c3c4147006e01e016:skills/profiler/ascend-cluster-fast-slow-rank-detector/SKILL.md",
+        "source_type": "reproduced_run+source_contract",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L3",
+      "title": "Ascend msprof-analyze Cluster Fast/Slow Rank Triage & Host-Bound Pseudo-Fast Rank Detection Workflow",
+      "token_estimate": 1032,
+      "triggers": {
+        "error_signatures": [
+          "slow_rank",
+          "slow_link",
+          "Free Time > 10%"
+        ],
+        "keywords": [
+          "msprof-analyze",
+          "cluster-time-summary",
+          "compute-op-sum",
+          "hccl-sum",
+          "cann-api-sum",
+          "pseudo-fast-rank",
+          "host-bound",
+          "straggler"
         ]
       }
     },
@@ -1064,6 +1673,56 @@
           "to",
           "the",
           "step"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "domain": "profiling",
+        "hardware": [
+          "Ascend 910B",
+          "Ascend 910C"
+        ]
+      },
+      "domain_path": "profiling/msprof-analyze/sqlite-db-explorer/canonical-cte-macros",
+      "evidence_strength": "software_contract",
+      "id": "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "profiling/msprof-analyze/sqlite-db-explorer/canonical-cte-macros/unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/Ascend/msagent/blob/521f8ead0ebda5db5b282f0c3c4147006e01e016/skills/profiler/ascend-profiler-db-explorer/SKILL.md#L1-L183"
+        ],
+        "source_locator": "Ascend/msagent@521f8ead0ebda5db5b282f0c3c4147006e01e016:skills/profiler/ascend-profiler-db-explorer/SKILL.md",
+        "source_type": "source_contract",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "Ascend PyTorch Profiler & msprof SQLite DB Canonical CTE Macros (compute_view, comm_view, dispatch_view) SOP",
+      "token_estimate": 1082,
+      "triggers": {
+        "error_signatures": [
+          "no such table COMPUTE_TASK_INFO",
+          "STRING_IDS join missing",
+          "CONNECTION_IDS mismatch"
+        ],
+        "keywords": [
+          "ascend-pytorch-profiler-db",
+          "msprof-db",
+          "compute-view",
+          "comm-view",
+          "dispatch-view",
+          "string-ids",
+          "connection-ids",
+          "sqlite"
         ]
       }
     },
@@ -1307,6 +1966,56 @@
       }
     },
     {
+      "category": "sop",
+      "conditions": {
+        "domain": "memory",
+        "hardware": [
+          "Ascend 910B",
+          "Ascend 910C"
+        ]
+      },
+      "domain_path": "memory/pytorch-snapshot/pickle-to-sqlite/fragmentation-and-oom-cte",
+      "evidence_strength": "software_contract",
+      "id": "unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "path": "memory/pytorch-snapshot/pickle-to-sqlite/fragmentation-and-oom-cte/unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/Ascend/msagent/blob/521f8ead0ebda5db5b282f0c3c4147006e01e016/skills/profiler/ascend-npu-snapshot-analyzer/SKILL.md#L1-L194"
+        ],
+        "source_locator": "Ascend/msagent@521f8ead0ebda5db5b282f0c3c4147006e01e016:skills/profiler/ascend-npu-snapshot-analyzer/SKILL.md",
+        "source_type": "source_contract",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "Ascend PyTorch Memory Snapshot (_dump_snapshot) SQLite Conversion, Fragmentation & OOM Triage SOP",
+      "token_estimate": 978,
+      "triggers": {
+        "error_signatures": [
+          "NPU out of memory",
+          "_dump_snapshot",
+          "active_allocated",
+          "segment_alloc"
+        ],
+        "keywords": [
+          "memory-snapshot",
+          "dump-snapshot",
+          "record-memory-history",
+          "snapshot-to-db",
+          "fragmentation",
+          "expandable-segments",
+          "oom-triage"
+        ]
+      }
+    },
+    {
       "category": "workflow",
       "conditions": {
         "hardware": [
@@ -1408,6 +2117,59 @@
           "one",
           "dual-die",
           "machine"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "domain": "validation",
+        "hardware": [
+          "Ascend 910B",
+          "Ascend 910C"
+        ]
+      },
+      "domain_path": "validation/ops-test-kit/forkserver-and-remote-xpu/error-cleaner-and-circuit-breaker",
+      "evidence_strength": "software_contract",
+      "id": "unit-ops-test-kit-error-manager-cleaner-and-xpu-circuit-breaker-sop",
+      "inherits_from": [
+        "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms",
+        "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop"
+      ],
+      "path": "validation/ops-test-kit/forkserver-and-remote-xpu/error-cleaner-and-circuit-breaker/unit-ops-test-kit-error-manager-cleaner-and-xpu-circuit-breaker-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://gitcode.com/cann/ops-test-kit/blob/92496503b70e2e05892d15dd5b78d1f80eae77df/csrc/error_manager_cleaner/README-EN.md#L1-L36",
+          "https://gitcode.com/cann/ops-test-kit/blob/92496503b70e2e05892d15dd5078d1f80eae77df/csrc/op_registry_accessor/README-EN.md#L1-L42",
+          "https://gitcode.com/cann/ops-test-kit/blob/92496503b70e2e05892d15dd5b78d1f80eae77df/ttk/remote/xpu_breaker.py#L1-L111"
+        ],
+        "source_locator": "cann/ops-test-kit@92496503b70e2e05892d15dd5b78d1f80eae77df:ttk/remote/xpu_breaker.py",
+        "source_type": "source_contract",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "CANN ops-test-kit (TTK) Forkserver ErrorManager Cleaner, SimplifiedKey Registry & XPU Circuit Breaker SOP",
+      "token_estimate": 925,
+      "triggers": {
+        "error_signatures": [
+          "XpuLegBrokenError",
+          "third-party leg failed",
+          "ClearErrorManager",
+          "FindGenSimplifiedKeyFuncs"
+        ],
+        "keywords": [
+          "ops-test-kit",
+          "ttk",
+          "error-manager-cleaner",
+          "op-registry-accessor",
+          "simplified-key",
+          "xpu-breaker",
+          "forkserver"
         ]
       }
     },
@@ -1522,6 +2284,109 @@
           "check_flops.py",
           "traced_flops",
           "hardware_flops"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "domain": "profiling",
+        "hardware": [
+          "Ascend 910B",
+          "Ascend 910C"
+        ]
+      },
+      "domain_path": "profiling/vllm-ascend/prometheus-metrics/ms-service-metric-hooks",
+      "evidence_strength": "software_contract",
+      "id": "unit-vllm-ascend-ms-service-metric-multiproc-and-symbol-hook-sop",
+      "inherits_from": [
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-msprof-analyze-step-overlap-clock-and-intervals",
+        "unit-msprof-analyze-mfu-range-flops-attribution",
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "path": "profiling/vllm-ascend/prometheus-metrics/ms-service-metric-hooks/unit-vllm-ascend-ms-service-metric-multiproc-and-symbol-hook-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://github.com/vllm-project/vllm-ascend/blob/175ef4d49c2072f9233619636f0309f4f88b4e2c/docs/source/user_guide/ms_service_metric.md#L1-L67"
+        ],
+        "source_locator": "vllm-project/vllm-ascend@175ef4d49c2072f9233619636f0309f4f88b4e2c:docs/source/user_guide/ms_service_metric.md",
+        "source_type": "source_contract",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "vLLM-Ascend MS Service Metric Prometheus Multiprocess Directory & Symbol Hook Injection SOP",
+      "token_estimate": 779,
+      "triggers": {
+        "error_signatures": [
+          "PROMETHEUS_MULTIPROC_DIR",
+          "MS_SERVICE_METRIC_CONFIG_PATH",
+          "ms-service-metric"
+        ],
+        "keywords": [
+          "vllm-ascend",
+          "ms-service-metric",
+          "prometheus-multiproc-dir",
+          "observability",
+          "model-runner-phase-handler",
+          "symbol-hook"
+        ]
+      }
+    },
+    {
+      "category": "workflow",
+      "conditions": {
+        "domain": "profiling",
+        "hardware": [
+          "Ascend 910B",
+          "Ascend 910C"
+        ]
+      },
+      "domain_path": "profiling/vllm-ascend/service-profiler/torch-and-msserviceprofiler",
+      "evidence_strength": "software_contract",
+      "id": "unit-vllm-ascend-torch-profiler-and-msserviceprofiler-pd-workflow",
+      "inherits_from": [
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-msprof-analyze-step-overlap-clock-and-intervals",
+        "unit-msprof-analyze-mfu-range-flops-attribution",
+        "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
+      ],
+      "path": "profiling/vllm-ascend/service-profiler/torch-and-msserviceprofiler/unit-vllm-ascend-torch-profiler-and-msserviceprofiler-pd-workflow.md",
+      "provenance": {
+        "evidence_refs": [
+          "https://github.com/vllm-project/vllm-ascend/blob/175ef4d49c2072f9233619636f0309f4f88b4e2c/docs/source/developer_guide/performance_and_debug/service_profiling_guide.md#L1-L250"
+        ],
+        "source_locator": "vllm-project/vllm-ascend@175ef4d49c2072f9233619636f0309f4f88b4e2c:docs/source/developer_guide/performance_and_debug/service_profiling_guide.md",
+        "source_type": "source_contract",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L3",
+      "title": "vLLM-Ascend Online Service Profiling (--profiler-config vs. MS Service Profiler) & PD Disaggregation Workflow",
+      "token_estimate": 988,
+      "triggers": {
+        "error_signatures": [
+          "404 Not Found /start_profile",
+          "VLLM_TORCH_PROFILER_DIR deprecated",
+          "SERVICE_PROF_CONFIG_PATH"
+        ],
+        "keywords": [
+          "vllm-ascend",
+          "profiler-config",
+          "start-profile",
+          "stop-profile",
+          "msserviceprofiler",
+          "acl-task-time",
+          "libmspti"
         ]
       }
     }
