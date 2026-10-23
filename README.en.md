@@ -12,7 +12,7 @@
   <a href="https://github.com/mindie-agent/mindie-agent"><img src="https://img.shields.io/badge/MindIE%20Agent-Ecosystem-7045f5.svg" alt="MindIE Agent"></a>
   <a href="./publication-contract.json"><img src="https://img.shields.io/badge/Schema-mindie--graded--unit%2F1-0f766e.svg" alt="Schema mindie-graded-unit/1"></a>
   <a href="./publication-contract.json"><img src="https://img.shields.io/badge/domain-infer--observability-0284c7.svg" alt="Domain infer-observability"></a>
-  <a href="./index/routing-manifest.json"><img src="https://img.shields.io/badge/Graded%20Units-23%20Units-d97757.svg" alt="23 Graded Units"></a>
+  <a href="./index/routing-manifest.json"><img src="https://img.shields.io/badge/Graded%20Units-39%20Units-d97757.svg" alt="39 Graded Units"></a>
   <a href="./index/shard-topology.json"><img src="https://img.shields.io/badge/Levels-L1%20to%20L4-10a37f.svg" alt="Levels L1-L4"></a>
 </p>
 
@@ -81,11 +81,11 @@ Once installed, the native host plugin connects to the [`mindie-knowledge`](http
 
 ## 🏗️ Domain Overview & L1–L4 Graded Architecture
 
-This repository hosts the **`infer-observability` graded domain knowledge corpus** for MindIE Agent (**23 graded units**: `L1: 4`, `L2: 14`, `L3: 5`). It covers full-stack observability across Ascend NPU inference and kernel development: CANN four-layer error-code & innermost first-report triage, plog / asys / msnpureport / msaicerr 34-step AI Core exception dump decoding, `npu-objdump` PC-offset disassembly, `mssanitizer` & `npu-check` memory/sync checking, `msprof` / `torch_npu.profiler` / `npusim` performance profiling, end-to-end TTFT/TPOT latency attribution, and multi-dtype (MERE/MARE) accuracy comparators with CPU/NPU twin whitebox validation gates.
+This repository hosts the **`infer-observability` graded domain knowledge corpus** for MindIE Agent (**39 graded units**: `L1: 5`, `L2: 24`, `L3: 10`, `L4: 0`). It covers full-stack observability across Ascend NPU inference and kernel development: CANN four-layer error-code & innermost first-report triage, plog / asys / msnpureport / msaicerr 34-step AI Core exception dump decoding, `npu-objdump` PC-offset disassembly, `mssanitizer` & `npu-check` memory/sync checking, `msprof` / `torch_npu.profiler` / `npusim` performance profiling, end-to-end TTFT/TPOT latency attribution, and multi-dtype (MERE/MARE) accuracy comparators with CPU/NPU twin whitebox validation gates.
 
 ### 1. The `mindie-graded-unit/1` L1–L4 Hierarchy
 
-Instead of lossy chat summaries or unconditioned "best practices", every knowledge unit in this repository is structured into **four graded levels (L1–L4)** based on engineering abstraction and actionability (current breakdown: **L1: 4 · L2: 14 · L3: 5 · L4: 0**):
+Instead of lossy chat summaries or unconditioned "best practices", every knowledge unit in this repository is structured into **four graded levels (L1–L4)** based on engineering abstraction and actionability (current breakdown: **L1: 5 · L2: 24 · L3: 10 · L4: 0**):
 
 | Level | Canonical Category (`category`) | Role | Scope & Admission Requirements |
 | :---: | --- | --- | --- |
@@ -100,7 +100,7 @@ Instead of lossy chat summaries or unconditioned "best practices", every knowled
 flowchart LR
   Agent["🤖 AI Coding Agent (Claude Code / Codex / Kimi / DSH)"]
   Query["🔎 knowledge_query (Query text + observed conditions)"]
-  Manifest["📋 index/routing-manifest.json (23 units · condition predicates · inheritance)"]
+  Manifest["📋 index/routing-manifest.json (39 units · condition predicates · inheritance)"]
   Topology["🗂️ index/shard-topology.json (Subdomain shards · L1-L4 counts)"]
   Match{"⚖️ Condition Matcher (matched / mismatch / condition_unknown)"}
   Explain["📖 knowledge_explain (Read pinned unit @revision)"]
@@ -117,16 +117,18 @@ flowchart LR
 
 ## 📊 Subdomain Breakdown & Representative Units
 
-[`index/routing-manifest.json`](./index/routing-manifest.json) and [`index/shard-topology.json`](./index/shard-topology.json) are the authoritative derived inventories rebuilt from the Markdown units. This repository currently contains **23 graded knowledge units** (**L1: 4 · L2: 14 · L3: 5 · L4: 0**):
+[`index/routing-manifest.json`](./index/routing-manifest.json) and [`index/shard-topology.json`](./index/shard-topology.json) are the authoritative derived inventories rebuilt from the Markdown units. This repository currently contains **39 graded knowledge units** (**L1: 5 · L2: 24 · L3: 10 · L4: 0**):
 
 ### 1. Subdomain Statistics
 
 | Subdomain | Units | Level Breakdown (`L1–L4`) | Core Engineering Scope |
 | --- | :---: | :---: | --- |
+| `profiling` | **12** | `L1: 2, L2: 7, L3: 3` | `msprof op` PMU metrics & Ascend 950 Vector Roofline axioms, Ascend 910B `msKPP` interpolation axioms & cycle prediction, Simulator four-table cross-analysis & `npusim` bubble diagnosis, `msprof` SQLite CTE views, `msprof-analyze` AICPU elimination & cluster pseudo-fast-rank triage, `torch_npu.profiler` launch-gap attribution, `vLLM-Ascend` online service profiling, and E2E HCCL overlap workflow |
 | `diagnostics` | **10** | `L2: 7, L3: 3` | CANN four-layer error-code workflow, plog first-error triage, asys/msnpureport blackbox collection, msaicerr 34-step exception decoding (Stars/David registers), `npu-objdump` PC disassembly, and `mssanitizer` memory anomaly detection |
 | `measurement` | **5** | `L1: 1, L2: 3, L3: 1` | `msprof` pipe ratios vs host wall-clock axioms, MFU FLOPs attribution & step overlap intervals, `npu-compute`/`npu-check` kernel measurement, and four-stage serving TTFT/TPOT attribution workflow |
-| `profiling` | **5** | `L1: 1, L2: 3, L3: 1` | `msprof op` PMU metrics & Ascend 950 Vector Roofline axioms, Simulator four-table cross-analysis & `npusim` bubble diagnosis, `torch_npu.profiler` launch-gap attribution, Triton MFU grid search, and E2E HCCL overlap workflow |
-| `validation` | **2** | `L1: 1, L2: 1` | Multi-dtype precision standards (MERE/MARE vs `allclose`, NaN comparator traps, host BF16 conversion) axioms and AscendC CPU/NPU twin UT/ST whitebox TilingKey coverage SOP |
+| `validation` | **5** | `L1: 1, L2: 3, L3: 1` | Multi-dtype precision standards (MERE/MARE vs `allclose`, NaN comparator traps, host BF16 conversion) axioms, AscendC CPU/NPU twin UT/ST whitebox TilingKey coverage, CANN `ops-test-kit` circuit breaker, `msprobe` cross-rank NaN source triage workflow, and `MindIE-SD`/`vLLM-Omni` Window A/B/A perf & accuracy gate SOP |
+| `memory` | **3** | `L2: 2, L3: 1` | `msMemScope` `LD_PRELOAD` hook leak/inefficient-memory detection, memory-block corruption watch & step-comparison workflow, and PyTorch NPU `_dump_snapshot` SQLite CTE fragmentation & OOM triage SOP |
+| `modeling` | **3** | `L2: 2, L3: 1` | `MindStudio-Modeling` TensorCast DeviceProfile & `CommGrid` calibration, ServingCast throughput optimizer Prefill/Decode decomposition, and Profiling DB axis-density calibration & OptiX closed-loop search workflow |
 | `hardware` | **1** | `L1: 1` | Observed NPU, Chip, and physical `Phy-ID` topology mapping on dual-die Ascend hardware |
 
 ### 2. Representative Graded Knowledge Units
@@ -145,6 +147,7 @@ flowchart LR
 | [`unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow`](./diagnostics/aicore-dump/unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow.md) | `diagnostics` | **L3** / `workflow` | Closed-loop 34-step AI Core exception dump workflow across Stars/David register decoding, special scenarios, and 101-107 return codes | `mindie://infer-observability/units/unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow@1` |
 | [`unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow`](./measurement/end-to-end/unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow.md) | `measurement` | **L3** / `workflow` | Four-stage attribution of serving TTFT and TPOT regressions across host, graph, HCCL and AICore | `mindie://infer-observability/units/unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow@1` |
 | [`unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow`](./profiling/msprof-and-simulator/system-and-timeline/hccl-overlap-and-precision-flow/unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow.md) | `profiling` | **L3** / `workflow` | End-to-End HCCL Communication Overlap Analysis and Eight-Step Operator Precision Triage Workflow | `mindie://infer-observability/units/unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow@1` |
+| [`unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop`](./validation/mindie-sd-and-omni/gates/unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop.md) | `validation` | **L2** / `sop` | MindIE-SD exploratory vs acceptance Window A/B/A perf-gate and 3-tier PSNR/SSIM/LPIPS accuracy-gate SOP | `mindie://infer-observability/units/unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop@1` |
 
 ---
 
@@ -158,6 +161,7 @@ knowledge-infer-observability/
 ├── AGENTS.md                           # Maintainer and AI-Agent repository boundary rules
 ├── README.md                           # Primary documentation (Chinese)
 ├── README.en.md                        # Primary documentation (English)
+├── LICENSE                             # Dual license (CC BY 4.0 corpus & docs + MIT scripts)
 ├── index/
 │   ├── routing-manifest.json           # [Derived Index] Live unit IDs, paths, tiers, conditions, inheritance & token estimates
 │   └── shard-topology.json             # [Derived Index] Subdomain shard counts and level topology
@@ -185,10 +189,19 @@ Every push and pull request targeting `main` is enforced by `.github/workflows/c
 - **Main Repository & One-Line Installer**: [`mindie-agent/mindie-agent`](https://github.com/mindie-agent/mindie-agent)
 - **Knowledge Runtime & Redaction Engine**: [`mindie-agent/knowledge`](https://github.com/mindie-agent/knowledge) (`mindie-knowledge`)
 - **The 7 Public Domain Knowledge Corpora**:
-  - [`knowledge-vllm-ascend`](https://github.com/mindie-agent/knowledge-vllm-ascend) — `vLLM-Ascend` model bring-up, ACLGraph, MoE & PD disaggregation (43 Units)
-  - [`knowledge-operators`](https://github.com/mindie-agent/knowledge-operators) — AscendC / BiShengIR / Triton / TileLang operator development & optimization (87 Units)
-  - [`knowledge-infer-core`](https://github.com/mindie-agent/knowledge-infer-core) — Core inference engine scheduling, KV cache, multi-stream overlap & serving (78 Units)
-  - [`knowledge-infer-distributed`](https://github.com/mindie-agent/knowledge-infer-distributed) — HCCL collectives, RoCE/HCCS topology, hybrid parallelism & SHMEM (23 Units)
-  - [`knowledge-infer-observability`](https://github.com/mindie-agent/knowledge-infer-observability) — CANN fault diagnostics, `msprof` profiling & accuracy validation (23 Units)
-  - [`knowledge-infer-ops-compat`](https://github.com/mindie-agent/knowledge-infer-ops-compat) — GE/TorchAir graph compilation, custom-op registration & CUDA migration (22 Units)
-  - [`knowledge-agent-engineering`](https://github.com/mindie-agent/knowledge-agent-engineering) — Multi-agent orchestration, NPU lease coordination, redaction audit & benchmarking (23 Units)
+  - [`knowledge-vllm-ascend`](https://github.com/mindie-agent/knowledge-vllm-ascend) — `vLLM-Ascend` & `vLLM-Omni` model bring-up, ACLGraph, MoE, PD disaggregation & omni pipelines (91 Units)
+  - [`knowledge-operators`](https://github.com/mindie-agent/knowledge-operators) — AscendC / BiShengIR / Triton / TileLang / MindIE-SD operator development & optimization (105 Units)
+  - [`knowledge-infer-core`](https://github.com/mindie-agent/knowledge-infer-core) — Core inference engine scheduling, KV cache, `MindIE-SD` DiT acceleration & serving (109 Units)
+  - [`knowledge-infer-distributed`](https://github.com/mindie-agent/knowledge-infer-distributed) — HCCL collectives, RoCE/HCCS topology, Ulysses/Ring/CFG hybrid parallelism & SHMEM (39 Units)
+  - [`knowledge-infer-observability`](https://github.com/mindie-agent/knowledge-infer-observability) — CANN fault diagnostics, `msprof` profiling & Window A/B/A perf/accuracy gates (39 Units)
+  - [`knowledge-infer-ops-compat`](https://github.com/mindie-agent/knowledge-infer-ops-compat) — GE/TorchAir/Inductor graph compilation, custom-op registration & two-stage integration (34 Units)
+  - [`knowledge-agent-engineering`](https://github.com/mindie-agent/knowledge-agent-engineering) — Multi-agent orchestration, S0–S6 auto-optimization, redaction audit & benchmarking (33 Units)
+
+---
+
+## 📄 License
+
+This repository is dual-licensed under [`LICENSE`](./LICENSE) in alignment with the `mindie-publication-contract/2` repository layout:
+
+- **Knowledge Corpus, Derived Indexes, Public Feedback & Documentation** (`<domain_path>/unit-*.md`, `index/`, `feedback/`, `README.md`, `README.en.md`, `AGENTS.md`, `docs/`) are licensed under **[Creative Commons Attribution 4.0 International (CC BY 4.0)](./LICENSE)**.
+- **Repository Maintenance Scripts & Workflow Configuration** (`scripts/`, `.github/workflows/`, `publication-contract.json`) are licensed under the **[MIT License](./LICENSE)**.

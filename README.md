@@ -12,7 +12,7 @@
   <a href="https://github.com/mindie-agent/mindie-agent"><img src="https://img.shields.io/badge/MindIE%20Agent-Ecosystem-7045f5.svg" alt="MindIE Agent"></a>
   <a href="./publication-contract.json"><img src="https://img.shields.io/badge/Schema-mindie--graded--unit%2F1-0f766e.svg" alt="Schema mindie-graded-unit/1"></a>
   <a href="./publication-contract.json"><img src="https://img.shields.io/badge/domain-infer--observability-0284c7.svg" alt="Domain infer-observability"></a>
-  <a href="./index/routing-manifest.json"><img src="https://img.shields.io/badge/Graded%20Units-23%20Units-d97757.svg" alt="23 Graded Units"></a>
+  <a href="./index/routing-manifest.json"><img src="https://img.shields.io/badge/Graded%20Units-39%20Units-d97757.svg" alt="39 Graded Units"></a>
   <a href="./index/shard-topology.json"><img src="https://img.shields.io/badge/Levels-L1%20to%20L4-10a37f.svg" alt="Levels L1-L4"></a>
 </p>
 
@@ -81,11 +81,11 @@
 
 ## 🏗️ 领域全景与 L1–L4 分级架构
 
-本仓库承载 MindIE Agent 的 **`infer-observability` 领域分级知识源**（共 **23 个分级知识单元**：`L1: 4`、`L2: 14`、`L3: 5`）。聚焦昇腾 NPU 推理与算子开发全链路可观测性：涵盖 CANN 四层错误码与最内层首报定位、plog / asys / msnpureport / msaicerr 34 步 AI Core 异常 Dump 解析、`npu-objdump` PC 偏移反汇编、`mssanitizer` 与 `npu-check` 内存/同步检测、`msprof` / `torch_npu.profiler` / `npusim` 性能剖析、端到端 TTFT/TPOT 时延归因，以及多精度（MERE/MARE）容差标准与 CPU/NPU 孪生白盒测试门禁。
+本仓库承载 MindIE Agent 的 **`infer-observability` 领域分级知识源**（共 **39 个分级知识单元**：`L1: 5`、`L2: 24`、`L3: 10`、`L4: 0`）。聚焦昇腾 NPU 推理与算子开发全链路可观测性：涵盖 CANN 四层错误码与最内层首报定位、plog / asys / msnpureport / msaicerr 34 步 AI Core 异常 Dump 解析、`npu-objdump` PC 偏移反汇编、`mssanitizer` 与 `npu-check` 内存/同步检测、`msprof` / `torch_npu.profiler` / `npusim` 性能剖析、端到端 TTFT/TPOT 时延归因，以及多精度（MERE/MARE）容差标准与 CPU/NPU 孪生白盒测试门禁。
 
 ### 1. `mindie-graded-unit/1` 四级知识单元体系（L1–L4）
 
-本知识库拒绝碎片化的聊天摘要或脱离前提的“万能经验”，所有知识单元均按工程抽象粒度与可操作性划分为 **L1–L4 四个层级**（当前分布：**L1: 4 · L2: 14 · L3: 5 · L4: 0**）：
+本知识库拒绝碎片化的聊天摘要或脱离前提的“万能经验”，所有知识单元均按工程抽象粒度与可操作性划分为 **L1–L4 四个层级**（当前分布：**L1: 5 · L2: 24 · L3: 10 · L4: 0**）：
 
 | 层级 | 标准类别 (`category`) | 工程定位 | 核心内容与准入要求 |
 | :---: | --- | --- | --- |
@@ -100,7 +100,7 @@
 flowchart LR
   Agent["🤖 AI Coding Agent (Claude Code / Codex / Kimi / DSH)"]
   Query["🔎 knowledge_query (查询词 + 实测环境条件)"]
-  Manifest["📋 index/routing-manifest.json (23 个单元元数据 · 条件与继承闭包)"]
+  Manifest["📋 index/routing-manifest.json (39 个单元元数据 · 条件与继承闭包)"]
   Topology["🗂️ index/shard-topology.json (子领域分片拓扑 · L1-L4 统计)"]
   Match{"⚖️ 条件匹配引擎 (matched / mismatch / condition_unknown)"}
   Explain["📖 knowledge_explain (按精确修订号 @revision 精读)"]
@@ -117,16 +117,18 @@ flowchart LR
 
 ## 📊 子领域分布与代表性知识单元
 
-[`index/routing-manifest.json`](./index/routing-manifest.json) 与 [`index/shard-topology.json`](./index/shard-topology.json) 是由全量 Markdown 单元派生的权威实时清单。当前仓库共包含 **23 个分级知识单元**（**L1: 4 · L2: 14 · L3: 5 · L4: 0**）：
+[`index/routing-manifest.json`](./index/routing-manifest.json) 与 [`index/shard-topology.json`](./index/shard-topology.json) 是由全量 Markdown 单元派生的权威实时清单。当前仓库共包含 **39 个分级知识单元**（**L1: 5 · L2: 24 · L3: 10 · L4: 0**）：
 
 ### 1. 子领域（Subdomain）分布统计
 
 | 子领域目录 | 单元数量 | 层级分布 (`L1–L4`) | 核心覆盖范围 |
 | --- | :---: | :---: | --- |
+| `profiling` | **12** | `L1: 2, L2: 7, L3: 3` | `msprof op` PMU 指标与 Ascend 950 Vector Roofline 公理、Ascend 910B `msKPP` 流水线插值公理与周期预测、Simulator 四表交叉分析与 `npusim` 气泡诊断、`msprof` SQLite CTE 标准视图、`msprof-analyze` AICPU 消除与集群快慢卡/伪快卡分诊、`torch_npu.profiler` Launch Gap、`vLLM-Ascend` 在线剖析及端到端 HCCL 通信掩盖工作流 |
 | `diagnostics` | **10** | `L2: 7, L3: 3` | CANN 错误码四层证据链工作流、plog 首报定位、asys/msnpureport 黑匣子采集、msaicerr 34 步异常解析（Stars/David 寄存器解码）、`npu-objdump` PC 反汇编与 `mssanitizer` 内存异常检测 |
 | `measurement` | **5** | `L1: 1, L2: 3, L3: 1` | `msprof` 流水线利用率与 Host 挂钟时间边界公理、MFU FLOPs 归因与 Step 重叠区间计算、`npu-compute`/`npu-check` 算子级测量及服务化 TTFT/TPOT 四阶段回归归因工作流 |
-| `profiling` | **5** | `L1: 1, L2: 3, L3: 1` | `msprof op` PMU 指标与 Ascend 950 Vector Roofline 公理、Simulator 四表交叉分析与 `npusim` 气泡诊断、`torch_npu.profiler` Launch Gap 归因、Triton 算子 MFU 网格搜索与端到端 HCCL 通信掩盖工作流 |
-| `validation` | **2** | `L1: 1, L2: 1` | 多数据类型精度标准（MERE/MARE vs `allclose`、NaN 比较陷阱、Host BF16 转换）公理与 AscendC CPU/NPU 孪生 UT/ST 白盒 TilingKey 覆盖规程 |
+| `validation` | **5** | `L1: 1, L2: 3, L3: 1` | 多数据类型精度标准（MERE/MARE vs `allclose`、NaN 比较陷阱、Host BF16 转换）公理、AscendC CPU/NPU 孪生 UT/ST 白盒 TilingKey 覆盖、CANN `ops-test-kit` 熔断器、`msprobe` 跨卡 NaN 源定位工作流及 `MindIE-SD`/`vLLM-Omni` 同窗口 A/B/A 性能与三级精度门禁 SOP |
+| `memory` | **3** | `L2: 2, L3: 1` | `msMemScope` `LD_PRELOAD` 钩子内存泄漏/低效内存检测、内存块踩踏监控与跨 Step 对比工作流，以及 PyTorch NPU `_dump_snapshot` SQLite CTE 碎片与 OOM 分诊 SOP |
+| `modeling` | **3** | `L2: 2, L3: 1` | `MindStudio-Modeling` TensorCast 设备画像与 `CommGrid` 校准、ServingCast 吞吐量优化器 Prefill/Decode 拆解，以及 Profiling DB 轴密度校准与 OptiX 闭环搜索工作流 |
 | `hardware` | **1** | `L1: 1` | 双 Die NPU 机型上 NPU ID、Chip ID 与物理 `Phy-ID` 拓扑映射实测事实 |
 
 ### 2. 代表性分级知识单元（Representative Units）
@@ -145,6 +147,7 @@ flowchart LR
 | [`unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow`](./diagnostics/aicore-dump/unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow.md) | `diagnostics` | **L3** / `workflow` | Closed-loop 34-step AI Core exception dump workflow across Stars/David register decoding, special scenarios, and 101-107 return codes | `mindie://infer-observability/units/unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow@1` |
 | [`unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow`](./measurement/end-to-end/unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow.md) | `measurement` | **L3** / `workflow` | Four-stage attribution of serving TTFT and TPOT regressions across host, graph, HCCL and AICore | `mindie://infer-observability/units/unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow@1` |
 | [`unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow`](./profiling/msprof-and-simulator/system-and-timeline/hccl-overlap-and-precision-flow/unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow.md) | `profiling` | **L3** / `workflow` | End-to-End HCCL Communication Overlap Analysis and Eight-Step Operator Precision Triage Workflow | `mindie://infer-observability/units/unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow@1` |
+| [`unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop`](./validation/mindie-sd-and-omni/gates/unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop.md) | `validation` | **L2** / `sop` | MindIE-SD exploratory vs acceptance Window A/B/A perf-gate and 3-tier PSNR/SSIM/LPIPS accuracy-gate SOP | `mindie://infer-observability/units/unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop@1` |
 
 ---
 
@@ -158,6 +161,7 @@ knowledge-infer-observability/
 ├── AGENTS.md                           # 维护者与 AI Agent 仓库操作边界规范
 ├── README.md                           # 中文主文档
 ├── README.en.md                        # 英文主文档 (English Documentation)
+├── LICENSE                             # 双许可声明 (CC BY 4.0 语料与文档 + MIT 维护脚本)
 ├── index/
 │   ├── routing-manifest.json           # [派生索引] 全量单元 ID、路径、层级、条件、继承闭包与 Token 估算
 │   └── shard-topology.json             # [派生索引] 子领域分片计数与层级拓扑
@@ -185,10 +189,19 @@ knowledge-infer-observability/
 - **主仓库与一键安装入口**：[`mindie-agent/mindie-agent`](https://github.com/mindie-agent/mindie-agent)
 - **知识检索与隐私脱敏运行时**：[`mindie-agent/knowledge`](https://github.com/mindie-agent/knowledge)（Python 包 `mindie-knowledge`）
 - **七大公开领域知识库矩阵**：
-  - [`knowledge-vllm-ascend`](https://github.com/mindie-agent/knowledge-vllm-ascend) — `vLLM-Ascend` 适配、图编译、MoE 与 PD 分离（43 Units）
-  - [`knowledge-operators`](https://github.com/mindie-agent/knowledge-operators) — AscendC / BiShengIR / Triton / TileLang 算子开发与优化（87 Units）
-  - [`knowledge-infer-core`](https://github.com/mindie-agent/knowledge-infer-core) — 核心推理引擎调度、KV Cache、多流并行与服务化架构（78 Units）
-  - [`knowledge-infer-distributed`](https://github.com/mindie-agent/knowledge-infer-distributed) — HCCL 集合通信、RoCE/HCCS 拓扑、多维并行与 SHMEM（23 Units）
-  - [`knowledge-infer-observability`](https://github.com/mindie-agent/knowledge-infer-observability) — CANN 故障诊断、`msprof` 性能剖析与精度验证（23 Units）
-  - [`knowledge-infer-ops-compat`](https://github.com/mindie-agent/knowledge-infer-ops-compat) — GE/TorchAir 图编译、自定义算子注册与 CUDA 迁移兼容（22 Units）
-  - [`knowledge-agent-engineering`](https://github.com/mindie-agent/knowledge-agent-engineering) — 智能体编排、远端 NPU 租约协同、脱敏审计与基准评测（23 Units）
+  - [`knowledge-vllm-ascend`](https://github.com/mindie-agent/knowledge-vllm-ascend) — `vLLM-Ascend` 与 `vLLM-Omni` 适配、图编译、MoE、PD 分离与多阶段全模态流水线（91 Units）
+  - [`knowledge-operators`](https://github.com/mindie-agent/knowledge-operators) — AscendC / BiShengIR / Triton / TileLang / MindIE-SD 算子开发与优化（105 Units）
+  - [`knowledge-infer-core`](https://github.com/mindie-agent/knowledge-infer-core) — 核心推理引擎调度、KV Cache、`MindIE-SD` 扩散加速与服务化架构（109 Units）
+  - [`knowledge-infer-distributed`](https://github.com/mindie-agent/knowledge-infer-distributed) — HCCL 集合通信、RoCE/HCCS 拓扑、Ulysses/Ring/CFG 混合并行与 SHMEM（39 Units）
+  - [`knowledge-infer-observability`](https://github.com/mindie-agent/knowledge-infer-observability) — CANN 故障诊断、`msprof` 性能剖析与 A/B/A 性能/精度门禁（39 Units）
+  - [`knowledge-infer-ops-compat`](https://github.com/mindie-agent/knowledge-infer-ops-compat) — GE/TorchAir/Inductor 图编译、自定义算子注册与两阶段框架集成（34 Units）
+  - [`knowledge-agent-engineering`](https://github.com/mindie-agent/knowledge-agent-engineering) — 智能体编排、S0–S6 自动调优工作流、脱敏审计与基准评测（33 Units）
+
+---
+
+## 📄 开源许可（License）
+
+本仓库遵循 [`LICENSE`](./LICENSE) 双许可声明（与 `mindie-publication-contract/2` 仓库结构对齐）：
+
+- **知识语料、派生索引、公开反馈与文档证据**（`<domain_path>/unit-*.md`、`index/`、`feedback/`、`README.md`、`README.en.md`、`AGENTS.md`、`docs/`）采用 **[Creative Commons Attribution 4.0 International (CC BY 4.0)](./LICENSE)** 许可协议。
+- **仓库维护脚本与工作流配置**（`scripts/`、`.github/workflows/`、`publication-contract.json`）采用 **[MIT License](./LICENSE)** 许可协议。

@@ -45,6 +45,11 @@
     "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow": [
       "unit-msprof-analyze-step-overlap-clock-and-intervals"
     ],
+    "unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+    ],
     "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop": [
       "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
@@ -168,8 +173,8 @@
   "federation": {
     "corpus": {
       "automatic": false,
-      "bytes": 219947,
-      "estimated_tokens": 39859,
+      "bytes": 225843,
+      "estimated_tokens": 40904,
       "kind": "federation",
       "path": ".",
       "unit_ids": [
@@ -184,6 +189,7 @@
         "unit-asys-ep-subcommand-routing-and-six-env-collection-sop",
         "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop",
         "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow",
+        "unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop",
         "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop",
         "unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms",
         "unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop",
@@ -212,7 +218,7 @@
         "unit-vllm-ascend-ms-service-metric-multiproc-and-symbol-hook-sop",
         "unit-vllm-ascend-torch-profiler-and-msserviceprofiler-pd-workflow"
       ],
-      "units": 38
+      "units": 39
     },
     "domains": [
       {
@@ -323,23 +329,24 @@
       },
       {
         "automatic": false,
-        "bytes": 22039,
-        "estimated_tokens": 3825,
+        "bytes": 27935,
+        "estimated_tokens": 4870,
         "exceeds": [],
         "kind": "federation",
         "path": "validation",
         "recommended_action": "review_federation_boundary",
         "unit_ids": [
           "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop",
+          "unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop",
           "unit-msprobe-cross-rank-nan-source-and-construct-chain-triage-workflow",
           "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms",
           "unit-ops-test-kit-error-manager-cleaner-and-xpu-circuit-breaker-sop"
         ],
-        "units": 4
+        "units": 5
       }
     ]
   },
-  "index_build_elapsed_ms": 18.13133293762803,
+  "index_build_elapsed_ms": 20.214457996189594,
   "leaves": [
     {
       "automatic": false,
@@ -773,6 +780,19 @@
     },
     {
       "automatic": false,
+      "bytes": 5896,
+      "estimated_tokens": 1045,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "validation/mindie-sd-and-omni/gates",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
       "bytes": 4610,
       "estimated_tokens": 870,
       "exceeds": [],
@@ -1162,6 +1182,19 @@
     },
     {
       "automatic": false,
+      "bytes": 5896,
+      "estimated_tokens": 1045,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "validation/mindie-sd-and-omni",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
       "bytes": 4610,
       "estimated_tokens": 870,
       "exceeds": [],
@@ -1201,7 +1234,7 @@
       "units": 2
     }
   ],
-  "unit_count": 38,
+  "unit_count": 39,
   "units": {
     "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": {
       "bytes": 5014,
@@ -1348,6 +1381,20 @@
       ],
       "path": "profiling/msprof-and-simulator/system-and-timeline/hccl-overlap-and-precision-flow/unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow.md",
       "tier": "L3"
+    },
+    "unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop": {
+      "bytes": 5896,
+      "category": "sop",
+      "content_sha256": "43605df49bd0780a35094ffd94915bcd2988e2635332b8724a90074af86d75b7",
+      "domain_path": "validation/mindie-sd-and-omni/gates",
+      "estimated_tokens": 1045,
+      "evidence_strength": "reproduced_empirical",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+      ],
+      "path": "validation/mindie-sd-and-omni/gates/unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop.md",
+      "tier": "L2"
     },
     "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop": {
       "bytes": 4901,

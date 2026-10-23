@@ -1,5 +1,5 @@
 {
-  "build_elapsed_ms": 18.13133293762803,
+  "build_elapsed_ms": 20.214457996189594,
   "closure": {
     "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": [
       "unit-observed-dual-die-phy-id-topology",
@@ -45,6 +45,11 @@
     ],
     "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow": [
       "unit-msprof-analyze-step-overlap-clock-and-intervals"
+    ],
+    "unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop": [
+      "unit-observed-dual-die-phy-id-topology",
+      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
     ],
     "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop": [
       "unit-observed-dual-die-phy-id-topology",
@@ -166,7 +171,7 @@
       "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
     ]
   },
-  "generation": "59f7e41b63db0984516f46359769456604a5a27c1b8177b8f5e3a08350e19e1a",
+  "generation": "c45f464cea7d3df8311af55d0daec24413b72b3804b77b5d68c1814c0310f404",
   "id_path": {
     "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": "diagnostics/error-codes/unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow.md",
     "unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow": "diagnostics/aicore-dump/unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow.md",
@@ -179,6 +184,7 @@
     "unit-asys-ep-subcommand-routing-and-six-env-collection-sop": "diagnostics/cann-toolchain/asys-and-msnpureport/command-routing-and-collect/unit-asys-ep-subcommand-routing-and-six-env-collection-sop.md",
     "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop": "validation/testing-and-golden/ut-st-benchmarks/ut-st-and-whitebox-coverage/unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop.md",
     "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow": "profiling/msprof-and-simulator/system-and-timeline/hccl-overlap-and-precision-flow/unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow.md",
+    "unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop": "validation/mindie-sd-and-omni/gates/unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop.md",
     "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop": "diagnostics/cann-toolchain/msaicerr-and-objdump/exception-register-decoding/unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop.md",
     "unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms": "profiling/mskpp/interpolation-and-roofline/prof-data-910b-calibration/unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms.md",
     "unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop": "profiling/mskpp/dsl-and-pipe-modeling/mmad-mov-vec-prediction/unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop.md",
@@ -210,7 +216,7 @@
   "query_budget_excludes_build": true,
   "schema_version": "mindie-routing-manifest/1",
   "token_estimator": "utf8_bytes_div_4_ceiling",
-  "unit_count": 38,
+  "unit_count": 39,
   "units": [
     {
       "category": "workflow",
@@ -953,6 +959,67 @@
           "stage dump bisection",
           "1-ULP rounding proof",
           "communication overlap ratio"
+        ]
+      }
+    },
+    {
+      "category": "sop",
+      "conditions": {
+        "cann_versions": [
+          ">=8.5.0"
+        ],
+        "hardware": [
+          "Ascend 910B (Atlas A2)",
+          "Ascend 910C (Atlas A3)",
+          "Ascend 950PR/DT"
+        ],
+        "workloads": [
+          "Shared multi-NPU performance benchmarking, drift correction, and lossless/lossy accuracy verification for DiT and Omni pipelines"
+        ]
+      },
+      "domain_path": "validation/mindie-sd-and-omni/gates",
+      "evidence_strength": "reproduced_empirical",
+      "id": "unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop",
+      "inherits_from": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+      ],
+      "inherits_from_closure": [
+        "unit-observed-dual-die-phy-id-topology",
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+      ],
+      "path": "validation/mindie-sd-and-omni/gates/unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop.md",
+      "provenance": {
+        "evidence_refs": [
+          "Ascend/MindIE-SD@9fe772dfb90696e21b5e5d4e92ca07dffab84cf4:.agents/skills/perf-gate/SKILL.md",
+          "Ascend/MindIE-SD@9fe772dfb90696e21b5e5d4e92ca07dffab84cf4:.agents/skills/accuracy-gate/SKILL.md"
+        ],
+        "source_digest": "995b847b6c689a49ee6e45bac0af3ca4df705cb5796da29ed61a252dd7de6fb9",
+        "source_locator": "Ascend/MindIE-SD@9fe772dfb90696e21b5e5d4e92ca07dffab84cf4:.agents/skills/perf-gate/SKILL.md",
+        "source_type": "architecture_and_runtime_guide",
+        "supersedes": []
+      },
+      "revision": 1,
+      "tier": "L2",
+      "title": "MindIE-SD and vLLM-Omni perf-gate same-window A/B/A drift correction and accuracy-gate three-tier equivalence SOP",
+      "token_estimate": 1045,
+      "triggers": {
+        "error_signatures": [
+          "cross-window wall-clock drift exceeds optimization delta on shared NPU host",
+          "output md5 matches baseline only because optimization branch was silently bypassed",
+          "curl time_total inflated by profiler capture or queue contention"
+        ],
+        "keywords": [
+          "perf-gate",
+          "accuracy-gate",
+          "window-ab-protocol",
+          "engagement_check",
+          "bit_exact_harness",
+          "silent-failure-localization",
+          "content-health-gate",
+          "layer_bisect",
+          "op_threshold_sweep"
         ]
       }
     },

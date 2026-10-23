@@ -1,6 +1,6 @@
 # Inference Observability Domain Boundaries (`domain: "infer-observability"`)
 
-This repository (`/Volumes/data/code/knowledge-infer-observability`) stores
+This repository (`knowledge-infer-observability`) stores
 observability, profiler attribution, measurement, and recovery knowledge units
 under the canonical domain `infer-observability`. Runtime engine code lives
 exclusively in `mindie-agent/knowledge`.
@@ -31,7 +31,5 @@ exclusively in `mindie-agent/knowledge`.
 4. **Publication Gate**: [`./publication-contract.json`](./publication-contract.json)
    (`mindie-publication-contract/2`) and thin maintenance entry points under
    `scripts/` define the validator pin and local checks; run
-   `python scripts/run_all_checks.py` after any unit or index edit. Follow
-   `/Volumes/data/temp/mindie-003-execution/execution-status.json` for release
-   state and do not push to the public remote or cut over installed Harness pins
-   before the paired runtime/plugin release is finalized.
+   `python3 scripts/build_routing_index.py --root . --check` after any unit or
+   index edit.
