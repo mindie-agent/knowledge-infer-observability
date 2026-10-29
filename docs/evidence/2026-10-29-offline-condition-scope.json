@@ -1,0 +1,225 @@
+{
+  "schema": "mindie-condition-scope-verification/1",
+  "date": "2026-10-29",
+  "scope": "deterministic query/explain applicability only; no live device or model task execution",
+  "base_commit": "195bc9e0b48588a5ca16d2bb9e47b9490cc7e62c",
+  "generation": "76b099beb9bd5098b7c160a922296be26965ee8cbe7112305feeb8dec6dde54f",
+  "cases": [
+    {
+      "id": "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop",
+      "revision_before": 1,
+      "revision_after": 2,
+      "observed_conditions": {
+        "domain": "profiling",
+        "trace_device": "fixture:two-rank"
+      },
+      "before_unresolved": [
+        {
+          "id": "unit-observed-dual-die-phy-id-topology",
+          "status": "condition_unknown",
+          "missing_conditions": [
+            "device_name",
+            "machine_identity_sha256",
+            "npu_smi_version",
+            "topology_sha256"
+          ],
+          "required_conditions": {
+            "device_name": "Ascend910",
+            "machine_identity_sha256": "c09dc2994a84315148b486a9b4f2e34b656d0112fe5c9d9e663bd57fb2922bab",
+            "npu_smi_version": "26.0.rc1",
+            "topology_sha256": "69790a51d503a1816fb4145c0516d46168123b646d9da24063edc4f0099fa638"
+          }
+        },
+        {
+          "id": "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+          "status": "condition_unknown",
+          "missing_conditions": [
+            "artifact",
+            "clock_domains",
+            "profiler_family",
+            "required_sync",
+            "warmup_policy"
+          ],
+          "required_conditions": {
+            "artifact": [
+              "op_summary_*.csv",
+              "step_trace_time.csv"
+            ],
+            "clock_domains": [
+              "host wall clock",
+              "device task timestamps"
+            ],
+            "profiler_family": [
+              "msprof",
+              "torch_npu.profiler"
+            ],
+            "required_sync": "torch.npu.synchronize or an equivalent device or stream boundary",
+            "warmup_policy": "compile, capture and DVFS warmup are excluded from the steady-state sample"
+          }
+        },
+        {
+          "id": "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop",
+          "status": "condition_unknown",
+          "missing_conditions": [
+            "hardware"
+          ],
+          "required_conditions": {
+            "hardware": [
+              "Ascend 910B",
+              "Ascend 910C"
+            ]
+          }
+        }
+      ],
+      "after_units": [
+        "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop"
+      ],
+      "after_unresolved": [],
+      "query_ready_to_apply": true
+    },
+    {
+      "id": "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow",
+      "revision_before": 1,
+      "revision_after": 2,
+      "observed_conditions": {
+        "domain": "profiling",
+        "trace_device": "fixture:two-rank"
+      },
+      "before_unresolved": [
+        {
+          "id": "unit-observed-dual-die-phy-id-topology",
+          "status": "condition_unknown",
+          "missing_conditions": [
+            "device_name",
+            "machine_identity_sha256",
+            "npu_smi_version",
+            "topology_sha256"
+          ],
+          "required_conditions": {
+            "device_name": "Ascend910",
+            "machine_identity_sha256": "c09dc2994a84315148b486a9b4f2e34b656d0112fe5c9d9e663bd57fb2922bab",
+            "npu_smi_version": "26.0.rc1",
+            "topology_sha256": "69790a51d503a1816fb4145c0516d46168123b646d9da24063edc4f0099fa638"
+          }
+        },
+        {
+          "id": "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+          "status": "condition_unknown",
+          "missing_conditions": [
+            "artifact",
+            "clock_domains",
+            "profiler_family",
+            "required_sync",
+            "warmup_policy"
+          ],
+          "required_conditions": {
+            "artifact": [
+              "op_summary_*.csv",
+              "step_trace_time.csv"
+            ],
+            "clock_domains": [
+              "host wall clock",
+              "device task timestamps"
+            ],
+            "profiler_family": [
+              "msprof",
+              "torch_npu.profiler"
+            ],
+            "required_sync": "torch.npu.synchronize or an equivalent device or stream boundary",
+            "warmup_policy": "compile, capture and DVFS warmup are excluded from the steady-state sample"
+          }
+        },
+        {
+          "id": "unit-msprof-analyze-step-overlap-clock-and-intervals",
+          "status": "condition_unknown",
+          "missing_conditions": [
+            "repository",
+            "revision"
+          ],
+          "required_conditions": {
+            "repository": "Ascend/msprof-analyze",
+            "revision": "639eb8702c1884813dfab59ddb371f7838caab6d"
+          }
+        },
+        {
+          "id": "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow",
+          "status": "condition_unknown",
+          "missing_conditions": [
+            "hardware"
+          ],
+          "required_conditions": {
+            "hardware": [
+              "Ascend 910B",
+              "Ascend 910C"
+            ]
+          }
+        }
+      ],
+      "after_units": [
+        "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow"
+      ],
+      "after_unresolved": [],
+      "query_ready_to_apply": true
+    },
+    {
+      "id": "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "revision_before": 1,
+      "revision_after": 2,
+      "observed_conditions": {
+        "profiler_family": "msprof",
+        "artifact": "step_trace_time.csv",
+        "clock_domains": "device task timestamps",
+        "required_sync": "torch.npu.synchronize or an equivalent device or stream boundary",
+        "warmup_policy": "compile, capture and DVFS warmup are excluded from the steady-state sample"
+      },
+      "before_unresolved": [
+        {
+          "id": "unit-observed-dual-die-phy-id-topology",
+          "status": "condition_unknown",
+          "missing_conditions": [
+            "device_name",
+            "machine_identity_sha256",
+            "npu_smi_version",
+            "topology_sha256"
+          ],
+          "required_conditions": {
+            "device_name": "Ascend910",
+            "machine_identity_sha256": "c09dc2994a84315148b486a9b4f2e34b656d0112fe5c9d9e663bd57fb2922bab",
+            "npu_smi_version": "26.0.rc1",
+            "topology_sha256": "69790a51d503a1816fb4145c0516d46168123b646d9da24063edc4f0099fa638"
+          }
+        },
+        {
+          "id": "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+          "status": "condition_unknown",
+          "missing_conditions": [
+            "device_name",
+            "machine_identity_sha256",
+            "npu_smi_version",
+            "topology_sha256"
+          ],
+          "required_conditions": {
+            "device_name": "Ascend910",
+            "machine_identity_sha256": "c09dc2994a84315148b486a9b4f2e34b656d0112fe5c9d9e663bd57fb2922bab",
+            "npu_smi_version": "26.0.rc1",
+            "topology_sha256": "69790a51d503a1816fb4145c0516d46168123b646d9da24063edc4f0099fa638"
+          }
+        }
+      ],
+      "after_units": [
+        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
+      ],
+      "after_unresolved": [],
+      "query_ready_to_apply": true
+    }
+  ],
+  "preserved_legacy_content_digests": {
+    "algorithm": "sha256 of canonical JSON [metadata excluding content_digest/domain_path/revision, normalized body]; verified against original bytes and historical graded/units.py at 71d7439",
+    "units": [
+      {
+        "id": "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "content_digest": "sha256:89c25b95813bf26a77b075b2e217e48a011e886bf1d98ed357fe0139fe73dac4"
+      }
+    ]
+  }
+}

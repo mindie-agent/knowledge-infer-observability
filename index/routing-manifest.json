@@ -1,5 +1,5 @@
 {
-  "build_elapsed_ms": 20.214457996189594,
+  "build_elapsed_ms": 20.983583061024547,
   "closure": {
     "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": [
       "unit-observed-dual-die-phy-id-topology",
@@ -10,11 +10,8 @@
       "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
       "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
     ],
-    "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms": [
-      "unit-observed-dual-die-phy-id-topology"
-    ],
+    "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms": [],
     "unit-ascend-npu-compute-npu-check-and-debug-api-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop": [
@@ -25,13 +22,11 @@
       "unit-observed-dual-die-phy-id-topology"
     ],
     "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-msprof-analyze-step-overlap-clock-and-intervals",
       "unit-msprof-analyze-mfu-range-flops-attribution"
     ],
     "unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
     ],
@@ -47,8 +42,8 @@
       "unit-msprof-analyze-step-overlap-clock-and-intervals"
     ],
     "unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-observed-dual-die-phy-id-topology",
       "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
     ],
     "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop": [
@@ -57,39 +52,32 @@
       "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
     ],
     "unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
     ],
     "unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
     ],
     "unit-msmemscope-block-watch-corruption-and-step-compare-workflow": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-msmemscope-ld-preload-hooks-leak-and-inefficient-memory-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-msmodeling-profiling-db-axis-density-and-optix-search-workflow": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-msprof-analyze-step-overlap-clock-and-intervals",
       "unit-msprof-analyze-mfu-range-flops-attribution",
       "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
     ],
     "unit-msmodeling-tensorcast-device-profile-commgrid-and-op-mapping-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-msprof-analyze-step-overlap-clock-and-intervals",
       "unit-msprof-analyze-mfu-range-flops-attribution",
       "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
     ],
     "unit-msmodeling-throughput-optimizer-aggregation-to-text-generate-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-msprof-analyze-step-overlap-clock-and-intervals",
       "unit-msprof-analyze-mfu-range-flops-attribution",
@@ -104,30 +92,19 @@
       "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
     ],
     "unit-msprof-analyze-aicpu-elimination-and-fused-affinity-api-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
-    "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow": [
-      "unit-observed-dual-die-phy-id-topology",
-      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
-      "unit-msprof-analyze-step-overlap-clock-and-intervals"
-    ],
+    "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow": [],
     "unit-msprof-analyze-mfu-range-flops-attribution": [],
     "unit-msprof-analyze-step-overlap-clock-and-intervals": [],
-    "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop": [
-      "unit-observed-dual-die-phy-id-topology",
-      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
-    ],
+    "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop": [],
     "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
     ],
@@ -135,7 +112,6 @@
       "unit-observed-dual-die-phy-id-topology"
     ],
     "unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow": [
@@ -150,28 +126,25 @@
       "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop"
     ],
     "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop": [
       "unit-msprof-analyze-mfu-range-flops-attribution"
     ],
     "unit-vllm-ascend-ms-service-metric-multiproc-and-symbol-hook-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-msprof-analyze-step-overlap-clock-and-intervals",
       "unit-msprof-analyze-mfu-range-flops-attribution",
       "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
     ],
     "unit-vllm-ascend-torch-profiler-and-msserviceprofiler-pd-workflow": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-msprof-analyze-step-overlap-clock-and-intervals",
       "unit-msprof-analyze-mfu-range-flops-attribution",
       "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
     ]
   },
-  "generation": "c45f464cea7d3df8311af55d0daec24413b72b3804b77b5d68c1814c0310f404",
+  "generation": "76b099beb9bd5098b7c160a922296be26965ee8cbe7112305feeb8dec6dde54f",
   "id_path": {
     "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": "diagnostics/error-codes/unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow.md",
     "unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow": "diagnostics/aicore-dump/unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow.md",
@@ -351,12 +324,8 @@
       "domain_path": "measurement/msprof",
       "evidence_strength": "software_contract",
       "id": "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
-      "inherits_from": [
-        "unit-observed-dual-die-phy-id-topology"
-      ],
-      "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology"
-      ],
+      "inherits_from": [],
+      "inherits_from_closure": [],
       "path": "measurement/msprof/unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms.md",
       "provenance": {
         "evidence_refs": [
@@ -373,10 +342,10 @@
         "source_type": "ecosystem_repo",
         "supersedes": []
       },
-      "revision": 1,
+      "revision": 2,
       "tier": "L1",
       "title": "Ascend msprof pipe ratios and host wall clock are separate measurement domains",
-      "token_estimate": 1571,
+      "token_estimate": 1675,
       "triggers": {
         "error_signatures": [
           "host wall clock and Task Duration disagree",
@@ -424,7 +393,6 @@
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
       ],
       "path": "measurement/npu-compute/unit-ascend-npu-compute-npu-check-and-debug-api-sop.md",
@@ -660,7 +628,6 @@
         "unit-msprof-analyze-mfu-range-flops-attribution"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
         "unit-msprof-analyze-step-overlap-clock-and-intervals",
         "unit-msprof-analyze-mfu-range-flops-attribution"
@@ -750,7 +717,6 @@
         "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
         "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
       ],
@@ -985,8 +951,8 @@
         "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+        "unit-observed-dual-die-phy-id-topology",
         "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
       ],
       "path": "validation/mindie-sd-and-omni/gates/unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop.md",
@@ -1096,7 +1062,6 @@
         "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
         "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
       ],
@@ -1147,7 +1112,6 @@
         "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
         "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
       ],
@@ -1199,7 +1163,6 @@
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
       ],
       "path": "memory/msmemscope/watch-and-decompose/memory-corruption-and-breakdown/unit-msmemscope-block-watch-corruption-and-step-compare-workflow.md",
@@ -1250,7 +1213,6 @@
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
       ],
       "path": "memory/msmemscope/hal-and-mstx-hooks/step-leak-and-inefficient-memory/unit-msmemscope-ld-preload-hooks-leak-and-inefficient-memory-sop.md",
@@ -1302,7 +1264,6 @@
         "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
         "unit-msprof-analyze-step-overlap-clock-and-intervals",
         "unit-msprof-analyze-mfu-range-flops-attribution",
@@ -1356,7 +1317,6 @@
         "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
         "unit-msprof-analyze-step-overlap-clock-and-intervals",
         "unit-msprof-analyze-mfu-range-flops-attribution",
@@ -1409,7 +1369,6 @@
         "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
         "unit-msprof-analyze-step-overlap-clock-and-intervals",
         "unit-msprof-analyze-mfu-range-flops-attribution",
@@ -1567,7 +1526,6 @@
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
       ],
       "path": "profiling/msprof-analyze/aicpu-and-fusion-advisor/dtype-cast-and-affinity-api/unit-msprof-analyze-aicpu-elimination-and-fused-affinity-api-sop.md",
@@ -1604,24 +1562,13 @@
     {
       "category": "workflow",
       "conditions": {
-        "domain": "profiling",
-        "hardware": [
-          "Ascend 910B",
-          "Ascend 910C"
-        ]
+        "domain": "profiling"
       },
       "domain_path": "profiling/msprof-analyze/cluster-fast-slow-rank/pseudo-fast-rank-and-wait",
       "evidence_strength": "reproduced_empirical",
       "id": "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow",
-      "inherits_from": [
-        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
-        "unit-msprof-analyze-step-overlap-clock-and-intervals"
-      ],
-      "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
-        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
-        "unit-msprof-analyze-step-overlap-clock-and-intervals"
-      ],
+      "inherits_from": [],
+      "inherits_from_closure": [],
       "path": "profiling/msprof-analyze/cluster-fast-slow-rank/pseudo-fast-rank-and-wait/unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow.md",
       "provenance": {
         "evidence_refs": [
@@ -1632,10 +1579,10 @@
         "source_type": "reproduced_run+source_contract",
         "supersedes": []
       },
-      "revision": 1,
+      "revision": 2,
       "tier": "L3",
       "title": "Ascend msprof-analyze Cluster Fast/Slow Rank Triage & Host-Bound Pseudo-Fast Rank Detection Workflow",
-      "token_estimate": 1032,
+      "token_estimate": 1230,
       "triggers": {
         "error_signatures": [
           "slow_rank",
@@ -1746,22 +1693,13 @@
     {
       "category": "sop",
       "conditions": {
-        "domain": "profiling",
-        "hardware": [
-          "Ascend 910B",
-          "Ascend 910C"
-        ]
+        "domain": "profiling"
       },
       "domain_path": "profiling/msprof-analyze/sqlite-db-explorer/canonical-cte-macros",
       "evidence_strength": "software_contract",
       "id": "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop",
-      "inherits_from": [
-        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
-      ],
-      "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
-        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
-      ],
+      "inherits_from": [],
+      "inherits_from_closure": [],
       "path": "profiling/msprof-analyze/sqlite-db-explorer/canonical-cte-macros/unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop.md",
       "provenance": {
         "evidence_refs": [
@@ -1771,10 +1709,10 @@
         "source_type": "source_contract",
         "supersedes": []
       },
-      "revision": 1,
+      "revision": 2,
       "tier": "L2",
       "title": "Ascend PyTorch Profiler & msprof SQLite DB Canonical CTE Macros (compute_view, comm_view, dispatch_view) SOP",
-      "token_estimate": 1082,
+      "token_estimate": 1232,
       "triggers": {
         "error_signatures": [
           "no such table COMPUTE_TASK_INFO",
@@ -1819,7 +1757,6 @@
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
       ],
       "path": "profiling/msprof-and-simulator/op-and-camodel/pmu-metrics-and-roofline/unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms.md",
@@ -1878,7 +1815,6 @@
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
       ],
       "path": "profiling/msprof-and-simulator/op-and-camodel/camodel-and-npusim-trace/unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop.md",
@@ -1938,7 +1874,6 @@
         "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
         "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
       ],
@@ -2048,7 +1983,6 @@
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
       ],
       "path": "memory/pytorch-snapshot/pickle-to-sqlite/fragmentation-and-oom-cte/unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop.md",
@@ -2266,7 +2200,6 @@
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
       ],
       "path": "profiling/msprof-and-simulator/system-and-timeline/torch-npu-profiler-and-gaps/unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop.md",
@@ -2370,7 +2303,6 @@
         "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
         "unit-msprof-analyze-step-overlap-clock-and-intervals",
         "unit-msprof-analyze-mfu-range-flops-attribution",
@@ -2421,7 +2353,6 @@
         "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
       ],
       "inherits_from_closure": [
-        "unit-observed-dual-die-phy-id-topology",
         "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
         "unit-msprof-analyze-step-overlap-clock-and-intervals",
         "unit-msprof-analyze-mfu-range-flops-attribution",

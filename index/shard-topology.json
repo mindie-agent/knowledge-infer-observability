@@ -9,11 +9,8 @@
       "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop",
       "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
     ],
-    "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms": [
-      "unit-observed-dual-die-phy-id-topology"
-    ],
+    "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms": [],
     "unit-ascend-npu-compute-npu-check-and-debug-api-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop": [
@@ -24,13 +21,11 @@
       "unit-observed-dual-die-phy-id-topology"
     ],
     "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-msprof-analyze-step-overlap-clock-and-intervals",
       "unit-msprof-analyze-mfu-range-flops-attribution"
     ],
     "unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
     ],
@@ -46,8 +41,8 @@
       "unit-msprof-analyze-step-overlap-clock-and-intervals"
     ],
     "unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
+      "unit-observed-dual-die-phy-id-topology",
       "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
     ],
     "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop": [
@@ -56,39 +51,32 @@
       "unit-ascend-npu-objdump-and-aicore-exception-bitmask-triage-sop"
     ],
     "unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
     ],
     "unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms"
     ],
     "unit-msmemscope-block-watch-corruption-and-step-compare-workflow": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-msmemscope-ld-preload-hooks-leak-and-inefficient-memory-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-msmodeling-profiling-db-axis-density-and-optix-search-workflow": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-msprof-analyze-step-overlap-clock-and-intervals",
       "unit-msprof-analyze-mfu-range-flops-attribution",
       "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
     ],
     "unit-msmodeling-tensorcast-device-profile-commgrid-and-op-mapping-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-msprof-analyze-step-overlap-clock-and-intervals",
       "unit-msprof-analyze-mfu-range-flops-attribution",
       "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
     ],
     "unit-msmodeling-throughput-optimizer-aggregation-to-text-generate-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-msprof-analyze-step-overlap-clock-and-intervals",
       "unit-msprof-analyze-mfu-range-flops-attribution",
@@ -103,30 +91,19 @@
       "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
     ],
     "unit-msprof-analyze-aicpu-elimination-and-fused-affinity-api-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
-    "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow": [
-      "unit-observed-dual-die-phy-id-topology",
-      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
-      "unit-msprof-analyze-step-overlap-clock-and-intervals"
-    ],
+    "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow": [],
     "unit-msprof-analyze-mfu-range-flops-attribution": [],
     "unit-msprof-analyze-step-overlap-clock-and-intervals": [],
-    "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop": [
-      "unit-observed-dual-die-phy-id-topology",
-      "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
-    ],
+    "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop": [],
     "unit-msprof-op-pmu-metrics-and-a5-vector-roofline-axioms": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-msprof-simulator-four-table-and-npusim-bubble-diagnosis-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-mssanitizer-six-anomaly-classes-and-npu-check-synccheck-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-ascend-npu-compute-npu-check-and-debug-api-sop"
     ],
@@ -134,7 +111,6 @@
       "unit-observed-dual-die-phy-id-topology"
     ],
     "unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-npu-objdump-mix-symbol-and-err-info-pc-disassembly-workflow": [
@@ -149,21 +125,18 @@
       "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop"
     ],
     "unit-torch-npu-profiler-schedule-and-launch-gap-attribution-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
     ],
     "unit-triton-operator-mfu-grid-search-and-dtype-peak-calib-sop": [
       "unit-msprof-analyze-mfu-range-flops-attribution"
     ],
     "unit-vllm-ascend-ms-service-metric-multiproc-and-symbol-hook-sop": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-msprof-analyze-step-overlap-clock-and-intervals",
       "unit-msprof-analyze-mfu-range-flops-attribution",
       "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
     ],
     "unit-vllm-ascend-torch-profiler-and-msserviceprofiler-pd-workflow": [
-      "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-msprof-analyze-step-overlap-clock-and-intervals",
       "unit-msprof-analyze-mfu-range-flops-attribution",
@@ -173,8 +146,8 @@
   "federation": {
     "corpus": {
       "automatic": false,
-      "bytes": 225843,
-      "estimated_tokens": 40904,
+      "bytes": 227356,
+      "estimated_tokens": 41356,
       "kind": "federation",
       "path": ".",
       "unit_ids": [
@@ -258,8 +231,8 @@
       },
       {
         "automatic": false,
-        "bytes": 35342,
-        "estimated_tokens": 6374,
+        "bytes": 35720,
+        "estimated_tokens": 6478,
         "exceeds": [],
         "kind": "federation",
         "path": "measurement",
@@ -305,8 +278,8 @@
       },
       {
         "automatic": false,
-        "bytes": 62926,
-        "estimated_tokens": 11474,
+        "bytes": 64061,
+        "estimated_tokens": 11822,
         "exceeds": [],
         "kind": "federation",
         "path": "profiling",
@@ -346,7 +319,7 @@
       }
     ]
   },
-  "index_build_elapsed_ms": 20.214457996189594,
+  "index_build_elapsed_ms": 20.983583061024547,
   "leaves": [
     {
       "automatic": false,
@@ -494,8 +467,8 @@
     },
     {
       "automatic": false,
-      "bytes": 8746,
-      "estimated_tokens": 1571,
+      "bytes": 9124,
+      "estimated_tokens": 1675,
       "exceeds": [],
       "kind": "leaf",
       "path": "measurement/msprof",
@@ -663,8 +636,8 @@
     },
     {
       "automatic": false,
-      "bytes": 5467,
-      "estimated_tokens": 1032,
+      "bytes": 6102,
+      "estimated_tokens": 1230,
       "exceeds": [],
       "kind": "leaf",
       "path": "profiling/msprof-analyze/cluster-fast-slow-rank/pseudo-fast-rank-and-wait",
@@ -676,8 +649,8 @@
     },
     {
       "automatic": false,
-      "bytes": 5484,
-      "estimated_tokens": 1082,
+      "bytes": 5984,
+      "estimated_tokens": 1232,
       "exceeds": [],
       "kind": "leaf",
       "path": "profiling/msprof-analyze/sqlite-db-explorer/canonical-cte-macros",
@@ -956,8 +929,8 @@
     },
     {
       "automatic": false,
-      "bytes": 15739,
-      "estimated_tokens": 2651,
+      "bytes": 16117,
+      "estimated_tokens": 2755,
       "exceeds": [],
       "kind": "subtree",
       "path": "measurement/msprof",
@@ -1101,8 +1074,8 @@
     },
     {
       "automatic": false,
-      "bytes": 5467,
-      "estimated_tokens": 1032,
+      "bytes": 6102,
+      "estimated_tokens": 1230,
       "exceeds": [],
       "kind": "subtree",
       "path": "profiling/msprof-analyze/cluster-fast-slow-rank",
@@ -1114,8 +1087,8 @@
     },
     {
       "automatic": false,
-      "bytes": 5484,
-      "estimated_tokens": 1082,
+      "bytes": 5984,
+      "estimated_tokens": 1232,
       "exceeds": [],
       "kind": "subtree",
       "path": "profiling/msprof-analyze/sqlite-db-explorer",
@@ -1264,15 +1237,13 @@
       "tier": "L3"
     },
     "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms": {
-      "bytes": 8746,
+      "bytes": 9124,
       "category": "measurement",
-      "content_sha256": "0e25837fde7cd77ffef559d27c9113e9c8ce6f73f9fd88e36f4f9d4e5215befc",
+      "content_sha256": "b7baad00c379054143b992359fae48362cc862ccbe19c6b8b6118ead7bbe2e0e",
       "domain_path": "measurement/msprof",
-      "estimated_tokens": 1571,
+      "estimated_tokens": 1675,
       "evidence_strength": "software_contract",
-      "inherits_from": [
-        "unit-observed-dual-die-phy-id-topology"
-      ],
+      "inherits_from": [],
       "path": "measurement/msprof/unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms.md",
       "tier": "L1"
     },
@@ -1540,16 +1511,13 @@
       "tier": "L2"
     },
     "unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow": {
-      "bytes": 5467,
+      "bytes": 6102,
       "category": "workflow",
-      "content_sha256": "bf75ea9dc553b675160201086286cbd89487ca63023329549a13cf022a2b70cc",
+      "content_sha256": "56d12ddfaf66f87adc52448086a1c565f95278bb9f1f07b6559c059192b0323d",
       "domain_path": "profiling/msprof-analyze/cluster-fast-slow-rank/pseudo-fast-rank-and-wait",
-      "estimated_tokens": 1032,
+      "estimated_tokens": 1230,
       "evidence_strength": "reproduced_empirical",
-      "inherits_from": [
-        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
-        "unit-msprof-analyze-step-overlap-clock-and-intervals"
-      ],
+      "inherits_from": [],
       "path": "profiling/msprof-analyze/cluster-fast-slow-rank/pseudo-fast-rank-and-wait/unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow.md",
       "tier": "L3"
     },
@@ -1576,15 +1544,13 @@
       "tier": "L2"
     },
     "unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop": {
-      "bytes": 5484,
+      "bytes": 5984,
       "category": "sop",
-      "content_sha256": "10502fb2209c18a3cf7317965d656f8289647c272a1d8b6dba581692ce2ffaa6",
+      "content_sha256": "48df623f7229a61596010ba37d925c1499d283037002dfd38dd6be48cf99f665",
       "domain_path": "profiling/msprof-analyze/sqlite-db-explorer/canonical-cte-macros",
-      "estimated_tokens": 1082,
+      "estimated_tokens": 1232,
       "evidence_strength": "software_contract",
-      "inherits_from": [
-        "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms"
-      ],
+      "inherits_from": [],
       "path": "profiling/msprof-analyze/sqlite-db-explorer/canonical-cte-macros/unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop.md",
       "tier": "L2"
     },

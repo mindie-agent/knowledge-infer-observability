@@ -1,30 +1,24 @@
 ---
-schema: mindie-graded-unit/1
-id: unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms
-revision: 1
-tier: L1
 category: measurement
-domain_path: measurement/msprof
-evidence_strength: software_contract
-title: Ascend msprof pipe ratios and host wall clock are separate measurement domains
 conditions:
-  profiler_family:
-  - msprof
-  - torch_npu.profiler
   artifact:
   - op_summary_*.csv
   - step_trace_time.csv
   clock_domains:
   - host wall clock
   - device task timestamps
+  profiler_family:
+  - msprof
+  - torch_npu.profiler
   required_sync: torch.npu.synchronize or an equivalent device or stream boundary
-  warmup_policy: compile, capture and DVFS warmup are excluded from the steady-state sample
-content_digest: sha256:fb6b8d6ff3e853e0d20c6313b38b0a49009d6caae051842a0590161751d6c367
-inherits_from:
-- unit-observed-dual-die-phy-id-topology
+  warmup_policy: compile, capture and DVFS warmup are excluded from the steady-state
+    sample
+content_digest: sha256:89c25b95813bf26a77b075b2e217e48a011e886bf1d98ed357fe0139fe73dac4
+domain_path: measurement/msprof
+evidence_strength: software_contract
+id: unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms
+inherits_from: []
 provenance:
-  source_type: ecosystem_repo
-  source_locator: docs/evidence/cannbot-observability-provenance.json
   evidence_refs:
   - docs/evidence/cannbot-observability-provenance.json#source_records.src-msprof-op-summary-fields
   - docs/evidence/cannbot-observability-provenance.json#observed_measurements.obs-op-summary-wait
@@ -34,7 +28,13 @@ provenance:
   - cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:model/model-infer-profiling/SKILL.md#L185-L245
   - cannbot-skills@1fa2cbbc9fdddb4377ca26734e9b94d91c42b975:plugins-community/triton-optimizer/skills/triton-npu-optimize/scripts/profile-operator/torch_npu_profiler_parser.py#L113-L136
   source_digest: 814abc1f4a1141018c23b53388f21ee219ba15a1be1b87c1543f491685c1b68d
+  source_locator: docs/evidence/cannbot-observability-provenance.json
+  source_type: ecosystem_repo
   supersedes: []
+revision: 2
+schema: mindie-graded-unit/1
+tier: L1
+title: Ascend msprof pipe ratios and host wall clock are separate measurement domains
 triggers:
   error_signatures:
   - host wall clock and Task Duration disagree
@@ -60,6 +60,9 @@ triggers:
   - warmup
   - pipe utilization
 ---
+## Applicability boundary for offline analysis
+
+The interval and exporter semantics here do not depend on a particular machine topology. The separate `unit-observed-dual-die-phy-id-topology` applies only when resolving device identities on its recorded machine; it is not a prerequisite for reading existing profiler artifacts. Live timing still requires the synchronization and warmup facts declared by this unit.
 
 Ascend NPU work is enqueued asynchronously. A Python caller that returns from `model(...)` or an operator call has not observed device completion. A host-clock interval that is meant to include that work therefore needs an explicit `torch.npu.synchronize()` or an equivalent device/stream boundary. Without it, the measured interval is primarily launch and enqueue cost, and it can be far smaller than the device interval. Put the synchronization at the boundary of the measured region: once before the first timed iteration and once after the last. Do not insert a synchronization between every kernel when the question is overlap; that changes the schedule being measured.
 

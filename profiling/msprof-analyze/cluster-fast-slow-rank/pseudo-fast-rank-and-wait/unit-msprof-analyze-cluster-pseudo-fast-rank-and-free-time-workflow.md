@@ -1,43 +1,42 @@
 ---
-schema: mindie-graded-unit/1
-id: unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow
-revision: 1
-title: "Ascend msprof-analyze Cluster Fast/Slow Rank Triage & Host-Bound Pseudo-Fast Rank Detection Workflow"
-tier: L3
 category: workflow
-evidence_strength: reproduced_empirical
-status: active
-domain_path: profiling/msprof-analyze/cluster-fast-slow-rank/pseudo-fast-rank-and-wait
-inherits_from:
-  - unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms
-  - unit-msprof-analyze-step-overlap-clock-and-intervals
 conditions:
-  hardware:
-    - Ascend 910B
-    - Ascend 910C
   domain: profiling
+domain_path: profiling/msprof-analyze/cluster-fast-slow-rank/pseudo-fast-rank-and-wait
+evidence_strength: reproduced_empirical
+id: unit-msprof-analyze-cluster-pseudo-fast-rank-and-free-time-workflow
+inherits_from: []
+provenance:
+  evidence_refs:
+  - https://gitcode.com/Ascend/msagent/blob/521f8ead0ebda5db5b282f0c3c4147006e01e016/skills/profiler/ascend-cluster-fast-slow-rank-detector/SKILL.md#L1-L121
+  - https://gitcode.com/Ascend/msprof-analyze/blob/639eb8702c1884813dfab59ddb371f7838caab6d/README_EN.md#L21-L50
+  source_locator: Ascend/msagent@521f8ead0ebda5db5b282f0c3c4147006e01e016:skills/profiler/ascend-cluster-fast-slow-rank-detector/SKILL.md
+  source_type: reproduced_run+source_contract
+  supersedes: []
+revision: 2
+schema: mindie-graded-unit/1
+status: active
+tier: L3
+title: Ascend msprof-analyze Cluster Fast/Slow Rank Triage & Host-Bound Pseudo-Fast
+  Rank Detection Workflow
 triggers:
   error_signatures:
-    - slow_rank
-    - slow_link
-    - Free Time > 10%
+  - slow_rank
+  - slow_link
+  - Free Time > 10%
   keywords:
-    - msprof-analyze
-    - cluster-time-summary
-    - compute-op-sum
-    - hccl-sum
-    - cann-api-sum
-    - pseudo-fast-rank
-    - host-bound
-    - straggler
-provenance:
-  source_type: reproduced_run+source_contract
-  source_locator: Ascend/msagent@521f8ead0ebda5db5b282f0c3c4147006e01e016:skills/profiler/ascend-cluster-fast-slow-rank-detector/SKILL.md
-  evidence_refs:
-    - https://gitcode.com/Ascend/msagent/blob/521f8ead0ebda5db5b282f0c3c4147006e01e016/skills/profiler/ascend-cluster-fast-slow-rank-detector/SKILL.md#L1-L121
-    - https://gitcode.com/Ascend/msprof-analyze/blob/639eb8702c1884813dfab59ddb371f7838caab6d/README_EN.md#L21-L50
-  supersedes: []
+  - msprof-analyze
+  - cluster-time-summary
+  - compute-op-sum
+  - hccl-sum
+  - cann-api-sum
+  - pseudo-fast-rank
+  - host-bound
+  - straggler
 ---
+## Applicability boundary for offline analysis
+
+Offline rank attribution uses the supplied trace clocks, windows and rank identities. It does not require the analyst to supply an unobserved SoC, live synchronization policy or machine-topology digest. Verify the actual exporter/analyzer formulas and schema before comparing durations; `unit-msprof-analyze-step-overlap-clock-and-intervals` is a source-revision-specific reference when that implementation is being inspected, not an unconditional prerequisite for every trace. Treat the signatures below as hypotheses until the trace supports them. Re-collection, link bandwidth and thermal explanations additionally require the actual device, transport and measurement protocol; a passing offline parser check does not verify those claims.
 
 ## Preconditions & Trigger
 

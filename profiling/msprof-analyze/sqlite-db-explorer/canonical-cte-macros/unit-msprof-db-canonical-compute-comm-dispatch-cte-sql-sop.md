@@ -1,41 +1,41 @@
 ---
-schema: mindie-graded-unit/1
-id: unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop
-revision: 1
-title: "Ascend PyTorch Profiler & msprof SQLite DB Canonical CTE Macros (compute_view, comm_view, dispatch_view) SOP"
-tier: L2
 category: sop
-evidence_strength: software_contract
-status: active
-domain_path: profiling/msprof-analyze/sqlite-db-explorer/canonical-cte-macros
-inherits_from:
-  - unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms
 conditions:
-  hardware:
-    - Ascend 910B
-    - Ascend 910C
   domain: profiling
+domain_path: profiling/msprof-analyze/sqlite-db-explorer/canonical-cte-macros
+evidence_strength: software_contract
+id: unit-msprof-db-canonical-compute-comm-dispatch-cte-sql-sop
+inherits_from: []
+provenance:
+  evidence_refs:
+  - https://gitcode.com/Ascend/msagent/blob/521f8ead0ebda5db5b282f0c3c4147006e01e016/skills/profiler/ascend-profiler-db-explorer/SKILL.md#L1-L183
+  source_locator: Ascend/msagent@521f8ead0ebda5db5b282f0c3c4147006e01e016:skills/profiler/ascend-profiler-db-explorer/SKILL.md
+  source_type: source_contract
+  supersedes: []
+revision: 2
+schema: mindie-graded-unit/1
+status: active
+tier: L2
+title: Ascend PyTorch Profiler & msprof SQLite DB Canonical CTE Macros (compute_view,
+  comm_view, dispatch_view) SOP
 triggers:
   error_signatures:
-    - no such table COMPUTE_TASK_INFO
-    - STRING_IDS join missing
-    - CONNECTION_IDS mismatch
+  - no such table COMPUTE_TASK_INFO
+  - STRING_IDS join missing
+  - CONNECTION_IDS mismatch
   keywords:
-    - ascend-pytorch-profiler-db
-    - msprof-db
-    - compute-view
-    - comm-view
-    - dispatch-view
-    - string-ids
-    - connection-ids
-    - sqlite
-provenance:
-  source_type: source_contract
-  source_locator: Ascend/msagent@521f8ead0ebda5db5b282f0c3c4147006e01e016:skills/profiler/ascend-profiler-db-explorer/SKILL.md
-  evidence_refs:
-    - https://gitcode.com/Ascend/msagent/blob/521f8ead0ebda5db5b282f0c3c4147006e01e016/skills/profiler/ascend-profiler-db-explorer/SKILL.md#L1-L183
-  supersedes: []
+  - ascend-pytorch-profiler-db
+  - msprof-db
+  - compute-view
+  - comm-view
+  - dispatch-view
+  - string-ids
+  - connection-ids
+  - sqlite
 ---
+## Applicability boundary for offline analysis
+
+This is a host-side SQLite parsing procedure. Its prerequisites are the documented tables, columns, join keys and timestamp units in the artifact being inspected; inspect that schema before using a query. A saved capture or offline parser fixture does not require access to an NPU or a known SoC. Neither the SQL sums nor a parser test establish live device utilization, elapsed step time, bandwidth or hardware performance. Do not inherit device-topology or live-collection requirements merely because the artifact was produced by an Ascend profiler.
 
 ## Preconditions & Trigger
 
