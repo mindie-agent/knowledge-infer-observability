@@ -33,6 +33,7 @@
       "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
     ],
+    "unit-cann9-steady-state-capture-and-clock-hygiene": [],
     "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop": [
       "unit-observed-dual-die-phy-id-topology",
       "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
@@ -44,6 +45,9 @@
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-observed-dual-die-phy-id-topology",
       "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+    ],
+    "unit-mindie-sim-capture-diff-trace-attribution-workflow": [
+      "unit-cann9-steady-state-capture-and-clock-hygiene"
     ],
     "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop": [
       "unit-observed-dual-die-phy-id-topology",
@@ -146,8 +150,8 @@
   "federation": {
     "corpus": {
       "automatic": false,
-      "bytes": 227356,
-      "estimated_tokens": 41356,
+      "bytes": 236855,
+      "estimated_tokens": 42878,
       "kind": "federation",
       "path": ".",
       "unit_ids": [
@@ -160,9 +164,11 @@
         "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow",
         "unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop",
         "unit-asys-ep-subcommand-routing-and-six-env-collection-sop",
+        "unit-cann9-steady-state-capture-and-clock-hygiene",
         "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop",
         "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow",
         "unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop",
+        "unit-mindie-sim-capture-diff-trace-attribution-workflow",
         "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop",
         "unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms",
         "unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop",
@@ -191,7 +197,7 @@
         "unit-vllm-ascend-ms-service-metric-multiproc-and-symbol-hook-sop",
         "unit-vllm-ascend-torch-profiler-and-msserviceprofiler-pd-workflow"
       ],
-      "units": 39
+      "units": 41
     },
     "domains": [
       {
@@ -231,8 +237,8 @@
       },
       {
         "automatic": false,
-        "bytes": 35720,
-        "estimated_tokens": 6478,
+        "bytes": 39947,
+        "estimated_tokens": 7119,
         "exceeds": [],
         "kind": "federation",
         "path": "measurement",
@@ -241,10 +247,11 @@
           "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
           "unit-ascend-npu-compute-npu-check-and-debug-api-sop",
           "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow",
+          "unit-cann9-steady-state-capture-and-clock-hygiene",
           "unit-msprof-analyze-mfu-range-flops-attribution",
           "unit-msprof-analyze-step-overlap-clock-and-intervals"
         ],
-        "units": 5
+        "units": 6
       },
       {
         "automatic": false,
@@ -263,18 +270,19 @@
       },
       {
         "automatic": false,
-        "bytes": 14234,
-        "estimated_tokens": 2624,
+        "bytes": 19506,
+        "estimated_tokens": 3505,
         "exceeds": [],
         "kind": "federation",
         "path": "modeling",
         "recommended_action": "review_federation_boundary",
         "unit_ids": [
+          "unit-mindie-sim-capture-diff-trace-attribution-workflow",
           "unit-msmodeling-profiling-db-axis-density-and-optix-search-workflow",
           "unit-msmodeling-tensorcast-device-profile-commgrid-and-op-mapping-sop",
           "unit-msmodeling-throughput-optimizer-aggregation-to-text-generate-sop"
         ],
-        "units": 3
+        "units": 4
       },
       {
         "automatic": false,
@@ -319,7 +327,7 @@
       }
     ]
   },
-  "index_build_elapsed_ms": 20.983583061024547,
+  "index_build_elapsed_ms": 21.133499685674906,
   "leaves": [
     {
       "automatic": false,
@@ -519,6 +527,19 @@
     },
     {
       "automatic": false,
+      "bytes": 4227,
+      "estimated_tokens": 641,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "measurement/steady-state/cann9",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-cann9-steady-state-capture-and-clock-hygiene"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
       "bytes": 4995,
       "estimated_tokens": 920,
       "exceeds": [],
@@ -553,6 +574,19 @@
       "recommended_action": "review_leaf_split",
       "unit_ids": [
         "unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5272,
+      "estimated_tokens": 881,
+      "exceeds": [],
+      "kind": "leaf",
+      "path": "modeling/capture-diff-trace",
+      "recommended_action": "review_leaf_split",
+      "unit_ids": [
+        "unit-mindie-sim-capture-diff-trace-attribution-workflow"
       ],
       "units": 1
     },
@@ -957,6 +991,19 @@
     },
     {
       "automatic": false,
+      "bytes": 4227,
+      "estimated_tokens": 641,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "measurement/steady-state",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-cann9-steady-state-capture-and-clock-hygiene"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
       "bytes": 4995,
       "estimated_tokens": 920,
       "exceeds": [],
@@ -991,6 +1038,19 @@
       "recommended_action": "review_two_level_subtree_split",
       "unit_ids": [
         "unit-npu-memory-snapshot-sqlite-cte-and-oom-fragmentation-sop"
+      ],
+      "units": 1
+    },
+    {
+      "automatic": false,
+      "bytes": 5272,
+      "estimated_tokens": 881,
+      "exceeds": [],
+      "kind": "subtree",
+      "path": "modeling/capture-diff-trace",
+      "recommended_action": "review_two_level_subtree_split",
+      "unit_ids": [
+        "unit-mindie-sim-capture-diff-trace-attribution-workflow"
       ],
       "units": 1
     },
@@ -1207,7 +1267,7 @@
       "units": 2
     }
   ],
-  "unit_count": 39,
+  "unit_count": 41,
   "units": {
     "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": {
       "bytes": 5014,
@@ -1327,6 +1387,17 @@
       "path": "diagnostics/cann-toolchain/asys-and-msnpureport/command-routing-and-collect/unit-asys-ep-subcommand-routing-and-six-env-collection-sop.md",
       "tier": "L2"
     },
+    "unit-cann9-steady-state-capture-and-clock-hygiene": {
+      "bytes": 4227,
+      "category": "measurement",
+      "content_sha256": "5e4f621a4ebf90043d5905b2c62ada0698843c4d90b9ac361bed35339b07467e",
+      "domain_path": "measurement/steady-state/cann9",
+      "estimated_tokens": 641,
+      "evidence_strength": "hardware_spec",
+      "inherits_from": [],
+      "path": "measurement/steady-state/cann9/unit-cann9-steady-state-capture-and-clock-hygiene.md",
+      "tier": "L1"
+    },
     "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop": {
       "bytes": 6466,
       "category": "sop",
@@ -1366,6 +1437,19 @@
       ],
       "path": "validation/mindie-sd-and-omni/gates/unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop.md",
       "tier": "L2"
+    },
+    "unit-mindie-sim-capture-diff-trace-attribution-workflow": {
+      "bytes": 5272,
+      "category": "workflow",
+      "content_sha256": "82fb7f4593326a2c3e8d3b962c5a9ef0d1e757eac60b46761b282d5e3569c338",
+      "domain_path": "modeling/capture-diff-trace",
+      "estimated_tokens": 881,
+      "evidence_strength": "hypothesis",
+      "inherits_from": [
+        "unit-cann9-steady-state-capture-and-clock-hygiene"
+      ],
+      "path": "modeling/capture-diff-trace/unit-mindie-sim-capture-diff-trace-attribution-workflow.md",
+      "tier": "L3"
     },
     "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop": {
       "bytes": 4901,
