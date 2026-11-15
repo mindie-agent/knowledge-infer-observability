@@ -1,5 +1,5 @@
 {
-  "build_elapsed_ms": 20.983583061024547,
+  "build_elapsed_ms": 21.133499685674906,
   "closure": {
     "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": [
       "unit-observed-dual-die-phy-id-topology",
@@ -34,6 +34,7 @@
       "unit-observed-dual-die-phy-id-topology",
       "unit-ascend-plog-root-cause-and-asys-msaicerr-collection-sop"
     ],
+    "unit-cann9-steady-state-capture-and-clock-hygiene": [],
     "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop": [
       "unit-observed-dual-die-phy-id-topology",
       "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
@@ -45,6 +46,9 @@
       "unit-ascend-msprof-aicore-pipe-and-host-wall-clock-axioms",
       "unit-observed-dual-die-phy-id-topology",
       "unit-multi-dtype-tolerance-mere-mare-and-bf16-comparator-axioms"
+    ],
+    "unit-mindie-sim-capture-diff-trace-attribution-workflow": [
+      "unit-cann9-steady-state-capture-and-clock-hygiene"
     ],
     "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop": [
       "unit-observed-dual-die-phy-id-topology",
@@ -144,7 +148,7 @@
       "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow"
     ]
   },
-  "generation": "76b099beb9bd5098b7c160a922296be26965ee8cbe7112305feeb8dec6dde54f",
+  "generation": "441da2b67c8264880d0c61783b69f22062a5e81644e72b5c0f8449c782918fe2",
   "id_path": {
     "unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow": "diagnostics/error-codes/unit-ascend-cann-error-code-four-layer-evidence-and-remediation-workflow.md",
     "unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow": "diagnostics/aicore-dump/unit-ascend-msaicerr-34-step-exception-dump-and-return-code-workflow.md",
@@ -155,9 +159,11 @@
     "unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow": "measurement/end-to-end/unit-ascend-serving-ttft-tpot-and-operator-attribution-workflow.md",
     "unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop": "diagnostics/cann-toolchain/sanitizer-and-debug-api/kernel-debug-instrumentation/unit-ascendc-printf-dumptensor-assert-and-dirty-ub-repro-sop.md",
     "unit-asys-ep-subcommand-routing-and-six-env-collection-sop": "diagnostics/cann-toolchain/asys-and-msnpureport/command-routing-and-collect/unit-asys-ep-subcommand-routing-and-six-env-collection-sop.md",
+    "unit-cann9-steady-state-capture-and-clock-hygiene": "measurement/steady-state/cann9/unit-cann9-steady-state-capture-and-clock-hygiene.md",
     "unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop": "validation/testing-and-golden/ut-st-benchmarks/ut-st-and-whitebox-coverage/unit-cpu-npu-twin-ut-st-whitebox-predicates-and-edge-shape-sop.md",
     "unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow": "profiling/msprof-and-simulator/system-and-timeline/hccl-overlap-and-precision-flow/unit-end-to-end-hccl-overlap-and-eight-step-precision-triage-workflow.md",
     "unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop": "validation/mindie-sd-and-omni/gates/unit-mindie-sd-perf-gate-window-ab-and-accuracy-gate-sop.md",
+    "unit-mindie-sim-capture-diff-trace-attribution-workflow": "modeling/capture-diff-trace/unit-mindie-sim-capture-diff-trace-attribution-workflow.md",
     "unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop": "diagnostics/cann-toolchain/msaicerr-and-objdump/exception-register-decoding/unit-msaicerr-stars-david-bitmask-and-six-subdomain-decode-sop.md",
     "unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms": "profiling/mskpp/interpolation-and-roofline/prof-data-910b-calibration/unit-mskpp-910b-mov-mmad-vec-interpolation-and-pipe-bottleneck-axioms.md",
     "unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop": "profiling/mskpp/dsl-and-pipe-modeling/mmad-mov-vec-prediction/unit-mskpp-chip-tensor-mmad-hierarchy-and-cycle-prediction-sop.md",
@@ -189,7 +195,7 @@
   "query_budget_excludes_build": true,
   "schema_version": "mindie-routing-manifest/1",
   "token_estimator": "utf8_bytes_div_4_ceiling",
-  "unit_count": 39,
+  "unit_count": 41,
   "units": [
     {
       "category": "workflow",
@@ -807,6 +813,69 @@
       }
     },
     {
+      "category": "measurement",
+      "conditions": {
+        "accelerator": "ascend",
+        "cann": ">=9.0,<10",
+        "execution_mode": [
+          "aclgraph",
+          "eager"
+        ],
+        "measurement_gear": [
+          "fast",
+          "deep"
+        ],
+        "soc": [
+          "Ascend910B",
+          "Ascend910B4",
+          "Ascend910_93",
+          "Ascend950"
+        ]
+      },
+      "domain_path": "measurement/steady-state/cann9",
+      "evidence_strength": "hardware_spec",
+      "id": "unit-cann9-steady-state-capture-and-clock-hygiene",
+      "inherits_from": [],
+      "inherits_from_closure": [],
+      "path": "measurement/steady-state/cann9/unit-cann9-steady-state-capture-and-clock-hygiene.md",
+      "provenance": {
+        "evidence_refs": [
+          "mindie-profiler/commit/f7dbca5e643db52807e12649e02291069f3d9d82/mindie_profiler/native_capture.py",
+          "mindie-profiler/commit/f7dbca5e643db52807e12649e02291069f3d9d82/mindie_profiler/_cann9_capture_shim.c"
+        ],
+        "source_digest": "0718130f23b0414f7ffb0652495d24f705e3e03c88cf3959ae312928026f02a3",
+        "source_locator": "mindie-profiler/commit/f7dbca5e643db52807e12649e02291069f3d9d82/mindie_profiler/native_capture.py",
+        "source_type": "profiler_gate_and_capture_receipt_contract"
+      },
+      "revision": 3,
+      "tier": "L1",
+      "title": "CANN 9 steady-state capture — implemented gate, boundaries, and clock evidence",
+      "token_estimate": 641,
+      "triggers": {
+        "error_signatures": [
+          "first profiled step is 2x slower because NPUGraph capture or aclrtMalloc is in the window",
+          "AIC frequency drops during capture and every kernel looks uniformly slower",
+          "deep-gear absolute latency disagrees with the production SLA trace",
+          "step time has a monotonic drift that no operator change explains"
+        ],
+        "keywords": [
+          "mindie-profiler capture",
+          "--gear fast",
+          "--gear deep",
+          "SteadyStateGate",
+          "min-warmup-steps",
+          "steady-window-steps",
+          "max-cv-pct",
+          "NPUGraph capture warmup",
+          "aclrtMalloc jitter",
+          "npu-smi clock",
+          "aic_frequency",
+          "thermal throttling",
+          "P50 P90"
+        ]
+      }
+    },
+    {
       "category": "sop",
       "conditions": {
         "hardware": [
@@ -986,6 +1055,72 @@
           "content-health-gate",
           "layer_bisect",
           "op_threshold_sweep"
+        ]
+      }
+    },
+    {
+      "category": "workflow",
+      "conditions": {
+        "accelerator": "ascend",
+        "cann": ">=9.0,<10",
+        "execution_mode": "aclgraph",
+        "framework": [
+          "vllm-ascend>=0.10,<0.12"
+        ],
+        "measurement_gear": "deep",
+        "soc": [
+          "Ascend910B",
+          "Ascend910B4",
+          "Ascend910_93",
+          "Ascend950"
+        ],
+        "workload_phase": [
+          "decode",
+          "prefill"
+        ]
+      },
+      "domain_path": "modeling/capture-diff-trace",
+      "evidence_strength": "hypothesis",
+      "id": "unit-mindie-sim-capture-diff-trace-attribution-workflow",
+      "inherits_from": [
+        "unit-cann9-steady-state-capture-and-clock-hygiene"
+      ],
+      "inherits_from_closure": [
+        "unit-cann9-steady-state-capture-and-clock-hygiene"
+      ],
+      "path": "modeling/capture-diff-trace/unit-mindie-sim-capture-diff-trace-attribution-workflow.md",
+      "provenance": {
+        "evidence_refs": [
+          "knowledge-infer-observability/commit/4b3dd86b365c9e588a1eb47df7dcc6437fdf8a89/measurement/msprof/overlap/unit-msprof-analyze-step-overlap-clock-and-intervals.md",
+          "docs/design/next-release-design/2026-11-14/v2-pillars-4-to-7-design.md#15.3"
+        ],
+        "source_digest": "6077d6a1f70cc9cce0abb55b01a1c4a6367516e9bae36973011c4cbefe306ad4",
+        "source_locator": "docs/design/next-release-design/2026-11-14/v2-pillars-4-to-7-design.md#15.3",
+        "source_type": "simulator_attribution_contract"
+      },
+      "revision": 3,
+      "tier": "L3",
+      "title": "Four-way diff-trace — signed replay, device-wide intervals, and one-bucket ownership",
+      "token_estimate": 881,
+      "triggers": {
+        "error_signatures": [
+          "mindie-sim sol predicts 20 ms but the steady-state capture is 27 ms on the same launch facts",
+          "stream idle gaps align with Python or ATen dispatch on Kunpeng ARM64",
+          "CombineV3 time tracks the slowest rank rather than the modeled bytes",
+          "every operator is uniformly slower and the AIC clock is below nominal"
+        ],
+        "keywords": [
+          "mindie-sim diff-trace",
+          "prediction gap",
+          "graph lowering delta",
+          "host dispatch delta",
+          "Kunpeng ARM64",
+          "collective congestion",
+          "MoE routing skew",
+          "eta_skew",
+          "per-op roofline",
+          "repro-op pointer",
+          "interval union"
         ]
       }
     },
